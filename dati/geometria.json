@@ -37,8 +37,8 @@
   "asse_piatto_dal_dorso": 14.0,
   "telefono_max": 14.0,
   "guida_appoggio": {
-   "fessura": 4.6,
-   "cava": 7.4,
+   "fessura": 8.8,
+   "cava": 13.2,
    "lunga": 80.0
   },
   "pomello_diametro": 22.0,
@@ -53,16 +53,33 @@
    "sfilo": 20.0,
    "prolunghe": 3
   },
-  "viteria_base": {
-   "M4x50 (cerniere)": 2,
-   "M4x12 (morsa guaina, appoggio)": 2,
-   "dadi M4": 4
+  "filetto": {
+   "passo": 2.5,
+   "profondita": 0.9,
+   "gioco_radiale": 0.35,
+   "cerniere": 10.0,
+   "morse_appoggio": 8.0
   },
-  "viteria_per_prolunga": {
-   "M4x12": 1,
-   "dadi M4": 1,
-   "pomelli": 1
-  }
+  "vite_cerniera": {
+   "lunga": 57.0,
+   "testa": [
+    18.0,
+    4.0
+   ],
+   "collo": 10.4
+  },
+  "vite_appoggio": {
+   "lunga": 13.5,
+   "testa": [
+    12.6,
+    3.4
+   ]
+  },
+  "vite_morsa": 12.0,
+  "dado_morsa": [
+   13.0,
+   5.0
+  ]
  },
  "pezzi": {
   "P01_Base": {
@@ -81,8 +98,8 @@
     90.0,
     27.5
    ],
-   "volume_mm3": 121245,
-   "peso_PETG_g": 154.0,
+   "volume_mm3": 119562,
+   "peso_PETG_g": 151.8,
    "non_manifold_edges": 0
   },
   "P02_Guaina": {
@@ -93,16 +110,16 @@
    ],
    "max": [
     100.0,
-    19.0,
+    20.0,
     20.0
    ],
    "size": [
     110.0,
-    34.0,
+    35.0,
     20.0
    ],
-   "volume_mm3": 30354,
-   "peso_PETG_g": 38.6,
+   "volume_mm3": 27950,
+   "peso_PETG_g": 35.5,
    "non_manifold_edges": 0
   },
   "P03_Slitta": {
@@ -121,8 +138,8 @@
     30.0,
     20.0
    ],
-   "volume_mm3": 43008,
-   "peso_PETG_g": 54.6,
+   "volume_mm3": 40479,
+   "peso_PETG_g": 51.4,
    "non_manifold_edges": 0
   },
   "P07_Prolunga": {
@@ -133,16 +150,16 @@
    ],
    "max": [
     200.0,
-    19.0,
+    20.0,
     20.0
    ],
    "size": [
     185.0,
-    34.0,
+    35.0,
     20.0
    ],
-   "volume_mm3": 57656,
-   "peso_PETG_g": 73.2,
+   "volume_mm3": 57297,
+   "peso_PETG_g": 72.8,
    "non_manifold_edges": 0
   },
   "P04_Piatto": {
@@ -161,8 +178,8 @@
     80.0,
     32.0
    ],
-   "volume_mm3": 100075,
-   "peso_PETG_g": 127.1,
+   "volume_mm3": 95782,
+   "peso_PETG_g": 121.6,
    "non_manifold_edges": 0
   },
   "P05_Appoggio": {
@@ -181,8 +198,8 @@
     20.3,
     70.0
    ],
-   "volume_mm3": 11746,
-   "peso_PETG_g": 14.9,
+   "volume_mm3": 11679,
+   "peso_PETG_g": 14.8,
    "non_manifold_edges": 0
   },
   "P06_Pomello": {
@@ -201,14 +218,114 @@
     22.0,
     11.0
    ],
-   "volume_mm3": 3357,
-   "peso_PETG_g": 4.3,
+   "volume_mm3": 2890,
+   "peso_PETG_g": 3.7,
+   "non_manifold_edges": 0
+  },
+  "P10_Pomello_Appoggio": {
+   "min": [
+    -11.0,
+    -11.0,
+    0.0
+   ],
+   "max": [
+    11.0,
+    11.0,
+    11.0
+   ],
+   "size": [
+    22.0,
+    22.0,
+    11.0
+   ],
+   "volume_mm3": 3144,
+   "peso_PETG_g": 4.0,
+   "non_manifold_edges": 0
+  },
+  "P11_Pomello_Morsa": {
+   "min": [
+    -11.0,
+    -11.0,
+    -0.0
+   ],
+   "max": [
+    11.0,
+    11.0,
+    23.0
+   ],
+   "size": [
+    22.0,
+    22.0,
+    23.0
+   ],
+   "volume_mm3": 4083,
+   "peso_PETG_g": 5.2,
+   "non_manifold_edges": 0
+  },
+  "P08_Vite_Cerniera": {
+   "min": [
+    -9.0,
+    -9.0,
+    0.0
+   ],
+   "max": [
+    9.0,
+    9.0,
+    61.0
+   ],
+   "size": [
+    18.0,
+    18.0,
+    61.0
+   ],
+   "volume_mm3": 5116,
+   "peso_PETG_g": 6.5,
+   "non_manifold_edges": 0
+  },
+  "P09_Vite_Appoggio": {
+   "min": [
+    -6.3,
+    -6.3,
+    0.0
+   ],
+   "max": [
+    6.3,
+    6.3,
+    16.9
+   ],
+   "size": [
+    12.6,
+    12.6,
+    16.9
+   ],
+   "volume_mm3": 1084,
+   "peso_PETG_g": 1.4,
+   "non_manifold_edges": 0
+  },
+  "P12_Dado_Morsa": {
+   "min": [
+    -6.5,
+    -7.51,
+    0.0
+   ],
+   "max": [
+    6.5,
+    7.51,
+    5.0
+   ],
+   "size": [
+    13.0,
+    15.01,
+    5.0
+   ],
+   "volume_mm3": 458,
+   "peso_PETG_g": 0.6,
    "non_manifold_edges": 0
   }
  },
  "controlli": {
   "interferenze_uso_mm3": {},
-  "coppie_controllate_uso": 21,
+  "coppie_controllate_uso": 22,
   "ingombro_uso_mm": [
    [
     -7.68,
@@ -224,7 +341,7 @@
    ]
   ],
   "interferenze_prolunghe_mm3": {},
-  "coppie_controllate_prolunghe": 39,
+  "coppie_controllate_prolunghe": 40,
   "ingombro_prolunghe_mm": [
    [
     0.0,
@@ -240,7 +357,7 @@
    ]
   ],
   "interferenze_piegato_mm3": {},
-  "coppie_controllate_piegato": 33,
+  "coppie_controllate_piegato": 32,
   "ingombro_piegato_mm": [
    [
     0.0,
@@ -257,36 +374,40 @@
   ],
   "mensola_dal_tavolo_mm": {
    "0_prolunghe": [
-    122.9,
-    231.7
+    125.3,
+    229.7
    ],
    "1_prolunghe": [
-    222.9,
-    371.7
+    225.3,
+    369.7
    ],
    "2_prolunghe": [
-    322.9,
-    511.7
+    325.3,
+    509.7
    ],
    "3_prolunghe": [
-    422.9,
-    651.7
+    425.3,
+    649.7
    ]
   },
-  "mensola_uso_mm": 142.4,
-  "corsa_appoggio_mm": 73.2,
-  "telefono_baricentro_x_uso_mm": 21.2,
-  "telefono_baricentro_x_uso_appoggio_in_alto_mm": -3.9,
-  "telefono_baricentro_x_prolunghe_mm": 32.7,
-  "telefono_baricentro_x_dritto_appoggio_in_alto_mm": 7.6,
+  "mensola_uso_mm": 144.8,
+  "corsa_appoggio_mm": 68.6,
+  "telefono_baricentro_x_uso_mm": 20.3,
+  "telefono_baricentro_x_uso_appoggio_in_alto_mm": -3.2,
+  "telefono_baricentro_x_prolunghe_mm": 31.8,
+  "telefono_baricentro_x_dritto_appoggio_in_alto_mm": 8.4,
   "sfilo_massimo_per_tratto_mm": 40.0,
   "pacco_cerniera_mm": 48.4,
-  "vite_cerniera_filetto_oltre_il_dado_mm": 1.4,
+  "vite_cerniera_in_presa_nel_pomello_mm": 8.55,
+  "vite_cerniera_spazio_in_fondo_al_pomello_mm": 0.45,
+  "parete_sede_collo_orecchia_mm": 2.36,
+  "parete_nocca_attorno_al_foro_mm": 4.6,
   "parete_sopra_canale_mm": 2.5,
-  "parete_tra_dado_blocco_e_canale_mm": 3.6,
-  "piatto_dietro_la_cava_mm": 2.4,
+  "parete_tra_dado_morsa_e_canale_mm": 2.8,
+  "pomello_morsa_staccato_dal_rinforzo_mm": 2.75,
+  "piatto_dietro_la_cava_mm": 2.2,
   "pomello_appoggio_sotto_la_mensola_mm": 0.5,
-  "appoggio_vite_filetto_oltre_il_dado_mm": 3.75
+  "vite_appoggio_in_presa_nel_pomello_mm": 8.45
  },
  "montaggio": {
   "P01_Base": {
@@ -347,7 +468,7 @@
     ],
     [
      -15.0,
-     19.0
+     20.0
     ],
     [
      7.5,
@@ -441,20 +562,86 @@
    ],
    "bounds": [
     [
-     55.8,
-     74.56
+     54.95,
+     73.7
     ],
     [
      -35.0,
      35.0
     ],
     [
-     417.09,
-     456.77
+     419.44,
+     459.12
     ]
    ]
   },
   "P06_Pomello": {
+   "matrice": [
+    [
+     -0.728965,
+     -0.684551,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     1.0
+    ],
+    [
+     -0.684551,
+     0.728965,
+     -0.0
+    ]
+   ],
+   "bounds": [
+    [
+     19.28,
+     40.72
+    ],
+    [
+     24.25,
+     35.25
+    ],
+    [
+     6.78,
+     28.22
+    ]
+   ]
+  },
+  "P06_Pomello.2": {
+   "matrice": [
+    [
+     -0.393947,
+     0.919133,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     -0.919133,
+     -0.393947,
+     -0.0
+    ]
+   ],
+   "bounds": [
+    [
+     19.08,
+     40.92
+    ],
+    [
+     -35.25,
+     -24.25
+    ],
+    [
+     438.58,
+     460.42
+    ]
+   ]
+  },
+  "P08_Vite_Cerniera": {
    "matrice": [
     [
      1.0,
@@ -474,20 +661,20 @@
    ],
    "bounds": [
     [
-     19.0,
-     41.0
+     21.0,
+     39.0
     ],
     [
-     24.25,
-     35.25
+     -28.2,
+     32.8
     ],
     [
-     6.5,
-     28.5
+     8.5,
+     26.5
     ]
    ]
   },
-  "P06_Pomello.2": {
+  "P08_Vite_Cerniera.2": {
    "matrice": [
     [
      -0.34202,
@@ -507,53 +694,119 @@
    ],
    "bounds": [
     [
-     19.17,
-     40.83
+     21.0,
+     39.0
     ],
     [
-     -35.25,
-     -24.25
+     -32.8,
+     28.2
     ],
     [
-     438.67,
-     460.33
+     440.5,
+     458.5
     ]
    ]
   },
-  "P06_Pomello.3": {
+  "P09_Vite_Appoggio": {
    "matrice": [
     [
-     -0.296198,
-     0.17101,
+     -0.34202,
+     -0.0,
      0.939693
     ],
     [
-     -0.5,
-     -0.866025,
+     0.0,
+     -1.0,
      -0.0
     ],
     [
-     0.813798,
-     -0.469846,
+     0.939693,
+     -0.0,
      0.34202
     ]
    ],
    "bounds": [
     [
-     60.35,
-     77.56
+     53.02,
+     72.17
     ],
     [
-     -33.0,
-     -11.0
+     -28.3,
+     -15.7
     ],
     [
-     419.24,
-     442.99
+     422.95,
+     438.13
     ]
    ]
   },
-  "P06_Pomello.4": {
+  "P10_Pomello_Appoggio": {
+   "matrice": [
+    [
+     -0.339323,
+     0.042866,
+     0.939693
+    ],
+    [
+     -0.125334,
+     -0.992115,
+     -0.0
+    ],
+    [
+     0.932283,
+     -0.117775,
+     0.34202
+    ]
+   ],
+   "bounds": [
+    [
+     59.52,
+     76.68
+    ],
+    [
+     -32.91,
+     -11.09
+    ],
+    [
+     421.67,
+     445.26
+    ]
+   ]
+  },
+  "P11_Pomello_Morsa": {
+   "matrice": [
+    [
+     0.770513,
+     -0.637424,
+     0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     0.637424,
+     0.770513,
+     -0.0
+    ]
+   ],
+   "bounds": [
+    [
+     19.15,
+     40.85
+    ],
+    [
+     10.75,
+     33.75
+    ],
+    [
+     91.65,
+     113.35
+    ]
+   ]
+  },
+  "P12_Dado_Morsa": {
    "matrice": [
     [
      -0.0,
@@ -573,16 +826,16 @@
    ],
    "bounds": [
     [
-     16.0,
-     38.0
+     22.49,
+     37.51
     ],
     [
-     22.75,
-     33.75
+     14.9,
+     19.9
     ],
     [
-     91.5,
-     113.5
+     96.0,
+     109.0
     ]
    ]
   },
@@ -611,7 +864,7 @@
     ],
     [
      -15.0,
-     19.0
+     20.0
     ],
     [
      32.5,
@@ -619,7 +872,40 @@
     ]
    ]
   },
-  "P06_Pomello.5": {
+  "P11_Pomello_Morsa.2": {
+   "matrice": [
+    [
+     0.770513,
+     -0.637424,
+     0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     0.637424,
+     0.770513,
+     -0.0
+    ]
+   ],
+   "bounds": [
+    [
+     19.15,
+     40.85
+    ],
+    [
+     10.75,
+     33.75
+    ],
+    [
+     191.65,
+     213.35
+    ]
+   ]
+  },
+  "P12_Dado_Morsa.2": {
    "matrice": [
     [
      -0.0,
@@ -639,16 +925,16 @@
    ],
    "bounds": [
     [
-     16.0,
-     38.0
+     22.49,
+     37.51
     ],
     [
-     22.75,
-     33.75
+     14.9,
+     19.9
     ],
     [
-     191.5,
-     213.5
+     196.0,
+     209.0
     ]
    ]
   },
@@ -677,7 +963,7 @@
     ],
     [
      -15.0,
-     19.0
+     20.0
     ],
     [
      132.5,
@@ -685,7 +971,40 @@
     ]
    ]
   },
-  "P06_Pomello.6": {
+  "P11_Pomello_Morsa.3": {
+   "matrice": [
+    [
+     0.770513,
+     -0.637424,
+     0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     0.637424,
+     0.770513,
+     -0.0
+    ]
+   ],
+   "bounds": [
+    [
+     19.15,
+     40.85
+    ],
+    [
+     10.75,
+     33.75
+    ],
+    [
+     291.65,
+     313.35
+    ]
+   ]
+  },
+  "P12_Dado_Morsa.3": {
    "matrice": [
     [
      -0.0,
@@ -705,16 +1024,16 @@
    ],
    "bounds": [
     [
-     16.0,
-     38.0
+     22.49,
+     37.51
     ],
     [
-     22.75,
-     33.75
+     14.9,
+     19.9
     ],
     [
-     291.5,
-     313.5
+     296.0,
+     309.0
     ]
    ]
   },
@@ -743,7 +1062,7 @@
     ],
     [
      -15.0,
-     19.0
+     20.0
     ],
     [
      232.5,
@@ -751,7 +1070,40 @@
     ]
    ]
   },
-  "P06_Pomello.7": {
+  "P11_Pomello_Morsa.4": {
+   "matrice": [
+    [
+     0.770513,
+     -0.637424,
+     0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     0.637424,
+     0.770513,
+     -0.0
+    ]
+   ],
+   "bounds": [
+    [
+     19.15,
+     40.85
+    ],
+    [
+     10.75,
+     33.75
+    ],
+    [
+     391.65,
+     413.35
+    ]
+   ]
+  },
+  "P12_Dado_Morsa.4": {
    "matrice": [
     [
      -0.0,
@@ -771,181 +1123,18 @@
    ],
    "bounds": [
     [
-     16.0,
-     38.0
+     22.49,
+     37.51
     ],
     [
-     22.75,
-     33.75
+     14.9,
+     19.9
     ],
     [
-     391.5,
-     413.5
+     396.0,
+     409.0
     ]
    ]
-  }
- },
- "viti": {
-  "M4x50_cerniera": {
-   "centro": [
-    30.0,
-    3.8,
-    17.5
-   ],
-   "asse": [
-    0.0,
-    1.0,
-    -0.0
-   ],
-   "lunghezza": 50,
-   "diametro": 4.0,
-   "testa": {
-    "af": 7.0,
-    "h": 2.8
-   },
-   "dado": {
-    "af": 7.0,
-    "h": 3.2,
-    "dalla_testa": 45.4
-   }
-  },
-  "M4x50_cerniera.2": {
-   "centro": [
-    30.0,
-    -3.8,
-    449.5
-   ],
-   "asse": [
-    -0.0,
-    -1.0,
-    -0.0
-   ],
-   "lunghezza": 50,
-   "diametro": 4.0,
-   "testa": {
-    "af": 7.0,
-    "h": 2.8
-   },
-   "dado": {
-    "af": 7.0,
-    "h": 3.2,
-    "dalla_testa": 45.4
-   }
-  },
-  "M4x12_appoggio": {
-   "centro": [
-    64.86,
-    -22.0,
-    429.73
-   ],
-   "asse": [
-    0.9397,
-    -0.0,
-    0.342
-   ],
-   "lunghezza": 12,
-   "diametro": 4.0,
-   "testa": {
-    "af": 7.0,
-    "h": 2.8
-   },
-   "dado": {
-    "af": 7.0,
-    "h": 3.2,
-    "dalla_testa": 5.05
-   }
-  },
-  "M4x12_blocco": {
-   "centro": [
-    27.0,
-    16.75,
-    102.5
-   ],
-   "asse": [
-    -0.0,
-    -1.0,
-    -0.0
-   ],
-   "lunghezza": 12,
-   "diametro": 4.0,
-   "testa": {
-    "af": 7.0,
-    "h": 2.8
-   },
-   "dado": {
-    "af": 7.0,
-    "h": 3.2,
-    "dalla_testa": 3.85
-   }
-  },
-  "M4x12_blocco.2": {
-   "centro": [
-    27.0,
-    16.75,
-    202.5
-   ],
-   "asse": [
-    -0.0,
-    -1.0,
-    -0.0
-   ],
-   "lunghezza": 12,
-   "diametro": 4.0,
-   "testa": {
-    "af": 7.0,
-    "h": 2.8
-   },
-   "dado": {
-    "af": 7.0,
-    "h": 3.2,
-    "dalla_testa": 3.85
-   }
-  },
-  "M4x12_blocco.3": {
-   "centro": [
-    27.0,
-    16.75,
-    302.5
-   ],
-   "asse": [
-    -0.0,
-    -1.0,
-    -0.0
-   ],
-   "lunghezza": 12,
-   "diametro": 4.0,
-   "testa": {
-    "af": 7.0,
-    "h": 2.8
-   },
-   "dado": {
-    "af": 7.0,
-    "h": 3.2,
-    "dalla_testa": 3.85
-   }
-  },
-  "M4x12_blocco.4": {
-   "centro": [
-    27.0,
-    16.75,
-    402.5
-   ],
-   "asse": [
-    -0.0,
-    -1.0,
-    -0.0
-   ],
-   "lunghezza": 12,
-   "diametro": 4.0,
-   "testa": {
-    "af": 7.0,
-    "h": 2.8
-   },
-   "dado": {
-    "af": 7.0,
-    "h": 3.2,
-    "dalla_testa": 3.85
-   }
   }
  }
 }

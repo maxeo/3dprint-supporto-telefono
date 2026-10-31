@@ -9,14 +9,14 @@
  "header": {
   "eyebrow": "Supporto Telefono · pieghevole da scrivania · PETG",
   "h1": "Si alza a tratti, si chiude piatto.",
-  "intro_html": "<b>Supporto per telefono da scrivania, pieghevole, con braccio telescopico, prolunghe e appoggio regolabile.</b> Le due cerniere sono viti M4 strette da un pomello zigrinato: la durezza la scegli a mano. Il braccio è fatto a tratti che si infilano uno nell'altro, ognuno con la sua <b>morsa</b> a pomello: senza prolunghe la mensola va da 123 a 232 mm dal tavolo, e ogni <b>prolunga</b> (P07, quante ne vuoi) aggiunge 100 mm più 40 di sfilo. L'<b>appoggio</b> scorre lungo il piatto per 73 mm su una guida a T e si blocca col suo pomello. Scegli qui sotto quante prolunghe vuoi: vista, passaggi e lista di stampa si aggiornano.",
+  "intro_html": "<b>Supporto per telefono da scrivania, pieghevole, con braccio telescopico, prolunghe e appoggio regolabile.</b> Le due cerniere sono viti stampate strette da un pomello zigrinato filettato: la durezza la scegli a mano. Non serve comprare niente: anche viti e dadi si stampano. Il braccio è fatto a tratti che si infilano uno nell'altro, ognuno con la sua <b>morsa</b> a pomello: senza prolunghe la mensola va da 125 a 230 mm dal tavolo, e ogni <b>prolunga</b> (P07, quante ne vuoi) aggiunge 100 mm più 40 di sfilo. L'<b>appoggio</b> scorre lungo il piatto per 69 mm su una guida a T e si blocca col suo pomello. Scegli qui sotto quante prolunghe vuoi: vista, passaggi e lista di stampa si aggiornano.",
   "facts": [
    {
     "value": "185 × 90 × 58 mm",
     "label": "chiuso, senza prolunghe"
    },
    {
-    "value": "123–232 mm",
+    "value": "125–230 mm",
     "label": "mensola dal tavolo, senza prolunghe"
    },
    {
@@ -24,8 +24,8 @@
     "label": "per ogni prolunga, più lo sfilo"
    },
    {
-    "value": "solo M4",
-    "label": "2 × M4×50, M4×12 e dadi"
+    "value": "zero viteria",
+    "label": "viti, dadi e pomelli stampati"
    }
   ]
  },
@@ -34,7 +34,7 @@
   "pitch": 0.3
  },
  "caption": "",
- "model_note_html": "<span class='badge'>Quote del modello</span><p>Altezza della mensola dal tavolo, braccio dritto, dal tutto chiuso al tutto sfilato con l'appoggio in alto: senza prolunghe 123–232 mm, con una 223–372, con due 323–512, con tre 423–652. Chiuso: 58 mm di spessore.</p>",
+ "model_note_html": "<span class='badge'>Quote del modello</span><p>Altezza della mensola dal tavolo, braccio dritto, dal tutto chiuso al tutto sfilato con l'appoggio in alto: senza prolunghe 125–230 mm, con una 225–370, con due 325–510, con tre 425–650. Chiuso: 58 mm di spessore.</p>",
  "groups": {
   "Base": {
    "color": "#c9ccd1"
@@ -50,6 +50,9 @@
   },
   "Pomelli": {
    "color": "#454a52"
+  },
+  "Viti": {
+   "color": "#9aa0a8"
   }
  },
  "parts": [
@@ -93,7 +96,7 @@
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Piastra 185 × 90 × 7 con la forchetta della cerniera bassa: due orecchie da 9 mm, foro M4 e, sull'orecchia sinistra, la sede esagonale della testa della vite. Sotto quattro incavi Ø10,5 per piedini adesivi; sopra due incavi dove girano i pomelli (uno da aperto, uno da chiuso). 154 g a pezzo pieno.</p>"
+   "note_html": "<p>Piastra 185 × 90 × 7 con la forchetta della cerniera bassa: due orecchie da 9 mm, foro per la vite Ø10 e, sull'orecchia sinistra, la sede quadra del collo della vite: non la lascia girare. Sotto quattro incavi Ø10,5 per piedini adesivi; sopra tre incavi dove girano i pomelli (uno da aperto, due da chiuso). 152 g a pezzo pieno.</p>"
   },
   {
    "id": "P02",
@@ -127,7 +130,7 @@
     ],
     [
      -15.0,
-     19.0
+     20.0
     ],
     [
      7.5,
@@ -135,7 +138,7 @@
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Tratto 30 × 20 lungo 100 mm dall'asse, con la nocca in fondo e il canale 24 × 15. Davanti il canale ha una fessura da 14 in cui corre la nervatura della barra. Sul fianco destro la morsa: rinforzo con la sede del dado M4 per la vite di blocco. 39 g.</p>"
+   "note_html": "<p>Tratto 30 × 20 lungo 100 mm dall'asse, con la nocca in fondo e il canale 24 × 15. Davanti il canale ha una fessura da 14 in cui corre la nervatura della barra. Sul fianco destro la morsa: rinforzo con la sede esagonale del dado P12 per la vite di blocco. 36 g.</p>"
   },
   {
    "id": "P07",
@@ -169,7 +172,7 @@
     ],
     [
      -15.0,
-     19.0
+     20.0
     ],
     [
      32.5,
@@ -236,7 +239,7 @@
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Barra 23,4 × 14,4 (0,3 mm di gioco per lato) con la nervatura davanti e, in cima, la nocca della cerniera alta. Sul fianco destro una scanalatura dove punta la vite della morsa: fa anche da fermo, la barra esce al massimo di 40 mm. 55 g.</p>"
+   "note_html": "<p>Barra 23,4 × 14,4 (0,3 mm di gioco per lato) con la nervatura davanti e, in cima, la nocca della cerniera alta. Sul fianco destro una scanalatura dove punta la vite della morsa: fa anche da fermo, la barra esce al massimo di 40 mm. 51 g.</p>"
   },
   {
    "id": "P04",
@@ -278,7 +281,7 @@
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Piatto 150 × 80 × 8 con la forchetta della cerniera alta sul dorso. Dentro lo spessore corre la guida a T dell'appoggio: fessura da 4,6 sulla faccia, cava da 7,4 per la testa della vite, aperta sul bordo basso. 127 g.</p>"
+   "note_html": "<p>Piatto 150 × 80 × 8 con la forchetta della cerniera alta sul dorso. Dentro lo spessore corre la guida a T dell'appoggio: fessura da 8,8 sulla faccia, cava da 13,2 per la testa della vite, aperta sul bordo basso. 122 g.</p>"
   },
   {
    "id": "P05",
@@ -307,20 +310,20 @@
    ],
    "assembled_bounds": [
     [
-     55.8,
-     74.56
+     54.95,
+     73.7
     ],
     [
      -35.0,
      35.0
     ],
     [
-     417.09,
-     456.77
+     419.44,
+     459.12
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Mensola con la sponda davanti, per telefoni spessi fino a 14 mm con la cover, e un'asola in mezzo per il cavo. Scorre lungo il piatto per 73 mm: una vite M4×12 con la testa nella guida a T e il pomello sotto la mensola la bloccano. Una chiavetta sul retro corre nella fessura e non la fa girare. 15 g.</p>"
+   "note_html": "<p>Mensola con la sponda davanti, per telefoni spessi fino a 14 mm con la cover, e un'asola in mezzo per il cavo. Scorre lungo il piatto per 69 mm: la vite P09 con la testa quadra nella guida a T e il pomello sotto la mensola la bloccano. Una chiavetta sul retro corre nella fessura e non la fa girare. 15 g.</p>"
   },
   {
    "id": "P06A",
@@ -328,6 +331,90 @@
    "group": "Pomelli",
    "file": "stl/P06_Pomello.stl",
    "print": "pomelli",
+   "mode": "mesh",
+   "max_triangles": 4000,
+   "matrix": [
+    [
+     -0.728965,
+     -0.684551,
+     0.0
+    ],
+    [
+     -0.0,
+     0.0,
+     1.0
+    ],
+    [
+     -0.684551,
+     0.728965,
+     -0.0
+    ]
+   ],
+   "assembled_bounds": [
+    [
+     19.28,
+     40.72
+    ],
+    [
+     24.25,
+     35.25
+    ],
+    [
+     6.78,
+     28.22
+    ]
+   ],
+   "quantity": 1,
+   "note_html": "<p>Pomello zigrinato Ø22 con la madrevite Ø10 stampata dentro, cieca: si avvita sulla vite P08 e stringe le orecchie della base sulla nocca del braccio. 4 g.</p>"
+  },
+  {
+   "id": "P06B",
+   "label": "Pomello · cerniera alta",
+   "group": "Pomelli",
+   "file": "stl/P06_Pomello.stl",
+   "print": "pomelli",
+   "mode": "mesh",
+   "max_triangles": 4000,
+   "matrix": [
+    [
+     -0.393947,
+     0.919133,
+     -0.0
+    ],
+    [
+     0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     -0.919133,
+     -0.393947,
+     -0.0
+    ]
+   ],
+   "assembled_bounds": [
+    [
+     19.08,
+     40.92
+    ],
+    [
+     -35.25,
+     -24.25
+    ],
+    [
+     438.58,
+     460.42
+    ]
+   ],
+   "quantity": 1,
+   "note_html": "<p>Stesso pomello: regola la durezza della cerniera del piatto.</p>"
+  },
+  {
+   "id": "P08A",
+   "label": "Vite · cerniera bassa",
+   "group": "Viti",
+   "file": "stl/P08_Vite_Cerniera.stl",
+   "print": "viti",
    "mode": "mesh",
    "max_triangles": 4000,
    "matrix": [
@@ -349,27 +436,27 @@
    ],
    "assembled_bounds": [
     [
-     19.0,
-     41.0
+     21.0,
+     39.0
     ],
     [
-     24.25,
-     35.25
+     -28.2,
+     32.8
     ],
     [
-     6.5,
-     28.5
+     8.5,
+     26.5
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Pomello zigrinato Ø22 con il dado M4 premuto nella sede: stringe le orecchie della base sulla nocca del braccio. 4 g.</p>"
+   "note_html": "<p>Vite stampata Ø10 passo 2,5, lunga 57 mm: testa tonda Ø18 e sotto un collo quadro che entra nella sede dell'orecchia e non gira. 6 g.</p>"
   },
   {
-   "id": "P06B",
-   "label": "Pomello · cerniera alta",
-   "group": "Pomelli",
-   "file": "stl/P06_Pomello.stl",
-   "print": "pomelli",
+   "id": "P08B",
+   "label": "Vite · cerniera alta",
+   "group": "Viti",
+   "file": "stl/P08_Vite_Cerniera.stl",
+   "print": "viti",
    "mode": "mesh",
    "max_triangles": 4000,
    "matrix": [
@@ -391,69 +478,175 @@
    ],
    "assembled_bounds": [
     [
-     19.17,
-     40.83
+     21.0,
+     39.0
     ],
     [
-     -35.25,
-     -24.25
+     -32.8,
+     28.2
     ],
     [
-     438.67,
-     460.33
+     440.5,
+     458.5
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Stesso pomello col dado M4: regola la durezza della cerniera del piatto.</p>"
+   "note_html": "<p>Stessa vite, nella forchetta del piatto.</p>"
   },
   {
-   "id": "P06C",
-   "label": "Pomello · appoggio",
-   "group": "Pomelli",
-   "file": "stl/P06_Pomello.stl",
-   "print": "pomelli",
+   "id": "P09",
+   "label": "Vite · appoggio",
+   "group": "Viti",
+   "file": "stl/P09_Vite_Appoggio.stl",
+   "print": "viti",
    "mode": "mesh",
    "max_triangles": 4000,
    "matrix": [
     [
-     -0.296198,
-     0.17101,
+     -0.34202,
+     -0.0,
      0.939693
     ],
     [
-     -0.5,
-     -0.866025,
+     0.0,
+     -1.0,
      -0.0
     ],
     [
-     0.813798,
-     -0.469846,
+     0.939693,
+     -0.0,
      0.34202
     ]
    ],
    "assembled_bounds": [
     [
-     60.35,
-     77.56
+     53.02,
+     72.17
     ],
     [
-     -33.0,
-     -11.0
+     -28.3,
+     -15.7
     ],
     [
-     419.24,
-     442.99
+     422.95,
+     438.13
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Stesso pomello col dado M4: blocca l'appoggio sul piatto.</p>"
+   "note_html": "<p>Vite Ø8 lunga 13,5 mm con la testa quadra da 12,6: scorre nella cava del piatto e non gira. 1 g.</p>"
   },
   {
-   "id": "P06D",
+   "id": "P10",
+   "label": "Pomello · appoggio",
+   "group": "Pomelli",
+   "file": "stl/P10_Pomello_Appoggio.stl",
+   "print": "pomelli",
+   "mode": "mesh",
+   "max_triangles": 4000,
+   "matrix": [
+    [
+     -0.339323,
+     0.042866,
+     0.939693
+    ],
+    [
+     -0.125334,
+     -0.992115,
+     -0.0
+    ],
+    [
+     0.932283,
+     -0.117775,
+     0.34202
+    ]
+   ],
+   "assembled_bounds": [
+    [
+     59.52,
+     76.68
+    ],
+    [
+     -32.91,
+     -11.09
+    ],
+    [
+     421.67,
+     445.26
+    ]
+   ],
+   "quantity": 1,
+   "note_html": "<p>Pomello con la madrevite Ø8: sotto la mensola, blocca l'appoggio sul piatto. 4 g.</p>"
+  },
+  {
+   "id": "P11",
    "label": "Pomello · morse del braccio",
    "group": "Pomelli",
-   "file": "stl/P06_Pomello.stl",
+   "file": "stl/P11_Pomello_Morsa.stl",
    "print": "pomelli",
+   "mode": "mesh",
+   "max_triangles": 4000,
+   "matrix": [
+    [
+     0.770513,
+     -0.637424,
+     0.0
+    ],
+    [
+     -0.0,
+     -0.0,
+     -1.0
+    ],
+    [
+     0.637424,
+     0.770513,
+     -0.0
+    ]
+   ],
+   "assembled_bounds": [
+    [
+     19.15,
+     40.85
+    ],
+    [
+     10.75,
+     33.75
+    ],
+    [
+     91.65,
+     113.35
+    ]
+   ],
+   "quantity": 4,
+   "note_html": "<p>Pomello e vite in un pezzo solo: vite Ø8 lunga 12 mm che si avvita nel dado P12 e punta nella scanalatura della barra. Uno sulla guaina e uno su ogni prolunga. 5 g.</p>",
+   "instances": [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     0.0,
+     0.0,
+     100.0
+    ],
+    [
+     0.0,
+     0.0,
+     200.0
+    ],
+    [
+     0.0,
+     0.0,
+     300.0
+    ]
+   ]
+  },
+  {
+   "id": "P12",
+   "label": "Dado · morse del braccio",
+   "group": "Viti",
+   "file": "stl/P12_Dado_Morsa.stl",
+   "print": "viti",
    "mode": "mesh",
    "max_triangles": 4000,
    "matrix": [
@@ -475,20 +668,20 @@
    ],
    "assembled_bounds": [
     [
-     16.0,
-     38.0
+     22.49,
+     37.51
     ],
     [
-     22.75,
-     33.75
+     14.9,
+     19.9
     ],
     [
-     91.5,
-     113.5
+     96.0,
+     109.0
     ]
    ],
    "quantity": 4,
-   "note_html": "<p>Stesso pomello, ma con la <b>testa</b> della vite M4×12 nella sede: uno sulla guaina e uno su ogni prolunga.</p>",
+   "note_html": "<p>Dado esagonale da 13 alto 5 mm con la madrevite Ø8: entra nella sede del rinforzo e non gira. Uno per morsa. 1 g.</p>",
    "instances": [
     [
      0,
@@ -513,312 +706,11 @@
    ]
   }
  ],
- "connectors": {
-  "items": [
-   {
-    "p": [
-     30.0,
-     3.8,
-     17.5
-    ],
-    "axis": [
-     0.0,
-     1.0,
-     -0.0
-    ],
-    "length": 50,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 45.4
-    },
-    "a": "P01",
-    "b": "P02"
-   },
-   {
-    "p": [
-     30.0,
-     -3.8,
-     449.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 50,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 45.4
-    },
-    "move_with": "P03",
-    "a": "P03",
-    "b": "P04"
-   },
-   {
-    "p": [
-     64.86,
-     -22.0,
-     429.73
-    ],
-    "axis": [
-     0.9397,
-     -0.0,
-     0.342
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 5.05
-    },
-    "move_with": "P05",
-    "a": "P04",
-    "b": "P05"
-   },
-   {
-    "p": [
-     27.0,
-     16.75,
-     102.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 3.85
-    },
-    "a": "P02",
-    "b": "P07",
-    "only": [
-     "n1",
-     "n2",
-     "n3"
-    ]
-   },
-   {
-    "p": [
-     27.0,
-     16.75,
-     102.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 3.85
-    },
-    "a": "P02",
-    "b": "P03",
-    "only": [
-     "n0"
-    ]
-   },
-   {
-    "p": [
-     27.0,
-     16.75,
-     202.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 3.85
-    },
-    "a": "P07",
-    "b": "P07",
-    "only": [
-     "n2",
-     "n3"
-    ]
-   },
-   {
-    "p": [
-     27.0,
-     16.75,
-     202.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 3.85
-    },
-    "a": "P07",
-    "b": "P03",
-    "only": [
-     "n1"
-    ]
-   },
-   {
-    "p": [
-     27.0,
-     16.75,
-     302.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 3.85
-    },
-    "a": "P07",
-    "b": "P07",
-    "only": [
-     "n3"
-    ]
-   },
-   {
-    "p": [
-     27.0,
-     16.75,
-     302.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 3.85
-    },
-    "a": "P07",
-    "b": "P03",
-    "only": [
-     "n2"
-    ]
-   },
-   {
-    "p": [
-     27.0,
-     16.75,
-     402.5
-    ],
-    "axis": [
-     -0.0,
-     -1.0,
-     -0.0
-    ],
-    "length": 12,
-    "diameter": 4.0,
-    "head": {
-     "af": 7.0,
-     "h": 2.8,
-     "at": "start"
-    },
-    "nut": {
-     "af": 7.0,
-     "h": 3.2,
-     "from_head": 3.85
-    },
-    "a": "P07",
-    "b": "P03",
-    "only": [
-     "n3"
-    ]
-   }
-  ],
-  "label": "vite",
-  "label_plural": "viti",
-  "joint_labels": {
-   "P01+P02": "cerniera bassa · M4×50",
-   "P03+P04": "cerniera alta · M4×50",
-   "P04+P05": "appoggio · M4×12 nella guida a T",
-   "P02+P07": "morsa · M4×12",
-   "P02+P03": "morsa · M4×12",
-   "P07+P07": "morsa · M4×12",
-   "P07+P03": "morsa · M4×12"
-  }
- },
  "steps_section": {
   "eyebrow": "01 / Montaggio",
   "h2": "Dal braccio al piatto.",
-  "intro_html": "Destra e sinistra guardando il supporto da davanti, dalla parte del telefono. Le viti sono tutte M4 a testa esagonale: basta una chiave da 7 o una pinza per tenere i dadi mentre li spingi nelle sedi.",
-  "start_html": "<h3>Prima i pomelli.</h3><p>Spingi un dado M4 nella sede dei tre pomelli delle cerniere e dell'appoggio (P06A, P06B, P06C) e la testa di una vite M4×12 nella sede di ogni pomello delle morse (P06D): entrano un po' forzati, premendo su un tavolo. Se ballano, una goccia di colla.</p>"
+  "intro_html": "Destra e sinistra guardando il supporto da davanti, dalla parte del telefono. Viti, dadi e pomelli sono stampati: si avvitano a mano, senza attrezzi. Prima di montarli prova ogni pomello sulla sua vite: se è duro, avvita e svita un paio di volte.",
+  "start_html": "<h3>Prima le viti.</h3><p>Le viti di cerniera P08 vanno nei pomelli P06, la vite P09 nel pomello P10, i pomelli delle morse P11 nei dadi P12. Prova ogni coppia prima di montarla: deve avvitarsi a mano fino in fondo. Se un filetto è sporco di fili, ripassalo avvitando e svitando.</p>"
  },
  "steps": [
   {
@@ -845,110 +737,118 @@
   },
   {
    "title": "Morsa della guaina",
-   "short": "dado M4 + pomello",
-   "text": "Spingi un dado M4 nella sede esagonale del rinforzo di P02 e avvita un pomello P06D con la sua vite M4×12: la punta entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
+   "short": "dado P12 + pomello P11",
+   "text": "Spingi un dado P12 nella sede esagonale del rinforzo di P02 e avvitaci un pomello P11: la punta della sua vite entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
    "parts": [
     "P02",
     "P07",
-    "P06D"
+    "P12",
+    "P11"
    ],
    "built": [
     "P02",
     "P07",
-    "P06D"
+    "P12",
+    "P11"
    ],
    "moving": [
-    "P06D"
+    "P12",
+    "P11"
    ],
    "dir": [
     0,
     1,
     0
    ],
-   "travel": 30,
-   "joints": [
-    "P02+P07"
-   ]
+   "travel": 30
   },
   {
    "title": "Slitta nell'ultimo tratto",
    "short": "e la sua morsa",
-   "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un pomello P06D (dado M4 nella sede del rinforzo).",
+   "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un dado P12 e un pomello P11.",
    "parts": [
     "P07",
     "P03",
-    "P06D·2"
+    "P12·2",
+    "P11·2"
    ],
    "built": [
     "P02",
     "P07",
-    "P06D",
+    "P12",
+    "P11",
     "P03",
-    "P06D·2"
+    "P12·2",
+    "P11·2"
    ],
    "moving": [
     "P03",
-    "P06D·2"
+    "P12·2",
+    "P11·2"
    ],
    "dir": [
     0.0,
     0,
     1.0
    ],
-   "travel": 80,
-   "joints": [
-    "P07+P03"
-   ]
+   "travel": 80
   },
   {
    "title": "Braccio sulla base",
    "short": "nocca nella forchetta",
-   "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila una vite M4×50 da sinistra: la testa esagonale entra nella sua sede e non gira più.",
+   "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
    "parts": [
     "P01",
-    "P02"
+    "P02",
+    "P08A"
    ],
    "built": [
     "P01",
+    "P08A",
     "P02",
     "P07",
-    "P06D",
+    "P12",
+    "P11",
     "P03",
-    "P06D·2"
+    "P12·2",
+    "P11·2"
    ],
    "moving": [
     "P02",
     "P07",
-    "P06D",
+    "P12",
+    "P11",
     "P03",
-    "P06D·2"
+    "P12·2",
+    "P11·2"
    ],
    "dir": [
     0,
     0,
     1
    ],
-   "travel": 70,
-   "joints": [
-    "P01+P02"
-   ]
+   "travel": 70
   },
   {
    "title": "Pomello della cerniera bassa",
    "short": "da destra",
-   "text": "Avvita P06A (col dado) sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+   "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
    "parts": [
     "P01",
+    "P08A",
     "P06A"
    ],
    "built": [
     "P01",
+    "P08A",
     "P06A",
     "P02",
     "P07",
-    "P06D",
+    "P12",
+    "P11",
     "P03",
-    "P06D·2"
+    "P12·2",
+    "P11·2"
    ],
    "moving": [
     "P06A"
@@ -963,65 +863,69 @@
   {
    "title": "Appoggio sul piatto",
    "short": "vite nella guida a T",
-   "text": "Fai scorrere la testa di una M4×12 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P06C (col dado) sotto la mensola.",
+   "text": "Fai scorrere la testa quadra della vite P09 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P10 sotto la mensola.",
    "parts": [
     "P04",
+    "P09",
     "P05",
-    "P06C"
+    "P10"
    ],
    "built": [
     "P04",
+    "P09",
     "P05",
-    "P06C"
+    "P10"
    ],
    "moving": [
     "P05",
-    "P06C"
+    "P10"
    ],
    "dir": [
     0.94,
     0,
     0.342
    ],
-   "travel": 40,
-   "joints": [
-    "P04+P05"
-   ]
+   "travel": 40
   },
   {
    "title": "Piatto sulla testa del braccio",
    "short": "forchetta sulla nocca",
-   "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda M4×50 da destra, con la testa nella sede.",
+   "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda vite P08 da destra, col collo quadro nella sede.",
    "parts": [
     "P03",
-    "P04"
+    "P04",
+    "P08B"
    ],
    "built": [
     "P01",
+    "P08A",
     "P06A",
     "P02",
     "P07",
-    "P06D",
+    "P12",
+    "P11",
     "P03",
-    "P06D·2",
+    "P12·2",
+    "P11·2",
     "P04",
+    "P09",
     "P05",
-    "P06C"
+    "P10",
+    "P08B"
    ],
    "moving": [
     "P04",
+    "P09",
     "P05",
-    "P06C"
+    "P10",
+    "P08B"
    ],
    "dir": [
     0.94,
     0,
     0.342
    ],
-   "travel": 60,
-   "joints": [
-    "P03+P04"
-   ]
+   "travel": 60
   },
   {
    "title": "Pomello della cerniera alta",
@@ -1029,6 +933,7 @@
    "text": "Avvita P06B sulla vite che sporge a sinistra e regola la durezza come per la cerniera bassa.",
    "parts": [
     "P04",
+    "P08B",
     "P06B"
    ],
    "built": [
@@ -1040,9 +945,14 @@
     "P05",
     "P06A",
     "P06B",
-    "P06C",
-    "P06D",
-    "P06D·2"
+    "P08A",
+    "P08B",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P11·2",
+    "P12·2"
    ],
    "moving": [
     "P06B"
@@ -1057,7 +967,7 @@
   {
    "title": "Regola e prova",
    "short": "altezza, appoggio, inclinazione",
-   "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P06C e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+   "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
    "parts": [
     "P01",
     "P02",
@@ -1067,9 +977,14 @@
     "P05",
     "P06A",
     "P06B",
-    "P06C",
-    "P06D",
-    "P06D·2"
+    "P08A",
+    "P08B",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P11·2",
+    "P12·2"
    ]
   }
  ],
@@ -1079,7 +994,7 @@
    {
     "id": "n0",
     "label": "Senza prolunghe",
-    "description": "mensola 123–232 mm dal tavolo",
+    "description": "mensola 125–230 mm dal tavolo",
     "parts": [
      "P01",
      "P02",
@@ -1088,8 +1003,12 @@
      "P05",
      "P06A",
      "P06B",
-     "P06C",
-     "P06D"
+     "P08A",
+     "P08B",
+     "P09",
+     "P10",
+     "P11",
+     "P12"
     ],
     "shift": {
      "P03": [
@@ -1112,7 +1031,17 @@
       0,
       -300.0
      ],
-     "P06C": [
+     "P08B": [
+      0,
+      0,
+      -300.0
+     ],
+     "P09": [
+      0,
+      0,
+      -300.0
+     ],
+     "P10": [
       0,
       0,
       -300.0
@@ -1120,84 +1049,90 @@
     },
     "copies": {
      "P07": 0,
-     "P06D": 1
+     "P11": 1,
+     "P12": 1
     },
     "quantity": {
      "P07": 0,
-     "P06D": 1
+     "P11": 1,
+     "P12": 1
     },
     "steps": [
      {
       "title": "Slitta nella guaina",
       "short": "e la sua morsa",
-      "text": "Infila la slitta P03 in P02 come le barre prima, poi chiudi la morsa con un pomello P06D (dado M4 nella sede del rinforzo).",
+      "text": "Infila la slitta P03 in P02 come le barre prima, poi chiudi la morsa con un dado P12 e un pomello P11.",
       "parts": [
        "P02",
        "P03",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "built": [
        "P02",
        "P03",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "moving": [
        "P03",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "dir": [
        0.0,
        0,
        1.0
       ],
-      "travel": 80,
-      "joints": [
-       "P02+P03"
-      ]
+      "travel": 80
      },
      {
       "title": "Braccio sulla base",
       "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila una vite M4×50 da sinistra: la testa esagonale entra nella sua sede e non gira più.",
+      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
-       "P02"
+       "P02",
+       "P08A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P02",
        "P03",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "moving": [
        "P02",
        "P03",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "dir": [
        0,
        0,
        1
       ],
-      "travel": 70,
-      "joints": [
-       "P01+P02"
-      ]
+      "travel": 70
      },
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita P06A (col dado) sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
       "parts": [
        "P01",
+       "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P03",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "moving": [
        "P06A"
@@ -1212,63 +1147,66 @@
      {
       "title": "Appoggio sul piatto",
       "short": "vite nella guida a T",
-      "text": "Fai scorrere la testa di una M4×12 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P06C (col dado) sotto la mensola.",
+      "text": "Fai scorrere la testa quadra della vite P09 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P10 sotto la mensola.",
       "parts": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "built": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "moving": [
        "P05",
-       "P06C"
+       "P10"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 40,
-      "joints": [
-       "P04+P05"
-      ]
+      "travel": 40
      },
      {
       "title": "Piatto sulla testa del braccio",
       "short": "forchetta sulla nocca",
-      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda M4×50 da destra, con la testa nella sede.",
+      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda vite P08 da destra, col collo quadro nella sede.",
       "parts": [
        "P03",
-       "P04"
+       "P04",
+       "P08B"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P03",
-       "P06D",
+       "P12",
+       "P11",
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "moving": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 60,
-      "joints": [
-       "P03+P04"
-      ]
+      "travel": 60
      },
      {
       "title": "Pomello della cerniera alta",
@@ -1276,6 +1214,7 @@
       "text": "Avvita P06B sulla vite che sporge a sinistra e regola la durezza come per la cerniera bassa.",
       "parts": [
        "P04",
+       "P08B",
        "P06B"
       ],
       "built": [
@@ -1286,8 +1225,12 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D"
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12"
       ],
       "moving": [
        "P06B"
@@ -1302,7 +1245,7 @@
      {
       "title": "Regola e prova",
       "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P06C e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "P01",
        "P02",
@@ -1311,17 +1254,21 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D"
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12"
       ]
      }
     ],
     "override": {
-     "caption": "Il supporto senza prolunghe, braccio dritto, piatto inclinato di 20° e appoggio in basso. In grigio le viti.",
+     "caption": "Il supporto senza prolunghe, braccio dritto, piatto inclinato di 20° e appoggio in basso.",
      "print": {
       "eyebrow": "03 / Stampa",
-      "h2": "Sette file, un pomello per ogni morsa.",
-      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità senza prolunghe: 0 × P07 e 4 pomelli P06.",
+      "h2": "Tutto stampato, anche le viti.",
+      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti e non serve viteria: viti, dadi e pomelli si stampano. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità senza prolunghe: 0 × P07, 1 pomelli P11 e 1 dadi P12.",
       "profiles": [
        {
         "key": "base",
@@ -1429,11 +1376,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · pomelli",
+        "title": "P06 · P10 · P11 · pomelli",
         "rows": [
          [
           "Orientamento",
-          "faccia con la sede esagonale sul piatto"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
          ],
          [
           "Pareti",
@@ -1444,39 +1391,51 @@
           "50%"
          ],
          [
-          "Copie",
-          "3 + 1 per ogni morsa (4 senza prolunghe)"
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Supporti",
+          "no"
          ]
         ],
-        "why": "La sede esagonale stampata a contatto col piatto viene precisa e tiene il dado a pressione.",
-        "summary": "50% · un pomello per morsa"
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "summary": "in piedi · 0,16 mm · 50%"
+       },
+       {
+        "key": "viti",
+        "title": "P08 · P09 viti · P12 dadi",
+        "rows": [
+         [
+          "Orientamento",
+          "viti in piedi sulla testa, dadi piatti"
+         ],
+         [
+          "Pareti",
+          "6 (le viti vengono piene)"
+         ],
+         [
+          "Riempimento",
+          "100%"
+         ],
+         [
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Velocità",
+          "lenta: tempo minimo per strato 8 s"
+         ],
+         [
+          "Supporti",
+          "no"
+         ]
+        ],
+        "why": "Il filetto trapezoidale passo 2,5 ha fianchi ripidi e si stampa in piedi senza supporti (è quello già provato sulle palline, con 0,3 mm di gioco radiale). Una vite piena e lenta ha strati ben fusi: la vite di cerniera lavora a trazione quando stringi il pomello. Se si sbriciola, stampa la vite più calda di 10 °C.",
+        "summary": "in piedi · piene · 0,16 mm"
        }
       ],
       "extra_rows": [
-       {
-        "label": "Viteria (si compra)",
-        "what": "cerniere",
-        "file": "",
-        "quantity": 2,
-        "dims": "M4×50 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "appoggio",
-        "file": "",
-        "quantity": 1,
-        "dims": "M4×12 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "morse",
-        "file": "",
-        "quantity": 1,
-        "dims": "M4×12 testa esagonale + dado M4, una per guaina e prolunga",
-        "print": ""
-       },
        {
         "label": "Piedini adesivi (facoltativi)",
         "what": "base",
@@ -1486,14 +1445,14 @@
         "print": ""
        }
       ],
-      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
+      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>F_GIOCO</code> se i pomelli si avvitano duri o ballano sulle viti, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
      }
     }
    },
    {
     "id": "n1",
     "label": "1 prolunga",
-    "description": "mensola 223–372 mm dal tavolo",
+    "description": "mensola 225–370 mm dal tavolo",
     "parts": [
      "P01",
      "P02",
@@ -1503,8 +1462,12 @@
      "P05",
      "P06A",
      "P06B",
-     "P06C",
-     "P06D"
+     "P08A",
+     "P08B",
+     "P09",
+     "P10",
+     "P11",
+     "P12"
     ],
     "shift": {
      "P03": [
@@ -1527,7 +1490,17 @@
       0,
       -200.0
      ],
-     "P06C": [
+     "P08B": [
+      0,
+      0,
+      -200.0
+     ],
+     "P09": [
+      0,
+      0,
+      -200.0
+     ],
+     "P10": [
       0,
       0,
       -200.0
@@ -1535,11 +1508,13 @@
     },
     "copies": {
      "P07": 1,
-     "P06D": 2
+     "P11": 2,
+     "P12": 2
     },
     "quantity": {
      "P07": 1,
-     "P06D": 2
+     "P11": 2,
+     "P12": 2
     },
     "steps": [
      {
@@ -1566,110 +1541,118 @@
      },
      {
       "title": "Morsa della guaina",
-      "short": "dado M4 + pomello",
-      "text": "Spingi un dado M4 nella sede esagonale del rinforzo di P02 e avvita un pomello P06D con la sua vite M4×12: la punta entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
+      "short": "dado P12 + pomello P11",
+      "text": "Spingi un dado P12 nella sede esagonale del rinforzo di P02 e avvitaci un pomello P11: la punta della sua vite entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
       "parts": [
        "P02",
        "P07",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "moving": [
-       "P06D"
+       "P12",
+       "P11"
       ],
       "dir": [
        0,
        1,
        0
       ],
-      "travel": 30,
-      "joints": [
-       "P02+P07"
-      ]
+      "travel": 30
      },
      {
       "title": "Slitta nell'ultimo tratto",
       "short": "e la sua morsa",
-      "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un pomello P06D (dado M4 nella sede del rinforzo).",
+      "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un dado P12 e un pomello P11.",
       "parts": [
        "P07",
        "P03",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P03",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "moving": [
        "P03",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "dir": [
        0.0,
        0,
        1.0
       ],
-      "travel": 80,
-      "joints": [
-       "P07+P03"
-      ]
+      "travel": 80
      },
      {
       "title": "Braccio sulla base",
       "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila una vite M4×50 da sinistra: la testa esagonale entra nella sua sede e non gira più.",
+      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
-       "P02"
+       "P02",
+       "P08A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P03",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "moving": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P03",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "dir": [
        0,
        0,
        1
       ],
-      "travel": 70,
-      "joints": [
-       "P01+P02"
-      ]
+      "travel": 70
      },
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita P06A (col dado) sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
       "parts": [
        "P01",
+       "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P03",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "moving": [
        "P06A"
@@ -1684,65 +1667,69 @@
      {
       "title": "Appoggio sul piatto",
       "short": "vite nella guida a T",
-      "text": "Fai scorrere la testa di una M4×12 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P06C (col dado) sotto la mensola.",
+      "text": "Fai scorrere la testa quadra della vite P09 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P10 sotto la mensola.",
       "parts": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "built": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "moving": [
        "P05",
-       "P06C"
+       "P10"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 40,
-      "joints": [
-       "P04+P05"
-      ]
+      "travel": 40
      },
      {
       "title": "Piatto sulla testa del braccio",
       "short": "forchetta sulla nocca",
-      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda M4×50 da destra, con la testa nella sede.",
+      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda vite P08 da destra, col collo quadro nella sede.",
       "parts": [
        "P03",
-       "P04"
+       "P04",
+       "P08B"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P03",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "moving": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 60,
-      "joints": [
-       "P03+P04"
-      ]
+      "travel": 60
      },
      {
       "title": "Pomello della cerniera alta",
@@ -1750,6 +1737,7 @@
       "text": "Avvita P06B sulla vite che sporge a sinistra e regola la durezza come per la cerniera bassa.",
       "parts": [
        "P04",
+       "P08B",
        "P06B"
       ],
       "built": [
@@ -1761,9 +1749,14 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D",
-       "P06D·2"
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
+       "P11·2",
+       "P12·2"
       ],
       "moving": [
        "P06B"
@@ -1778,7 +1771,7 @@
      {
       "title": "Regola e prova",
       "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P06C e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "P01",
        "P02",
@@ -1788,18 +1781,23 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D",
-       "P06D·2"
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
+       "P11·2",
+       "P12·2"
       ]
      }
     ],
     "override": {
-     "caption": "Il supporto con 1 prolunga, braccio dritto, piatto inclinato di 20° e appoggio in basso. In grigio le viti.",
+     "caption": "Il supporto con 1 prolunga, braccio dritto, piatto inclinato di 20° e appoggio in basso.",
      "print": {
       "eyebrow": "03 / Stampa",
-      "h2": "Sette file, un pomello per ogni morsa.",
-      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 1 prolunga: 1 × P07 e 5 pomelli P06.",
+      "h2": "Tutto stampato, anche le viti.",
+      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti e non serve viteria: viti, dadi e pomelli si stampano. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 1 prolunga: 1 × P07, 2 pomelli P11 e 2 dadi P12.",
       "profiles": [
        {
         "key": "base",
@@ -1907,11 +1905,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · pomelli",
+        "title": "P06 · P10 · P11 · pomelli",
         "rows": [
          [
           "Orientamento",
-          "faccia con la sede esagonale sul piatto"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
          ],
          [
           "Pareti",
@@ -1922,39 +1920,51 @@
           "50%"
          ],
          [
-          "Copie",
-          "3 + 1 per ogni morsa (5 con 1 prolunga)"
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Supporti",
+          "no"
          ]
         ],
-        "why": "La sede esagonale stampata a contatto col piatto viene precisa e tiene il dado a pressione.",
-        "summary": "50% · un pomello per morsa"
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "summary": "in piedi · 0,16 mm · 50%"
+       },
+       {
+        "key": "viti",
+        "title": "P08 · P09 viti · P12 dadi",
+        "rows": [
+         [
+          "Orientamento",
+          "viti in piedi sulla testa, dadi piatti"
+         ],
+         [
+          "Pareti",
+          "6 (le viti vengono piene)"
+         ],
+         [
+          "Riempimento",
+          "100%"
+         ],
+         [
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Velocità",
+          "lenta: tempo minimo per strato 8 s"
+         ],
+         [
+          "Supporti",
+          "no"
+         ]
+        ],
+        "why": "Il filetto trapezoidale passo 2,5 ha fianchi ripidi e si stampa in piedi senza supporti (è quello già provato sulle palline, con 0,3 mm di gioco radiale). Una vite piena e lenta ha strati ben fusi: la vite di cerniera lavora a trazione quando stringi il pomello. Se si sbriciola, stampa la vite più calda di 10 °C.",
+        "summary": "in piedi · piene · 0,16 mm"
        }
       ],
       "extra_rows": [
-       {
-        "label": "Viteria (si compra)",
-        "what": "cerniere",
-        "file": "",
-        "quantity": 2,
-        "dims": "M4×50 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "appoggio",
-        "file": "",
-        "quantity": 1,
-        "dims": "M4×12 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "morse",
-        "file": "",
-        "quantity": 2,
-        "dims": "M4×12 testa esagonale + dado M4, una per guaina e prolunga",
-        "print": ""
-       },
        {
         "label": "Piedini adesivi (facoltativi)",
         "what": "base",
@@ -1964,14 +1974,14 @@
         "print": ""
        }
       ],
-      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
+      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>F_GIOCO</code> se i pomelli si avvitano duri o ballano sulle viti, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
      }
     }
    },
    {
     "id": "n2",
     "label": "2 prolunghe",
-    "description": "mensola 323–512 mm dal tavolo",
+    "description": "mensola 325–510 mm dal tavolo",
     "parts": [
      "P01",
      "P02",
@@ -1981,8 +1991,12 @@
      "P05",
      "P06A",
      "P06B",
-     "P06C",
-     "P06D"
+     "P08A",
+     "P08B",
+     "P09",
+     "P10",
+     "P11",
+     "P12"
     ],
     "shift": {
      "P03": [
@@ -2005,7 +2019,17 @@
       0,
       -100.0
      ],
-     "P06C": [
+     "P08B": [
+      0,
+      0,
+      -100.0
+     ],
+     "P09": [
+      0,
+      0,
+      -100.0
+     ],
+     "P10": [
       0,
       0,
       -100.0
@@ -2013,11 +2037,13 @@
     },
     "copies": {
      "P07": 2,
-     "P06D": 3
+     "P11": 3,
+     "P12": 3
     },
     "quantity": {
      "P07": 2,
-     "P06D": 3
+     "P11": 3,
+     "P12": 3
     },
     "steps": [
      {
@@ -2044,30 +2070,30 @@
      },
      {
       "title": "Morsa della guaina",
-      "short": "dado M4 + pomello",
-      "text": "Spingi un dado M4 nella sede esagonale del rinforzo di P02 e avvita un pomello P06D con la sua vite M4×12: la punta entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
+      "short": "dado P12 + pomello P11",
+      "text": "Spingi un dado P12 nella sede esagonale del rinforzo di P02 e avvitaci un pomello P11: la punta della sua vite entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
       "parts": [
        "P02",
        "P07",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "moving": [
-       "P06D"
+       "P12",
+       "P11"
       ],
       "dir": [
        0,
        1,
        0
       ],
-      "travel": 30,
-      "joints": [
-       "P02+P07"
-      ]
+      "travel": 30
      },
      {
       "title": "Prolunga 2 nella precedente",
@@ -2080,7 +2106,8 @@
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2"
       ],
       "moving": [
@@ -2095,120 +2122,133 @@
      },
      {
       "title": "Morsa della prolunga 1",
-      "short": "dado M4 + pomello",
-      "text": "Spingi un dado M4 nella sede esagonale del rinforzo di P07 e avvita un pomello P06D con la sua vite M4×12: la punta entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
+      "short": "dado P12 + pomello P11",
+      "text": "Spingi un dado P12 nella sede esagonale del rinforzo di P07 e avvitaci un pomello P11: la punta della sua vite entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
       "parts": [
        "P07",
        "P07·2",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "moving": [
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "dir": [
        0,
        1,
        0
       ],
-      "travel": 30,
-      "joints": [
-       "P07+P07"
-      ]
+      "travel": 30
      },
      {
       "title": "Slitta nell'ultimo tratto",
       "short": "e la sua morsa",
-      "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un pomello P06D (dado M4 nella sede del rinforzo).",
+      "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un dado P12 e un pomello P11.",
       "parts": [
        "P07·2",
        "P03",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P03",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "moving": [
        "P03",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "dir": [
        0.0,
        0,
        1.0
       ],
-      "travel": 80,
-      "joints": [
-       "P07+P03"
-      ]
+      "travel": 80
      },
      {
       "title": "Braccio sulla base",
       "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila una vite M4×50 da sinistra: la testa esagonale entra nella sua sede e non gira più.",
+      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
-       "P02"
+       "P02",
+       "P08A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P03",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "moving": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P03",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "dir": [
        0,
        0,
        1
       ],
-      "travel": 70,
-      "joints": [
-       "P01+P02"
-      ]
+      "travel": 70
      },
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita P06A (col dado) sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
       "parts": [
        "P01",
+       "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P03",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "moving": [
        "P06A"
@@ -2223,67 +2263,72 @@
      {
       "title": "Appoggio sul piatto",
       "short": "vite nella guida a T",
-      "text": "Fai scorrere la testa di una M4×12 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P06C (col dado) sotto la mensola.",
+      "text": "Fai scorrere la testa quadra della vite P09 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P10 sotto la mensola.",
       "parts": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "built": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "moving": [
        "P05",
-       "P06C"
+       "P10"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 40,
-      "joints": [
-       "P04+P05"
-      ]
+      "travel": 40
      },
      {
       "title": "Piatto sulla testa del braccio",
       "short": "forchetta sulla nocca",
-      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda M4×50 da destra, con la testa nella sede.",
+      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda vite P08 da destra, col collo quadro nella sede.",
       "parts": [
        "P03",
-       "P04"
+       "P04",
+       "P08B"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P03",
-       "P06D·3",
+       "P12·3",
+       "P11·3",
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "moving": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 60,
-      "joints": [
-       "P03+P04"
-      ]
+      "travel": 60
      },
      {
       "title": "Pomello della cerniera alta",
@@ -2291,6 +2336,7 @@
       "text": "Avvita P06B sulla vite che sporge a sinistra e regola la durezza come per la cerniera bassa.",
       "parts": [
        "P04",
+       "P08B",
        "P06B"
       ],
       "built": [
@@ -2302,11 +2348,17 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
        "P07·2",
-       "P06D·2",
-       "P06D·3"
+       "P11·2",
+       "P11·3",
+       "P12·2",
+       "P12·3"
       ],
       "moving": [
        "P06B"
@@ -2321,7 +2373,7 @@
      {
       "title": "Regola e prova",
       "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P06C e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "P01",
        "P02",
@@ -2331,20 +2383,26 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
        "P07·2",
-       "P06D·2",
-       "P06D·3"
+       "P11·2",
+       "P11·3",
+       "P12·2",
+       "P12·3"
       ]
      }
     ],
     "override": {
-     "caption": "Il supporto con 2 prolunghe, braccio dritto, piatto inclinato di 20° e appoggio in basso. In grigio le viti.",
+     "caption": "Il supporto con 2 prolunghe, braccio dritto, piatto inclinato di 20° e appoggio in basso.",
      "print": {
       "eyebrow": "03 / Stampa",
-      "h2": "Sette file, un pomello per ogni morsa.",
-      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 2 prolunghe: 2 × P07 e 6 pomelli P06.",
+      "h2": "Tutto stampato, anche le viti.",
+      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti e non serve viteria: viti, dadi e pomelli si stampano. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 2 prolunghe: 2 × P07, 3 pomelli P11 e 3 dadi P12.",
       "profiles": [
        {
         "key": "base",
@@ -2452,11 +2510,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · pomelli",
+        "title": "P06 · P10 · P11 · pomelli",
         "rows": [
          [
           "Orientamento",
-          "faccia con la sede esagonale sul piatto"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
          ],
          [
           "Pareti",
@@ -2467,39 +2525,51 @@
           "50%"
          ],
          [
-          "Copie",
-          "3 + 1 per ogni morsa (6 con 2 prolunghe)"
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Supporti",
+          "no"
          ]
         ],
-        "why": "La sede esagonale stampata a contatto col piatto viene precisa e tiene il dado a pressione.",
-        "summary": "50% · un pomello per morsa"
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "summary": "in piedi · 0,16 mm · 50%"
+       },
+       {
+        "key": "viti",
+        "title": "P08 · P09 viti · P12 dadi",
+        "rows": [
+         [
+          "Orientamento",
+          "viti in piedi sulla testa, dadi piatti"
+         ],
+         [
+          "Pareti",
+          "6 (le viti vengono piene)"
+         ],
+         [
+          "Riempimento",
+          "100%"
+         ],
+         [
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Velocità",
+          "lenta: tempo minimo per strato 8 s"
+         ],
+         [
+          "Supporti",
+          "no"
+         ]
+        ],
+        "why": "Il filetto trapezoidale passo 2,5 ha fianchi ripidi e si stampa in piedi senza supporti (è quello già provato sulle palline, con 0,3 mm di gioco radiale). Una vite piena e lenta ha strati ben fusi: la vite di cerniera lavora a trazione quando stringi il pomello. Se si sbriciola, stampa la vite più calda di 10 °C.",
+        "summary": "in piedi · piene · 0,16 mm"
        }
       ],
       "extra_rows": [
-       {
-        "label": "Viteria (si compra)",
-        "what": "cerniere",
-        "file": "",
-        "quantity": 2,
-        "dims": "M4×50 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "appoggio",
-        "file": "",
-        "quantity": 1,
-        "dims": "M4×12 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "morse",
-        "file": "",
-        "quantity": 3,
-        "dims": "M4×12 testa esagonale + dado M4, una per guaina e prolunga",
-        "print": ""
-       },
        {
         "label": "Piedini adesivi (facoltativi)",
         "what": "base",
@@ -2509,14 +2579,14 @@
         "print": ""
        }
       ],
-      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
+      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>F_GIOCO</code> se i pomelli si avvitano duri o ballano sulle viti, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
      }
     }
    },
    {
     "id": "n3",
     "label": "3 prolunghe",
-    "description": "mensola 423–652 mm dal tavolo",
+    "description": "mensola 425–650 mm dal tavolo",
     "parts": [
      "P01",
      "P02",
@@ -2526,8 +2596,12 @@
      "P05",
      "P06A",
      "P06B",
-     "P06C",
-     "P06D"
+     "P08A",
+     "P08B",
+     "P09",
+     "P10",
+     "P11",
+     "P12"
     ],
     "shift": {
      "P03": [
@@ -2550,7 +2624,17 @@
       0,
       0.0
      ],
-     "P06C": [
+     "P08B": [
+      0,
+      0,
+      0.0
+     ],
+     "P09": [
+      0,
+      0,
+      0.0
+     ],
+     "P10": [
       0,
       0,
       0.0
@@ -2558,11 +2642,13 @@
     },
     "copies": {
      "P07": 3,
-     "P06D": 4
+     "P11": 4,
+     "P12": 4
     },
     "quantity": {
      "P07": 3,
-     "P06D": 4
+     "P11": 4,
+     "P12": 4
     },
     "steps": [
      {
@@ -2589,30 +2675,30 @@
      },
      {
       "title": "Morsa della guaina",
-      "short": "dado M4 + pomello",
-      "text": "Spingi un dado M4 nella sede esagonale del rinforzo di P02 e avvita un pomello P06D con la sua vite M4×12: la punta entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
+      "short": "dado P12 + pomello P11",
+      "text": "Spingi un dado P12 nella sede esagonale del rinforzo di P02 e avvitaci un pomello P11: la punta della sua vite entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
       "parts": [
        "P02",
        "P07",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D"
+       "P12",
+       "P11"
       ],
       "moving": [
-       "P06D"
+       "P12",
+       "P11"
       ],
       "dir": [
        0,
        1,
        0
       ],
-      "travel": 30,
-      "joints": [
-       "P02+P07"
-      ]
+      "travel": 30
      },
      {
       "title": "Prolunga 2 nella precedente",
@@ -2625,7 +2711,8 @@
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2"
       ],
       "moving": [
@@ -2640,32 +2727,33 @@
      },
      {
       "title": "Morsa della prolunga 1",
-      "short": "dado M4 + pomello",
-      "text": "Spingi un dado M4 nella sede esagonale del rinforzo di P07 e avvita un pomello P06D con la sua vite M4×12: la punta entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
+      "short": "dado P12 + pomello P11",
+      "text": "Spingi un dado P12 nella sede esagonale del rinforzo di P07 e avvitaci un pomello P11: la punta della sua vite entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
       "parts": [
        "P07",
        "P07·2",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "moving": [
-       "P06D·2"
+       "P12·2",
+       "P11·2"
       ],
       "dir": [
        0,
        1,
        0
       ],
-      "travel": 30,
-      "joints": [
-       "P07+P07"
-      ]
+      "travel": 30
      },
      {
       "title": "Prolunga 3 nella precedente",
@@ -2678,9 +2766,11 @@
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P07·3"
       ],
       "moving": [
@@ -2695,130 +2785,148 @@
      },
      {
       "title": "Morsa della prolunga 2",
-      "short": "dado M4 + pomello",
-      "text": "Spingi un dado M4 nella sede esagonale del rinforzo di P07 e avvita un pomello P06D con la sua vite M4×12: la punta entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
+      "short": "dado P12 + pomello P11",
+      "text": "Spingi un dado P12 nella sede esagonale del rinforzo di P07 e avvitaci un pomello P11: la punta della sua vite entra nella scanalatura della barra. Stringi per bloccare, allenta di mezzo giro per regolare l'altezza. Non svitarlo del tutto: è anche il fermo che non fa uscire la barra.",
       "parts": [
        "P07·2",
        "P07·3",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P07·3",
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "moving": [
-       "P06D·3"
+       "P12·3",
+       "P11·3"
       ],
       "dir": [
        0,
        1,
        0
       ],
-      "travel": 30,
-      "joints": [
-       "P07+P07"
-      ]
+      "travel": 30
      },
      {
       "title": "Slitta nell'ultimo tratto",
       "short": "e la sua morsa",
-      "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un pomello P06D (dado M4 nella sede del rinforzo).",
+      "text": "Infila la slitta P03 in P07 come le barre prima, poi chiudi la morsa con un dado P12 e un pomello P11.",
       "parts": [
        "P07·3",
        "P03",
-       "P06D·4"
+       "P12·4",
+       "P11·4"
       ],
       "built": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P07·3",
-       "P06D·3",
+       "P12·3",
+       "P11·3",
        "P03",
-       "P06D·4"
+       "P12·4",
+       "P11·4"
       ],
       "moving": [
        "P03",
-       "P06D·4"
+       "P12·4",
+       "P11·4"
       ],
       "dir": [
        0.0,
        0,
        1.0
       ],
-      "travel": 80,
-      "joints": [
-       "P07+P03"
-      ]
+      "travel": 80
      },
      {
       "title": "Braccio sulla base",
       "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila una vite M4×50 da sinistra: la testa esagonale entra nella sua sede e non gira più.",
+      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
-       "P02"
+       "P02",
+       "P08A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P07·3",
-       "P06D·3",
+       "P12·3",
+       "P11·3",
        "P03",
-       "P06D·4"
+       "P12·4",
+       "P11·4"
       ],
       "moving": [
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P07·3",
-       "P06D·3",
+       "P12·3",
+       "P11·3",
        "P03",
-       "P06D·4"
+       "P12·4",
+       "P11·4"
       ],
       "dir": [
        0,
        0,
        1
       ],
-      "travel": 70,
-      "joints": [
-       "P01+P02"
-      ]
+      "travel": 70
      },
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita P06A (col dado) sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
       "parts": [
        "P01",
+       "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P07·3",
-       "P06D·3",
+       "P12·3",
+       "P11·3",
        "P03",
-       "P06D·4"
+       "P12·4",
+       "P11·4"
       ],
       "moving": [
        "P06A"
@@ -2833,69 +2941,75 @@
      {
       "title": "Appoggio sul piatto",
       "short": "vite nella guida a T",
-      "text": "Fai scorrere la testa di una M4×12 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P06C (col dado) sotto la mensola.",
+      "text": "Fai scorrere la testa quadra della vite P09 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P10 sotto la mensola.",
       "parts": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "built": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10"
       ],
       "moving": [
        "P05",
-       "P06C"
+       "P10"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 40,
-      "joints": [
-       "P04+P05"
-      ]
+      "travel": 40
      },
      {
       "title": "Piatto sulla testa del braccio",
       "short": "forchetta sulla nocca",
-      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda M4×50 da destra, con la testa nella sede.",
+      "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda vite P08 da destra, col collo quadro nella sede.",
       "parts": [
        "P03",
-       "P04"
+       "P04",
+       "P08B"
       ],
       "built": [
        "P01",
+       "P08A",
        "P06A",
        "P02",
        "P07",
-       "P06D",
+       "P12",
+       "P11",
        "P07·2",
-       "P06D·2",
+       "P12·2",
+       "P11·2",
        "P07·3",
-       "P06D·3",
+       "P12·3",
+       "P11·3",
        "P03",
-       "P06D·4",
+       "P12·4",
+       "P11·4",
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "moving": [
        "P04",
+       "P09",
        "P05",
-       "P06C"
+       "P10",
+       "P08B"
       ],
       "dir": [
        0.94,
        0,
        0.342
       ],
-      "travel": 60,
-      "joints": [
-       "P03+P04"
-      ]
+      "travel": 60
      },
      {
       "title": "Pomello della cerniera alta",
@@ -2903,6 +3017,7 @@
       "text": "Avvita P06B sulla vite che sporge a sinistra e regola la durezza come per la cerniera bassa.",
       "parts": [
        "P04",
+       "P08B",
        "P06B"
       ],
       "built": [
@@ -2914,13 +3029,20 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
        "P07·2",
        "P07·3",
-       "P06D·2",
-       "P06D·3",
-       "P06D·4"
+       "P11·2",
+       "P11·3",
+       "P11·4",
+       "P12·2",
+       "P12·3",
+       "P12·4"
       ],
       "moving": [
        "P06B"
@@ -2935,7 +3057,7 @@
      {
       "title": "Regola e prova",
       "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P06C e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "P01",
        "P02",
@@ -2945,22 +3067,29 @@
        "P05",
        "P06A",
        "P06B",
-       "P06C",
-       "P06D",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
        "P07·2",
        "P07·3",
-       "P06D·2",
-       "P06D·3",
-       "P06D·4"
+       "P11·2",
+       "P11·3",
+       "P11·4",
+       "P12·2",
+       "P12·3",
+       "P12·4"
       ]
      }
     ],
     "override": {
-     "caption": "Il supporto con 3 prolunghe, braccio dritto, piatto inclinato di 20° e appoggio in basso. In grigio le viti.",
+     "caption": "Il supporto con 3 prolunghe, braccio dritto, piatto inclinato di 20° e appoggio in basso.",
      "print": {
       "eyebrow": "03 / Stampa",
-      "h2": "Sette file, un pomello per ogni morsa.",
-      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 3 prolunghe: 3 × P07 e 7 pomelli P06.",
+      "h2": "Tutto stampato, anche le viti.",
+      "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti e non serve viteria: viti, dadi e pomelli si stampano. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 3 prolunghe: 3 × P07, 4 pomelli P11 e 4 dadi P12.",
       "profiles": [
        {
         "key": "base",
@@ -3068,11 +3197,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · pomelli",
+        "title": "P06 · P10 · P11 · pomelli",
         "rows": [
          [
           "Orientamento",
-          "faccia con la sede esagonale sul piatto"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
          ],
          [
           "Pareti",
@@ -3083,39 +3212,51 @@
           "50%"
          ],
          [
-          "Copie",
-          "3 + 1 per ogni morsa (7 con 3 prolunghe)"
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Supporti",
+          "no"
          ]
         ],
-        "why": "La sede esagonale stampata a contatto col piatto viene precisa e tiene il dado a pressione.",
-        "summary": "50% · un pomello per morsa"
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "summary": "in piedi · 0,16 mm · 50%"
+       },
+       {
+        "key": "viti",
+        "title": "P08 · P09 viti · P12 dadi",
+        "rows": [
+         [
+          "Orientamento",
+          "viti in piedi sulla testa, dadi piatti"
+         ],
+         [
+          "Pareti",
+          "6 (le viti vengono piene)"
+         ],
+         [
+          "Riempimento",
+          "100%"
+         ],
+         [
+          "Strato",
+          "0,16 mm"
+         ],
+         [
+          "Velocità",
+          "lenta: tempo minimo per strato 8 s"
+         ],
+         [
+          "Supporti",
+          "no"
+         ]
+        ],
+        "why": "Il filetto trapezoidale passo 2,5 ha fianchi ripidi e si stampa in piedi senza supporti (è quello già provato sulle palline, con 0,3 mm di gioco radiale). Una vite piena e lenta ha strati ben fusi: la vite di cerniera lavora a trazione quando stringi il pomello. Se si sbriciola, stampa la vite più calda di 10 °C.",
+        "summary": "in piedi · piene · 0,16 mm"
        }
       ],
       "extra_rows": [
-       {
-        "label": "Viteria (si compra)",
-        "what": "cerniere",
-        "file": "",
-        "quantity": 2,
-        "dims": "M4×50 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "appoggio",
-        "file": "",
-        "quantity": 1,
-        "dims": "M4×12 testa esagonale + dado M4",
-        "print": ""
-       },
-       {
-        "label": "Viteria (si compra)",
-        "what": "morse",
-        "file": "",
-        "quantity": 4,
-        "dims": "M4×12 testa esagonale + dado M4, una per guaina e prolunga",
-        "print": ""
-       },
        {
         "label": "Piedini adesivi (facoltativi)",
         "what": "base",
@@ -3125,7 +3266,7 @@
         "print": ""
        }
       ],
-      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
+      "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>F_GIOCO</code> se i pomelli si avvitano duri o ballano sulle viti, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
      }
     }
    }
@@ -3133,8 +3274,8 @@
  },
  "print": {
   "eyebrow": "03 / Stampa",
-  "h2": "Sette file, un pomello per ogni morsa.",
-  "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 1 prolunga: 1 × P07 e 5 pomelli P06.",
+  "h2": "Tutto stampato, anche le viti.",
+  "common_html": "<b>Profilo comune:</b> Kobra S1, ugello 0,4 mm, PETG, strato 0,20 mm. Sono parametri che <b>propongo io, da verificare</b>: il supporto non è ancora stato stampato. STL in millimetri, scala 100%, già orientati e appoggiati a Z = 0. Nessun pezzo ha bisogno di supporti e non serve viteria: viti, dadi e pomelli si stampano. I pesi indicati sono a pezzo pieno: col riempimento consigliato vengono meno. Quantità con 1 prolunga: 1 × P07, 2 pomelli P11 e 2 dadi P12.",
   "profiles": [
    {
     "key": "base",
@@ -3242,11 +3383,11 @@
    },
    {
     "key": "pomelli",
-    "title": "P06 · pomelli",
+    "title": "P06 · P10 · P11 · pomelli",
     "rows": [
      [
       "Orientamento",
-      "faccia con la sede esagonale sul piatto"
+      "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
      ],
      [
       "Pareti",
@@ -3257,39 +3398,51 @@
       "50%"
      ],
      [
-      "Copie",
-      "3 + 1 per ogni morsa (5 con 1 prolunga)"
+      "Strato",
+      "0,16 mm"
+     ],
+     [
+      "Supporti",
+      "no"
      ]
     ],
-    "why": "La sede esagonale stampata a contatto col piatto viene precisa e tiene il dado a pressione.",
-    "summary": "50% · un pomello per morsa"
+    "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+    "summary": "in piedi · 0,16 mm · 50%"
+   },
+   {
+    "key": "viti",
+    "title": "P08 · P09 viti · P12 dadi",
+    "rows": [
+     [
+      "Orientamento",
+      "viti in piedi sulla testa, dadi piatti"
+     ],
+     [
+      "Pareti",
+      "6 (le viti vengono piene)"
+     ],
+     [
+      "Riempimento",
+      "100%"
+     ],
+     [
+      "Strato",
+      "0,16 mm"
+     ],
+     [
+      "Velocità",
+      "lenta: tempo minimo per strato 8 s"
+     ],
+     [
+      "Supporti",
+      "no"
+     ]
+    ],
+    "why": "Il filetto trapezoidale passo 2,5 ha fianchi ripidi e si stampa in piedi senza supporti (è quello già provato sulle palline, con 0,3 mm di gioco radiale). Una vite piena e lenta ha strati ben fusi: la vite di cerniera lavora a trazione quando stringi il pomello. Se si sbriciola, stampa la vite più calda di 10 °C.",
+    "summary": "in piedi · piene · 0,16 mm"
    }
   ],
   "extra_rows": [
-   {
-    "label": "Viteria (si compra)",
-    "what": "cerniere",
-    "file": "",
-    "quantity": 2,
-    "dims": "M4×50 testa esagonale + dado M4",
-    "print": ""
-   },
-   {
-    "label": "Viteria (si compra)",
-    "what": "appoggio",
-    "file": "",
-    "quantity": 1,
-    "dims": "M4×12 testa esagonale + dado M4",
-    "print": ""
-   },
-   {
-    "label": "Viteria (si compra)",
-    "what": "morse",
-    "file": "",
-    "quantity": 2,
-    "dims": "M4×12 testa esagonale + dado M4, una per guaina e prolunga",
-    "print": ""
-   },
    {
     "label": "Piedini adesivi (facoltativi)",
     "what": "base",
@@ -3299,7 +3452,7 @@
     "print": ""
    }
   ],
-  "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
+  "note_html": "Le misure da cambiare sono in cima a <code>blender/costruisci.py</code>: <code>GIOCO_NOCCA</code> se le cerniere restano dure anche col pomello lento, <code>GIOCO_SLITTA</code> se barre e nervature scorrono male, <code>F_GIOCO</code> se i pomelli si avvitano duri o ballano sulle viti, <code>TELEFONO_MAX</code> per telefoni più spessi, <code>TRATTO</code> per prolunghe più corte o più lunghe. Lo script ricontrolla che nessun pezzo si tocchi (aperto, con le prolunghe e chiuso) e lo scrive in <code>dati/geometria.json</code>."
  },
  "notes": {
   "eyebrow": "04 / Cerniera e braccio",
@@ -3308,19 +3461,19 @@
   "cards": [
    {
     "title": "Sezione della cerniera",
-    "html": "<p>La nocca larga 30 sta fra due orecchie con 0,2 mm di gioco per lato. La testa della M4×50 entra in una sede esagonale profonda 3 e non gira; dall'altra parte il dado è chiuso nel pomello. Girando il pomello le orecchie si flettono un poco e serrano la nocca. Il pacco è 48,4 mm, la vite sporge 1,4 mm oltre il dado e resta nascosta nel pomello.</p><svg viewBox='0 0 460 200' xmlns='http://www.w3.org/2000/svg' font-size='11' font-family='sans-serif'><rect x='84.80000000000001' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='321.2' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='140.0' y='40' width='180.0' height='120' fill='#8aa1b8'/><rect x='86.0' y='79' width='16.799999999999997' height='42' fill='#777'/><rect x='102.80000000000001' y='88' width='300.0' height='24' fill='#999' opacity='.85'/><rect x='375.2' y='30' width='66.0' height='140' fill='#333' rx='6'/><rect x='375.2' y='79' width='19.200000000000003' height='42' fill='#777'/><text x='84.80000000000001' y='185'>orecchia 9</text><text x='182.0' y='30'>nocca 30</text><text x='84.80000000000001' y='22'>testa M4 in sede da 3</text><text x='365.2' y='185'>pomello + dado</text><text x='194.0' y='185'>gioco 0,2 per lato</text></svg>"
+    "html": "<p>La nocca larga 30 sta fra due orecchie con 0,2 mm di gioco per lato. La vite stampata P08 (Ø10) ha sotto la testa un collo quadro che entra nella sede dell'orecchia e non gira; dall'altra parte si avvita il pomello, che ha la madrevite dentro. Girando il pomello le orecchie si flettono un poco e serrano la nocca. Il pacco è 48,4 mm, la vite entra 8,6 mm nel pomello (più di tre giri) e resta nascosta.</p><svg viewBox='0 0 460 200' xmlns='http://www.w3.org/2000/svg' font-size='11' font-family='sans-serif'><rect x='84.80000000000001' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='321.2' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='140.0' y='40' width='180.0' height='120' fill='#8aa1b8'/><rect x='60.80000000000001' y='46.0' width='24.0' height='108.0' fill='#9aa0a8'/><rect x='84.80000000000001' y='70.0' width='342.0' height='60.0' fill='#9aa0a8' opacity='.9'/><rect x='375.2' y='30' width='66.0' height='140' fill='#333' rx='6' opacity='.9'/><text x='84.80000000000001' y='185'>orecchia 9</text><text x='182.0' y='30'>nocca 30</text><text x='60.80000000000001' y='22'>testa e collo quadro</text><text x='365.2' y='185'>pomello filettato</text><text x='194.0' y='185'>gioco 0,2 per lato</text></svg>"
    },
    {
     "title": "Sezione del braccio",
-    "html": "<p>Ogni tratto (guaina e prolunghe) ha il canale con una fessura davanti; ogni barra (prolunghe e slitta) ha sotto una nervatura che corre nella fessura e arriva a filo. La morsa è una vite M4 nel rinforzo sul fianco: la punta preme nella scanalatura della barra, che finisce prima del fondo e fa da fermo.</p><svg viewBox='0 0 420 200' xmlns='http://www.w3.org/2000/svg' font-size='11' font-family='sans-serif'><rect x='45.0' y='30.0' width='210.0' height='140.0' fill='#8aa1b8' opacity='1'/><rect x='66.0' y='47.5' width='168.0' height='105.0' fill='#fff' opacity='1'/><rect x='101.0' y='152.5' width='98.0' height='17.5' fill='#fff' opacity='1'/><rect x='68.10000000000001' y='49.6' width='163.79999999999998' height='100.8' fill='#5aa678' opacity='0.9'/><rect x='103.1' y='149.0' width='93.8' height='21.0' fill='#5aa678' opacity='0.9'/><rect x='255.0' y='33.5' width='28.0' height='133.0' fill='#8aa1b8' opacity='1'/><line x1='30.0' y1='170.0' x2='320.0' y2='170.0' stroke='#888' stroke-dasharray='4 3'/><text x='290.0' y='95.0'>morsa</text><text x='290.0' y='109.0'>(vite M4)</text><text x='5.0' y='40.0'>canale 24 × 15</text><text x='5.0' y='55.0'>barra 23,4 × 14,4</text><text x='5.0' y='188.0'>faccia davanti = piatto di stampa</text><text x='180.0' y='188.0'>nervatura 13,4 in fessura 14</text></svg>"
+    "html": "<p>Ogni tratto (guaina e prolunghe) ha il canale con una fessura davanti; ogni barra (prolunghe e slitta) ha sotto una nervatura che corre nella fessura e arriva a filo. La morsa è il pomello P11, con la sua vite, avvitato nel dado P12 chiuso nel rinforzo sul fianco: la punta preme nella scanalatura della barra, che finisce prima del fondo e fa da fermo.</p><svg viewBox='0 0 420 200' xmlns='http://www.w3.org/2000/svg' font-size='11' font-family='sans-serif'><rect x='45.0' y='30.0' width='210.0' height='140.0' fill='#8aa1b8' opacity='1'/><rect x='66.0' y='47.5' width='168.0' height='105.0' fill='#fff' opacity='1'/><rect x='101.0' y='152.5' width='98.0' height='17.5' fill='#fff' opacity='1'/><rect x='68.10000000000001' y='49.6' width='163.79999999999998' height='100.8' fill='#5aa678' opacity='0.9'/><rect x='103.1' y='149.0' width='93.8' height='21.0' fill='#5aa678' opacity='0.9'/><rect x='255.0' y='33.5' width='35.0' height='133.0' fill='#8aa1b8' opacity='1'/><line x1='30.0' y1='170.0' x2='320.0' y2='170.0' stroke='#888' stroke-dasharray='4 3'/><text x='290.0' y='95.0'>morsa</text><text x='290.0' y='109.0'>(P11 + P12)</text><text x='5.0' y='40.0'>canale 24 × 15</text><text x='5.0' y='55.0'>barra 23,4 × 14,4</text><text x='5.0' y='188.0'>faccia davanti = piatto di stampa</text><text x='180.0' y='188.0'>nervatura 13,4 in fessura 14</text></svg>"
    },
    {
     "title": "Stabilità",
-    "html": "<p>Con un telefono da 200 g, braccio a 95° e appoggio in basso il baricentro cade 21 mm dentro la base; con l'appoggio tutto in alto e il braccio a 95° cadrebbe fuori (-3,9 mm), col braccio dritto torna dentro (7,6 mm). Con le prolunghe tieni il braccio dritto: il peso resta sopra la base, ma ogni grado di inclinazione sposta il telefono di più.</p>"
+    "html": "<p>Con un telefono da 200 g, braccio a 95° e appoggio in basso il baricentro cade 20 mm dentro la base; con l'appoggio tutto in alto e il braccio a 95° cadrebbe fuori (-3,2 mm), col braccio dritto torna dentro (8,4 mm). Con le prolunghe tieni il braccio dritto: il peso resta sopra la base, ma ogni grado di inclinazione sposta il telefono di più.</p>"
    },
    {
     "title": "Se la cerniera scivola",
-    "html": "<p>Stringi il pomello. Se anche stretto non tiene (PETG molto liscio), metti una rondella di gomma o di sughero da 0,5–1 mm fra nocca e orecchia, oppure riduci <code>GIOCO_NOCCA</code> a 0,1 e ristampa. Non stringere con la chiave: le orecchie si aprono.</p>"
+    "html": "<p>Stringi il pomello. Se anche stretto non tiene (PETG molto liscio), metti una rondella di gomma o di sughero da 0,5–1 mm fra nocca e orecchia, oppure riduci <code>GIOCO_NOCCA</code> a 0,1 e ristampa. Non forzare il pomello oltre la stretta di una mano: il filetto stampato si rovina prima delle orecchie.</p>"
    }
   ]
  },

@@ -28,11 +28,18 @@ os.makedirs(os.path.join(ROOT, "dati"), exist_ok=True)
 
 # --- misure (mm) ----------------------------------------------------------
 SEG = 96
-# viteria (si compra): tutto M4 a testa esagonale (chiave 7)
-D_M4 = 4.4                 # foro passante M4
-AF_M4_TESTA = 7.3          # sede esagonale della testa nella forchetta: non gira
-AF_M4_DADO = 7.1           # dado (o testa) M4 nel pomello: entra un po' forzato
-H_DADO_M4 = 3.4
+# viteria stampata: filetto trapezoidale passo 2,5 (quello delle palline), viti stampate in piedi
+F_P, F_H = 2.5, 0.9        # passo, profondità del filetto
+F_GIOCO = 0.35             # gioco radiale della madrevite
+D_CERN, D_MORSA = 10.0, 8.0                # viti delle cerniere; viti di morse e appoggio
+FORO = 0.8                 # foro passante = diametro + 0,8
+Q_COLLO, Q_SEDE = 10.4, 10.8               # collo quadro sotto la testa della vite di cerniera, e la sua sede nell'orecchia
+TESTA_CERN = (18.0, 4.0)   # testa tonda della vite di cerniera: Ø, alto (fuori dall'orecchia)
+L_CERN = 57.0              # vite di cerniera dalla testa alla punta
+TESTA_APP, L_APP = (12.6, 3.4), 13.5       # testa quadra della vite dell'appoggio (lato, alto), lunghezza
+L_PERNO = 12.0             # vite della morsa, unita al suo pomello
+DADO_AF, DADO_H, SEDE_DADO = 13.0, 5.0, 13.3   # dado della morsa e la sua sede esagonale nel rinforzo
+FONDO_POMELLO = 2.0        # pieno sopra la madrevite cieca dei pomelli
 
 # cerniere: forchetta (due orecchie) + nocca larga 30 in mezzo
 NOCCA = 30.0               # larghezza della nocca (braccio e testa della slitta)
@@ -40,7 +47,6 @@ GIOCO_NOCCA = 0.2          # per lato: il bullone stringe le orecchie sulla nocc
 ORECCHIA = 9.0             # spessore di ogni orecchia
 Y_IN = NOCCA / 2 + GIOCO_NOCCA          # 15,2
 Y_OUT = Y_IN + ORECCHIA                 # 24,2
-TASCA = 3.0                # profondità della sede della testa nell'orecchia
 R_NOCCA = 10.0             # metà spessore del braccio: raggio di nocche e orecchie
 
 # base
@@ -61,10 +67,10 @@ NERV_Y = FESSURA_Y - 2 * GIOCO_SLITTA   # nervatura sotto la barra: arriva a fil
 S_U0, S_U1 = 15.0, TRATTO + 1.0         # barra a braccio chiuso (entra 1 mm nel tratto largo)
 TESTA_L = 12.0             # testa della slitta sopra la guaina
 AX_C_U = TRATTO + TESTA_L  # 112: asse della cerniera alta a braccio chiuso, senza prolunghe
-BLOCCO_U, BLOCCO_V = 85.0, 3.0          # morsa sul fianco +y: vite di blocco
-PAD = (78.0, 92.0, 4.0)                  # rinforzo sul fianco: da u, a u, sporgenza
-SCANALATURA = (45.0, 98.0, 5.2, 1.0)     # sulla barra: da u, a u, larghezza, profondità
-E_MAX = BLOCCO_U - SCANALATURA[0]        # 40: oltre, la vite batte in fondo alla scanalatura
+BLOCCO_U, BLOCCO_V = 85.0, 0.0          # morsa sul fianco +y: vite di blocco
+PAD = (76.0, 94.0, 5.0)                  # rinforzo sul fianco con la sede del dado: da u, a u, sporgenza
+E_MAX = 40.0               # sfilo per tratto: oltre, la vite batte in fondo alla scanalatura
+SCANALATURA = (BLOCCO_U - E_MAX - (D_MORSA + 1) / 2, 98.0, D_MORSA + 1, 1.0)   # sulla barra: da u, a u, larghezza, profondità
 
 # piatto (P04) e appoggio (P05), nel riferimento del piatto
 P_X0, P_X1, P_W, P_T, P_R = -35.0, 115.0, 80.0, 8.0, 8.0
@@ -72,12 +78,12 @@ P_DIST = 14.0              # dall'asse al dorso del piatto
 TELEFONO_MAX = 14.0        # spessore massimo del telefono con cover
 # guida a T per la vite dell'appoggio, dentro lo spessore del piatto, aperta sul bordo basso
 T_Y = 22.0                 # fuori asse: la vite e il pomello non stanno sotto l'asola del cavo
-T_FESSURA, T_LABBRO = 4.6, 2.0          # fessura sulla faccia e spessore del labbro davanti
-T_CAVA, T_CAVA_H = 7.4, 3.6             # cava della testa: la testa non gira (7 sui piani)
+T_FESSURA, T_LABBRO = D_MORSA + FORO, 2.0          # fessura sulla faccia e spessore del labbro davanti
+T_CAVA, T_CAVA_H = TESTA_APP[0] + 0.6, TESTA_APP[1] + 0.4   # cava della testa quadra: la testa non gira
 T_X1 = 45.0                # fine della fessura
 A_FLANGIA = (-12.0, 15.5, 3.0)          # flangia dell'appoggio: da x, a x (cima della mensola), spessore
 A_MENSOLA, A_SPONDA, A_LARGO = 4.0, 8.0, 35.0
-XB_MIN = P_X0 + 4.5        # vite più in basso possibile (testa tutta nella cava)
+XB_MIN = P_X0 + TESTA_APP[0] / 2 + 0.7   # vite più in basso possibile (testa tutta nella cava)
 XB_MAX = T_X1 - T_FESSURA / 2
 
 # pomello (P06)
@@ -198,6 +204,52 @@ def radial_solid(rfun, z0, z1, name, c, seg=SEG, dz=0.1):
     return obj_from_bm(bm, name, c)
 
 
+def thread_r(t, z, r_out):
+    """Profilo trapezoidale, filetto destro: cresta 0,24 p, fianchi 0,29 p (come le palline)."""
+    u = (z - F_P * t / (2 * math.pi)) % F_P / F_P
+    crest, flank = 0.24, 0.29
+    if u < crest:
+        f = 1.0
+    elif u < crest + flank:
+        f = 1 - (u - crest) / flank
+    elif u < 1 - flank:
+        f = 0.0
+    else:
+        f = (u - (1 - flank)) / flank
+    return r_out - F_H + F_H * f
+
+
+def vite_stampata(d, z0, z1, name, punta=True):
+    """Gambo filettato Ø d lungo Z da z0 a z1, con la punta smussata in z1 (e in z0 se punta == 'due')."""
+    rc = d / 2 - F_H
+    def r(t, z):
+        v = thread_r(t, z, d / 2)
+        if punta:
+            v = min(v, rc + 0.15 + (z1 - z))
+        if punta == "due":
+            v = min(v, rc + 0.15 + (z - z0))
+        return v
+    return radial_solid(r, z0, z1, name, C_TMP, seg=72, dz=0.1)
+
+
+def madrevite(d, z0, z1, name, invito=(True, False)):
+    """Solido da sottrarre per la madrevite di una vite Ø d (gioco F_GIOCO), con l'invito a 45° alle estremità scelte."""
+    fm = d / 2 + F_GIOCO
+    def r(t, z):
+        v = thread_r(t, z, fm)
+        if invito[0]:
+            v = max(v, fm + 0.6 - (z - z0 - 0.5))
+        if invito[1]:
+            v = max(v, fm + 0.6 - (z1 - 0.5 - z))
+        return v
+    return radial_solid(r, z0, z1, name, C_TMP, seg=72, dz=0.1)
+
+
+def fase(dz):
+    """Rotazione (attorno all'asse) che allinea il filetto di un pezzo spostato di dz lungo l'asse rispetto all'altro."""
+    return Matrix.Rotation(2 * math.pi * dz / F_P, 4, 'Z')
+
+
 def mat(name, rgb, metal=0.0):
     m = bpy.data.materials.new(name)
     m.diffuse_color = (*rgb, 1)
@@ -281,9 +333,10 @@ def forcella(name, poly_xz):
 
 
 def fora_cerniera(o, ax_xz):
-    """Foro M4 attraverso le orecchie e, sull'orecchia -y, la sede della testa."""
-    boolean(o, extrude(circ(*ax_xz, D_M4 / 2, 32), -Y_OUT - 1, Y_OUT + 1, "Y", "foro"), 'DIFFERENCE')
-    boolean(o, extrude(hexa(*ax_xz, AF_M4_TESTA), -Y_OUT - 1, -Y_OUT + TASCA, "Y", "testa"), 'DIFFERENCE')
+    """Foro della vite di cerniera attraverso le orecchie e, nell'orecchia -y, la sede del collo quadro
+    (girata di 45°: col vertice in alto il cielo si stampa senza supporti)."""
+    boolean(o, extrude(circ(*ax_xz, (D_CERN + FORO) / 2, 48), -Y_OUT - 1, Y_OUT + 1, "Y", "foro"), 'DIFFERENCE')
+    boolean(o, extrude(circ(*ax_xz, Q_SEDE / math.sqrt(2), 4), -Y_OUT - 1, -Y_IN + 1, "Y", "collo"), 'DIFFERENCE')
 
 
 def barra(o, u):
@@ -303,8 +356,8 @@ def canale(o, u):
     boolean(o, extrude(box(u + PAD[0], u + PAD[1], -R_NOCCA + 0.5, R_NOCCA - 0.5), NOCCA / 2 - 0.1, Y_PAD, "Y", "pad"), 'UNION')
     boolean(o, extrude(box(u + CANALE_U0, u + TRATTO + 1, -CANALE_V / 2, CANALE_V / 2), -CANALE_Y / 2, CANALE_Y / 2, "Y", "canale"), 'DIFFERENCE')
     boolean(o, extrude(box(u + CANALE_U0, u + TRATTO + 1, -R_NOCCA - 1, -CANALE_V / 2 + 0.1), -FESSURA_Y / 2, FESSURA_Y / 2, "Y", "fessura"), 'DIFFERENCE')
-    boolean(o, extrude(circ(u + BLOCCO_U, BLOCCO_V, D_M4 / 2, 32), 0, NOCCA, "Y", "foro_blocco"), 'DIFFERENCE')
-    boolean(o, extrude(hexa(u + BLOCCO_U, BLOCCO_V, AF_M4_DADO), Y_PAD - H_DADO_M4, Y_PAD + 1, "Y", "dado"), 'DIFFERENCE')
+    boolean(o, extrude(circ(u + BLOCCO_U, BLOCCO_V, (D_MORSA + FORO) / 2, 48), 0, NOCCA, "Y", "foro_blocco"), 'DIFFERENCE')
+    boolean(o, extrude(hexa(u + BLOCCO_U, BLOCCO_V, SEDE_DADO), Y_PAD - DADO_H - 0.2, Y_PAD + 1, "Y", "dado"), 'DIFFERENCE')
 
 
 # --- pezzi ------------------------------------------------------------------
@@ -313,7 +366,9 @@ pieces = {}                                          # nome -> (oggetto nel suo 
 M = {"P01": mat("M_P01", (0.86, 0.86, 0.88)), "P02": mat("M_P02", (0.55, 0.64, 0.74)),
      "P03": mat("M_P03", (0.93, 0.93, 0.93)), "P04": mat("M_P04", (0.30, 0.55, 0.78)),
      "P05": mat("M_P05", (0.95, 0.55, 0.20)), "P06": mat("M_P06", (0.20, 0.20, 0.23)),
-     "P07": mat("M_P07", (0.45, 0.70, 0.55)), "VITE": mat("M_viteria", (0.62, 0.62, 0.65), metal=0.9)}
+     "P07": mat("M_P07", (0.45, 0.70, 0.55)), "P08": mat("M_P08", (0.62, 0.64, 0.68)),
+     "P09": mat("M_P09", (0.62, 0.64, 0.68)), "P10": mat("M_P10", (0.20, 0.20, 0.23)),
+     "P11": mat("M_P11", (0.20, 0.20, 0.23)), "P12": mat("M_P12", (0.62, 0.64, 0.68))}
 
 # P01 · base
 base = extrude(rrect(0, B_L, -B_W / 2, B_W / 2, B_R), 0, B_T, "Z", "P01_Base")
@@ -324,6 +379,8 @@ fora_cerniera(base, AX_A)
 boolean(base, extrude(circ(*AX_A, K_R + K_A + 0.6, 64), Y_OUT + 0.2, B_W, "Y", "incavo"), 'DIFFERENCE')
 # da chiuso il pomello della cerniera alta (lato -y) scende allo stesso modo
 boolean(base, extrude(circ(AX_A[0] + AX_C_U, AX_A[1], K_R + K_A + 0.6, 64), -B_W, -Y_OUT - 0.2, "Y", "incavo2"), 'DIFFERENCE')
+# e quello della morsa della guaina (lato +y)
+boolean(base, extrude(circ(AX_A[0] + BLOCCO_U, AX_A[1] + BLOCCO_V, K_R + K_A + 0.6, 64), Y_PAD + 0.5, B_W, "Y", "incavo3"), 'DIFFERENCE')
 cut = None
 for x, y in PIEDINI:
     t = extrude(circ(x, y, D_PIEDINO / 2, 48), -1, H_PIEDINO, "Z", "piede")
@@ -338,7 +395,7 @@ pieces["P01_Base"] = (base, Matrix())
 gp = [(0, -R_NOCCA), (TRATTO, -R_NOCCA), (TRATTO, R_NOCCA), (0, R_NOCCA)] + arc(0, 0, R_NOCCA, 90, 270, 36, ends=False)
 guaina = extrude(gp, -NOCCA / 2, NOCCA / 2, "Y", "P02_Guaina")
 canale(guaina, 0.0)
-boolean(guaina, extrude(circ(0, 0, D_M4 / 2, 32), -NOCCA, NOCCA, "Y", "foro"), 'DIFFERENCE')
+boolean(guaina, extrude(circ(0, 0, (D_CERN + FORO) / 2, 48), -NOCCA, NOCCA, "Y", "foro"), 'DIFFERENCE')
 pieces["P02_Guaina"] = (guaina, T(0, 0, R_NOCCA))
 
 # P03 · slitta (braccio chiuso, senza prolunghe)
@@ -346,7 +403,7 @@ tp = [(TRATTO, -R_NOCCA), (AX_C_U, -R_NOCCA)] + arc(AX_C_U, 0, R_NOCCA, -90, 90,
      [(AX_C_U, R_NOCCA), (TRATTO, R_NOCCA)]
 slitta = extrude(tp, -NOCCA / 2, NOCCA / 2, "Y", "P03_Slitta")
 barra(slitta, 0.0)
-boolean(slitta, extrude(circ(AX_C_U, 0, D_M4 / 2, 32), -NOCCA, NOCCA, "Y", "foro"), 'DIFFERENCE')
+boolean(slitta, extrude(circ(AX_C_U, 0, (D_CERN + FORO) / 2, 48), -NOCCA, NOCCA, "Y", "foro"), 'DIFFERENCE')
 pieces["P03_Slitta"] = (slitta, T(0, 0, R_NOCCA))
 
 # P07 · prolunga: barra sotto, tratto con canale e morsa sopra (si impilano)
@@ -375,12 +432,12 @@ lp = [(fx0, 0), (fx1, 0), (fx1, Z_SP), (fx1 + A_SPONDA, Z_SP), (fx1 + A_SPONDA, 
 appoggio = extrude(lp, -A_LARGO, A_LARGO, "Y", "P05_Appoggio")
 # chiavetta che corre nella fessura: l'appoggio non gira attorno all'unica vite
 boolean(appoggio, extrude(box(-10, 10, T_Y - (T_FESSURA - 0.4) / 2, T_Y + (T_FESSURA - 0.4) / 2), -T_LABBRO + 0.2, 0.5, "Z", "chiavetta"), 'UNION')
-boolean(appoggio, extrude(circ(0, T_Y, D_M4 / 2, 32), -3, ft + 1, "Z", "foro"), 'DIFFERENCE')
+boolean(appoggio, extrude(circ(0, T_Y, (D_MORSA + FORO) / 2, 48), -3, ft + 1, "Z", "foro"), 'DIFFERENCE')
 boolean(appoggio, extrude(box(-8, 8, 2, Z_SP - 2), fx1 - A_MENSOLA - 1, fx1 + 1, "X", "cavo"), 'DIFFERENCE')
 pieces["P05_Appoggio"] = (appoggio, T(0, 0, A_LARGO) @ Rx(90))
 
 
-# P06 · pomello: dado M4 (cerniere, appoggio) o testa M4 (morse) nella sede esagonale
+# P06 · pomelli zigrinati: madrevite cieca (cerniere Ø10, appoggio Ø8) o vite unita (morse Ø8)
 def k_r(t, z):
     r = K_R + K_A * math.cos(K_LOBI * t)
     r -= max(0.0, z - (K_H - 1.5)) * 1.0          # smusso in cima
@@ -388,33 +445,40 @@ def k_r(t, z):
     return r
 
 
-pomello = radial_solid(k_r, 0, K_H, "P06_Pomello", C_TMP, seg=144, dz=0.25)
-boolean(pomello, extrude(hexa(0, 0, AF_M4_DADO), -1, H_DADO_M4, "Z", "sede"), 'DIFFERENCE')
-boolean(pomello, extrude(circ(0, 0, 2.3, 32), H_DADO_M4 - 0.1, K_H - 2.0, "Z", "foro"), 'DIFFERENCE')
-pieces["P06_Pomello"] = (pomello, Matrix())
+def pomello(name, d):
+    o = radial_solid(k_r, 0, K_H, name, C_TMP, seg=144, dz=0.25)
+    boolean(o, madrevite(d, -0.5, K_H - FONDO_POMELLO, "mv"), 'DIFFERENCE')
+    return o
+
+
+pieces["P06_Pomello"] = (pomello("P06_Pomello", D_CERN), Matrix())
+pieces["P10_Pomello_Appoggio"] = (pomello("P10_Pomello_Appoggio", D_MORSA), Matrix())
+# morsa: pomello pieno con la vite sotto la faccia (z < 0); si stampa con la cima sul piatto e la vite in su
+pm = radial_solid(k_r, 0, K_H, "P11_Pomello_Morsa", C_TMP, seg=144, dz=0.25)
+boolean(pm, vite_stampata(D_MORSA, -L_PERNO, 0.4, "perno"), 'UNION')
+pieces["P11_Pomello_Morsa"] = (pm, T(0, 0, K_H) @ Rx(180))
+
+# P08 · vite di cerniera: testa tonda, collo quadro (non gira nell'orecchia), gambo filettato; Z = 0 alla battuta della testa
+th, tt = TESTA_CERN
+vc = radial_solid(lambda t, z: th / 2 - max(0.0, -z - (tt - 1.0)), -tt, 0, "P08_Vite_Cerniera", C_TMP, seg=72, dz=0.25)
+boolean(vc, extrude(circ(0, 0, Q_COLLO / math.sqrt(2), 4), -0.3, ORECCHIA - 0.4, "Z", "collo"), 'UNION')
+boolean(vc, vite_stampata(D_CERN, ORECCHIA - 0.7, L_CERN, "gambo"), 'UNION')
+pieces["P08_Vite_Cerniera"] = (vc, T(0, 0, tt))
+
+# P09 · vite dell'appoggio: testa quadra nella cava, gambo filettato; Z = 0 alla battuta della testa
+ta, tah = TESTA_APP
+va = extrude(box(-ta / 2, ta / 2, -ta / 2, ta / 2), -tah, 0, "Z", "P09_Vite_Appoggio")
+boolean(va, vite_stampata(D_MORSA, -0.3, L_APP, "gambo"), 'UNION')
+pieces["P09_Vite_Appoggio"] = (va, T(0, 0, tah))
+
+# P12 · dado della morsa, nella sede esagonale del rinforzo
+dado = extrude(hexa(0, 0, DADO_AF), 0, DADO_H, "Z", "P12_Dado_Morsa")
+boolean(dado, madrevite(D_MORSA, -0.5, DADO_H + 0.5, "mv", (True, True)), 'DIFFERENCE')
+pieces["P12_Dado_Morsa"] = (dado, Matrix())
 
 for n, (o, mp) in pieces.items():
     move_to(o, C_STAMPA)
     paint(o, M[n[:3]])
-
-
-# --- viteria (solo per la scena) ---------------------------------------------
-def vite(name, L, dado_a=None):
-    """Vite M4 lungo +Z dalla battuta della testa (Z = 0), testa esagonale sotto Z = 0, dado facoltativo."""
-    v = extrude(circ(0, 0, 2.0, 24), -0.01, L, "Z", name)
-    boolean(v, extrude(hexa(0, 0, 7.0), -2.8, 0.0, "Z", "t"), 'UNION')
-    if dado_a is not None:
-        boolean(v, extrude(hexa(0, 0, 7.0), dado_a, dado_a + 3.2, "Z", "d"), 'UNION')
-    paint(v, M["VITE"]); move_to(v, C_STAMPA)
-    return v
-
-
-L_CERNIERA = 50
-SPESSORE_PACCO = 2 * Y_OUT
-vite_cern = vite("M4x50_cerniera", L_CERNIERA, dado_a=SPESSORE_PACCO - TASCA)
-vite_blocco = vite("M4x12_blocco", 12)
-dado_blocco = extrude(hexa(0, 0, 7.0), 0, 3.2, "Z", "M4_dado_blocco"); paint(dado_blocco, M["VITE"]); move_to(dado_blocco, C_STAMPA)
-vite_app = vite("M4x12_appoggio", 12, dado_a=T_LABBRO + ft + 0.05)
 
 
 # --- pose ----------------------------------------------------------------------
@@ -424,24 +488,27 @@ def pose(alfa, e, gamma, npro=0, xb=XB_MIN):
     braccio = T(AX_A[0], 0, AX_A[1]) @ Ry(-alfa)
     sl = braccio @ T(TRATTO * npro + e, 0, 0)
     pia = sl @ T(AX_C_U, 0, 0) @ Ry(gamma) @ Rx(180)
-    to_y = Rx(-90)                                       # Z del pomello → +Y
-    gap_bl = S_Y / 2 - SCANALATURA[3] + 12 + 0.05        # faccia del pomello di blocco a vite in battuta
+    to_y = Rx(-90)                                       # Z di viti e pomelli → +Y
+    y_k = Y_OUT + 0.05                                   # faccia del pomello di cerniera
+    y_bl = S_Y / 2 - SCANALATURA[3] + 0.05 + L_PERNO      # faccia del pomello della morsa a vite in battuta
+    y_dado = Y_PAD - DADO_H - 0.1
+    z_vb, z_kb = PZ1 - T_LABBRO, PZ1 + ft + 0.05         # battuta della vite dell'appoggio e faccia del suo pomello
+    # i pezzi che girano (pomelli) prendono la fase del filetto di quello fermo: nella scena i filetti combaciano
     m = {"P01_Base": Matrix(), "P02_Guaina": braccio, "P03_Slitta": sl, "P04_Piatto": pia,
          "P05_Appoggio": pia @ T(xb, 0, PZ1),
-         "P06_Pomello": T(AX_A[0], Y_OUT + 0.05, AX_A[1]) @ to_y,
-         "P06_Pomello.2": pia @ T(0, Y_OUT + 0.05, 0) @ to_y,
-         "P06_Pomello.3": pia @ T(xb, T_Y, PZ1 + ft + 0.05) @ Matrix.Rotation(math.radians(30), 4, 'Z'),
-         "M4x50_cerniera": T(AX_A[0], -Y_OUT + TASCA, AX_A[1]) @ to_y,
-         "M4x50_cerniera.2": pia @ T(0, -Y_OUT + TASCA, 0) @ to_y,
-         "M4x12_appoggio": pia @ T(xb, T_Y, PZ1 - T_LABBRO) @ Matrix.Rotation(math.radians(30), 4, 'Z')}   # piani contro la cava
+         "P06_Pomello": T(AX_A[0], y_k, AX_A[1]) @ to_y @ fase(y_k + Y_OUT),
+         "P06_Pomello.2": pia @ T(0, y_k, 0) @ to_y @ fase(y_k + Y_OUT),
+         "P08_Vite_Cerniera": T(AX_A[0], -Y_OUT, AX_A[1]) @ to_y,
+         "P08_Vite_Cerniera.2": pia @ T(0, -Y_OUT, 0) @ to_y,
+         "P09_Vite_Appoggio": pia @ T(xb, T_Y, z_vb),
+         "P10_Pomello_Appoggio": pia @ T(xb, T_Y, z_kb) @ fase(z_kb - z_vb)}
     for j in range(npro + 1):                            # una morsa per la guaina e per ogni prolunga
         u = TRATTO * j
         if j:
             m["P07_Prolunga" + ("" if j == 1 else f".{j}")] = braccio @ T(TRATTO * (j - 1), 0, 0)
         s = "" if j == 0 else f".{j + 1}"
-        m[f"P06_Pomello.{4 + j}"] = braccio @ T(u + BLOCCO_U, gap_bl, BLOCCO_V) @ to_y
-        m["M4x12_blocco" + s] = braccio @ T(u + BLOCCO_U, gap_bl, BLOCCO_V) @ Rx(90)
-        m["M4_dado_blocco" + s] = braccio @ T(u + BLOCCO_U, Y_PAD - H_DADO_M4 + 0.1, BLOCCO_V) @ to_y
+        m["P11_Pomello_Morsa" + s] = braccio @ T(u + BLOCCO_U, y_bl, BLOCCO_V) @ to_y @ fase(y_bl - y_dado)
+        m["P12_Dado_Morsa" + s] = braccio @ T(u + BLOCCO_U, y_dado, BLOCCO_V) @ to_y
     return m
 
 
@@ -449,8 +516,7 @@ def gamma_per(alfa, tilt):
     return -(90 + tilt - alfa)          # il piatto a (90 + tilt)° da +X, il braccio ad alfa
 
 
-src = {**{n: o for n, (o, _) in pieces.items()},
-       "M4x50_cerniera": vite_cern, "M4x12_blocco": vite_blocco, "M4_dado_blocco": dado_blocco, "M4x12_appoggio": vite_app}
+src = {n: o for n, (o, _) in pieces.items()}
 
 
 def monta(c, mats, suffix):
@@ -491,12 +557,11 @@ def tocca(a, b):
 
 
 def interferenze(objs):
-    """Tutte le coppie di pezzi stampati, e ogni vite contro i pezzi: solo dove gli ingombri si toccano."""
+    """Tutte le coppie di pezzi (viti comprese): solo dove gli ingombri si toccano."""
     ks = stampati(objs)
-    viti = [k for k in objs if k not in ks]
     out = {}
     for i, a in enumerate(ks):
-        for b in ks[i + 1:] + viti:
+        for b in ks[i + 1:]:
             if tocca(objs[a], objs[b]):
                 out[f"{a}+{b}"] = interference(objs[a], objs[b])
     return out
@@ -529,13 +594,17 @@ ctrl["telefono_baricentro_x_uso_appoggio_in_alto_mm"] = baricentro_x(pose(ALFA_U
 ctrl["telefono_baricentro_x_prolunghe_mm"] = baricentro_x(P_PRO, XB_MIN)
 ctrl["telefono_baricentro_x_dritto_appoggio_in_alto_mm"] = baricentro_x(pose(90.0, E_USO, gamma_per(90.0, TILT_USO), 0, XB_MAX), XB_MAX)
 ctrl["sfilo_massimo_per_tratto_mm"] = E_MAX
-ctrl["pacco_cerniera_mm"] = round(SPESSORE_PACCO, 2)
-ctrl["vite_cerniera_filetto_oltre_il_dado_mm"] = round(L_CERNIERA - (SPESSORE_PACCO - TASCA) - 3.2, 2)
+ctrl["pacco_cerniera_mm"] = round(2 * Y_OUT, 2)
+ctrl["vite_cerniera_in_presa_nel_pomello_mm"] = round(L_CERN - 2 * Y_OUT - 0.05, 2)
+ctrl["vite_cerniera_spazio_in_fondo_al_pomello_mm"] = round(K_H - FONDO_POMELLO - (L_CERN - 2 * Y_OUT - 0.05), 2)
+ctrl["parete_sede_collo_orecchia_mm"] = round(R_NOCCA - Q_SEDE / math.sqrt(2), 2)
+ctrl["parete_nocca_attorno_al_foro_mm"] = round(R_NOCCA - (D_CERN + FORO) / 2, 2)
 ctrl["parete_sopra_canale_mm"] = round(G_T / 2 - CANALE_V / 2, 2)
-ctrl["parete_tra_dado_blocco_e_canale_mm"] = round(Y_PAD - H_DADO_M4 - CANALE_Y / 2, 2)
+ctrl["parete_tra_dado_morsa_e_canale_mm"] = round(Y_PAD - DADO_H - 0.2 - CANALE_Y / 2, 2)
+ctrl["pomello_morsa_staccato_dal_rinforzo_mm"] = round(S_Y / 2 - SCANALATURA[3] + 0.05 + L_PERNO - Y_PAD, 2)
 ctrl["piatto_dietro_la_cava_mm"] = round(P_T - T_LABBRO - T_CAVA_H, 2)
 ctrl["pomello_appoggio_sotto_la_mensola_mm"] = round(fx1 - A_MENSOLA - (K_R + K_A), 2)
-ctrl["appoggio_vite_filetto_oltre_il_dado_mm"] = round(12 - (T_LABBRO + ft + 0.05) - 3.2, 2)
+ctrl["vite_appoggio_in_presa_nel_pomello_mm"] = round(L_APP - (T_LABBRO + ft + 0.05), 2)
 
 geo["misure"] = {
     "base": [B_L, B_W, B_T], "asse_basso": AX_A, "nocca": NOCCA, "gioco_nocca_per_lato": GIOCO_NOCCA,
@@ -546,28 +615,16 @@ geo["misure"] = {
     "pomello_diametro": round(2 * (K_R + K_A), 1), "pomello_altezza": K_H,
     "posa_uso": {"alfa": ALFA_USO, "sfilo": E_USO, "piatto_dalla_verticale": TILT_USO},
     "posa_prolunghe": {"alfa": ALFA_PRO, "sfilo": E_USO, "prolunghe": N_PRO},
-    "viteria_base": {"M4x50 (cerniere)": 2, "M4x12 (morsa guaina, appoggio)": 2, "dadi M4": 4},
-    "viteria_per_prolunga": {"M4x12": 1, "dadi M4": 1, "pomelli": 1},
+    "filetto": {"passo": F_P, "profondita": F_H, "gioco_radiale": F_GIOCO, "cerniere": D_CERN, "morse_appoggio": D_MORSA},
+    "vite_cerniera": {"lunga": L_CERN, "testa": TESTA_CERN, "collo": Q_COLLO},
+    "vite_appoggio": {"lunga": L_APP, "testa": TESTA_APP}, "vite_morsa": L_PERNO, "dado_morsa": [DADO_AF, DADO_H],
 }
 
-# pose per la guida (configurazione con le prolunghe): rotazione stampa → montaggio, ingombro, viti come cilindri
+# pose per la guida (configurazione con le prolunghe): rotazione stampa → montaggio, ingombro
 geo["montaggio"] = {}
 for k in stampati(pro):
     rot = (P_PRO[k] @ pieces[k.split(".")[0]][1].inverted()).to_3x3()
     geo["montaggio"][k] = {"matrice": [[round(a, 6) for a in r] for r in rot], "bounds": bounds([pro[k]])}
-geo["viti"] = {}
-for k in pro:
-    b = k.split(".")[0]
-    if b.startswith("M4x"):
-        mw = P_PRO[k]
-        L = int(b[3:].split("_")[0])
-        d = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
-        c = mw @ Vector((0, 0, 0)) + d * (L / 2)
-        # dado: distanza dalla battuta della testa, come nella scena
-        dado = {"M4x50_cerniera": SPESSORE_PACCO - TASCA, "M4x12_appoggio": T_LABBRO + ft + 0.05,
-                "M4x12_blocco": (S_Y / 2 - SCANALATURA[3] + 12 + 0.05) - (Y_PAD - H_DADO_M4 + 0.1 + 3.2)}[b]
-        geo["viti"][k] = {"centro": [round(a, 2) for a in c], "asse": [round(a, 4) for a in d], "lunghezza": L, "diametro": 4.0,
-                          "testa": {"af": 7.0, "h": 2.8}, "dado": {"af": 7.0, "h": 3.2, "dalla_testa": round(dado, 2)}}
 
 # --- STL in posa di stampa ---------------------------------------------------
 for n, (o, mp) in pieces.items():
