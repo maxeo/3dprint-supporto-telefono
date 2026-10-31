@@ -2,7 +2,7 @@
 
 Supporto pieghevole da scrivania per telefono, ispirato a quello delle foto in `originale/`: base, braccio telescopico a tratti, prolunghe da aggiungere quante se ne vuole, piatto con appoggio regolabile. Le due cerniere sono viti stampate strette da pomelli zigrinati filettati (frizione regolabile a mano); ogni tratto del braccio ha una morsa a pomello; l'appoggio scorre su una guida a T nel piatto e si blocca col suo pomello. Tutto stampato, viti e dadi compresi: non serve viteria.
 
-**Guida di stampa e montaggio:** [guida.html](guida.html)
+**Guida di stampa e montaggio:** [guida.html](guida.html) · online: https://maxeo.github.io/3dprint-guide/supporto-telefono/guida.html
 
 ## Pezzi
 
