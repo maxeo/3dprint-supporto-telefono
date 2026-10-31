@@ -85,7 +85,7 @@ K_R, K_LOBI, K_A, K_H = 10.3, 12, 0.7, 11.0
 
 # pose della scena
 ALFA_USO, E_USO, TILT_USO = 95.0, 20.0, 20.0     # braccio da +X, sfilo, inclinazione del piatto dalla verticale
-ALFA_PRO, N_PRO = 90.0, 2                        # con le prolunghe il braccio sta dritto
+ALFA_PRO, N_PRO = 90.0, 3                        # con le prolunghe il braccio sta dritto (la guida ne toglie da 3 a 0)
 TELEFONO = (160.0, 75.0, 9.0, 200.0)              # alto, largo, spesso, grammi (per il baricentro)
 
 if bpy.app.background:
@@ -563,7 +563,11 @@ for k in pro:
         L = int(b[3:].split("_")[0])
         d = (mw.to_3x3() @ Vector((0, 0, 1))).normalized()
         c = mw @ Vector((0, 0, 0)) + d * (L / 2)
-        geo["viti"][k] = {"centro": [round(a, 2) for a in c], "asse": [round(a, 4) for a in d], "lunghezza": L, "diametro": 4.0}
+        # dado: distanza dalla battuta della testa, come nella scena
+        dado = {"M4x50_cerniera": SPESSORE_PACCO - TASCA, "M4x12_appoggio": T_LABBRO + ft + 0.05,
+                "M4x12_blocco": (S_Y / 2 - SCANALATURA[3] + 12 + 0.05) - (Y_PAD - H_DADO_M4 + 0.1 + 3.2)}[b]
+        geo["viti"][k] = {"centro": [round(a, 2) for a in c], "asse": [round(a, 4) for a in d], "lunghezza": L, "diametro": 4.0,
+                          "testa": {"af": 7.0, "h": 2.8}, "dado": {"af": 7.0, "h": 3.2, "dalla_testa": round(dado, 2)}}
 
 # --- STL in posa di stampa ---------------------------------------------------
 for n, (o, mp) in pieces.items():

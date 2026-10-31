@@ -22,7 +22,7 @@ Tutti i pezzi si stampano senza supporti (PETG, 0,2 mm; parametri proposti nella
 
 ## Misure principali
 
-- Mensola dal tavolo, braccio dritto: 123–232 mm senza prolunghe, 223–372 con una, 323–512 con due (dal tutto chiuso al tutto sfilato con l'appoggio in alto).
+- Mensola dal tavolo, braccio dritto: 123–232 mm senza prolunghe, 223–372 con una, 323–512 con due, 423–652 con tre (dal tutto chiuso al tutto sfilato con l’appoggio in alto). Nella guida si sceglie il numero di prolunghe (di solito 1).
 - Ogni tratto (guaina o prolunga) sfila fino a 40 mm; la vite della morsa corre in una scanalatura che fa da fermo.
 - Barre con una nervatura davanti che corre nella fessura del canale: arriva a filo, così prolunghe e slitta si stampano coricate senza supporti.
 - Appoggio: corsa di 73 mm lungo il piatto; telefono fino a 14 mm con la cover; asola per il cavo.
