@@ -473,6 +473,8 @@ appoggio = extrude(lp, -A_LARGO, A_LARGO, "Y", "P05_Appoggio")
 boolean(appoggio, extrude(box(-10, 10, T_Y - (T_FESSURA - 0.4) / 2, T_Y + (T_FESSURA - 0.4) / 2), -T_LABBRO + 0.2, 0.5, "Z", "chiavetta"), 'UNION')
 boolean(appoggio, extrude(circ(0, T_Y, (D_MORSA + FORO) / 2, 48), -3, ft + 1, "Z", "foro"), 'DIFFERENCE')
 boolean(appoggio, extrude(box(-8, 8, 2, Z_SP - 2), fx1 - A_MENSOLA - 1, fx1 + 1, "X", "cavo"), 'DIFFERENCE')
+# l'asola si apre fino in cima attraverso la sponda: il cavo si infila e si sfila dall'alto
+boolean(appoggio, extrude(box(-8, 8, Z_SP - 2.5, Z_SP + 5), fx1 - A_MENSOLA - 1, fx1 + A_SPONDA + 1, "X", "apertura"), 'DIFFERENCE')
 pieces["P05_Appoggio"] = (appoggio, T(0, 0, A_LARGO) @ Rx(90))
 
 

@@ -32,7 +32,7 @@ Tutti i pezzi si stampano senza supporti (PETG, 0,2 mm; parametri proposti nella
 - Mensola dal tavolo, braccio dritto: 125–230 mm senza prolunghe, 225–370 con una, 325–510 con due, 425–650 con tre (dal tutto chiuso al tutto sfilato con l’appoggio in alto). Nella guida si sceglie il numero di prolunghe (di solito 1).
 - Ogni tratto (guaina o prolunga) sfila fino a 40 mm; la vite del pomello della morsa (P11, nel dado P12) corre in una scanalatura che fa da fermo.
 - Barre con una nervatura davanti che corre nella fessura del canale: arriva a filo, così prolunghe e slitta si stampano coricate senza supporti.
-- Appoggio: corsa di 69 mm lungo il piatto; telefono fino a 14 mm con la cover; asola per il cavo.
+- Appoggio: corsa di 69 mm lungo il piatto; telefono fino a 14 mm con la cover; asola per il cavo, aperta fino in cima alla sponda per infilarlo e sfilarlo dall'alto.
 - Chiuso (senza prolunghe): 185 × 90 × 58 mm.
 - Cerniera bassa a scatti di 10°: la nocca della guaina ha 36 denti radiali (alti 0,65 mm) sulla faccia destra e la rondella P14, ferma sulla base col suo piede, gli stessi girati. Il pomello deve solo tenerli in presa; allentato di mezzo giro lascia 0,85 mm di gioco e il braccio cambia scatto. Chi ha già stampato il supporto ristampa solo P02 e P14.
 - Galletto P13 (facoltativo): mozzo lungo fino al bordo della base e alette fuori, rifilate a 16,5 mm dall'asse per non toccare il tavolo; si avvita sulla stessa vite P08 al posto del P06. Lo genera `blender/alternative.py` (dopo `costruisci.py`), con i suoi controlli in `dati/alternative.json`.

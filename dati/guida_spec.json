@@ -365,7 +365,7 @@
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Mensola con la sponda davanti, per telefoni spessi fino a 14 mm con la cover, e un'asola in mezzo per il cavo. Scorre lungo il piatto per 69 mm: la vite P09 con la testa quadra nella guida a T e il pomello sotto la mensola la bloccano. Una chiavetta sul retro corre nella fessura e non la fa girare. 15 g.</p>"
+   "note_html": "<p>Mensola con la sponda davanti, per telefoni spessi fino a 14 mm con la cover, e un'asola in mezzo per il cavo, aperta fino in cima alla sponda: il cavo si infila e si sfila dall'alto. Scorre lungo il piatto per 69 mm: la vite P09 con la testa quadra nella guida a T e il pomello sotto la mensola la bloccano. Una chiavetta sul retro corre nella fessura e non la fa girare. 14 g.</p>"
   },
   {
    "id": "P06A",
@@ -1015,7 +1015,7 @@
   {
    "title": "Cavo nell'asola",
    "short": "spina sopra la mensola",
-   "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
+   "text": "Cala il cavo dall'alto nell'apertura della sponda dell'appoggio P05 e porta la spina nell'asola: il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
    "parts": [
     "P05",
     "RIF_Cavo_Spina_prolunghe",
@@ -1046,7 +1046,7 @@
   {
    "title": "Telefono e regolazioni",
    "short": "sulla spina, poi altezza e appoggio",
-   "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+   "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli il telefono, sfila il cavo dall'alto, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
    "parts": [
     "RIF_Telefono_prolunghe",
     "RIF_Telefono_Schermo_prolunghe",
@@ -1353,7 +1353,7 @@
      {
       "title": "Cavo nell'asola",
       "short": "spina sopra la mensola",
-      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
+      "text": "Cala il cavo dall'alto nell'apertura della sponda dell'appoggio P05 e porta la spina nell'asola: il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
        "P05",
        "RIF_Cavo_Spina_prolunghe",
@@ -1381,7 +1381,7 @@
      {
       "title": "Telefono e regolazioni",
       "short": "sulla spina, poi altezza e appoggio",
-      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli il telefono, sfila il cavo dall'alto, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "RIF_Telefono_prolunghe",
        "RIF_Telefono_Schermo_prolunghe",
@@ -1936,7 +1936,7 @@
      {
       "title": "Cavo nell'asola",
       "short": "spina sopra la mensola",
-      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
+      "text": "Cala il cavo dall'alto nell'apertura della sponda dell'appoggio P05 e porta la spina nell'asola: il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
        "P05",
        "RIF_Cavo_Spina_prolunghe",
@@ -1967,7 +1967,7 @@
      {
       "title": "Telefono e regolazioni",
       "short": "sulla spina, poi altezza e appoggio",
-      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli il telefono, sfila il cavo dall'alto, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "RIF_Telefono_prolunghe",
        "RIF_Telefono_Schermo_prolunghe",
@@ -2598,7 +2598,7 @@
      {
       "title": "Cavo nell'asola",
       "short": "spina sopra la mensola",
-      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
+      "text": "Cala il cavo dall'alto nell'apertura della sponda dell'appoggio P05 e porta la spina nell'asola: il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
        "P05",
        "RIF_Cavo_Spina_prolunghe",
@@ -2632,7 +2632,7 @@
      {
       "title": "Telefono e regolazioni",
       "short": "sulla spina, poi altezza e appoggio",
-      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli il telefono, sfila il cavo dall'alto, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "RIF_Telefono_prolunghe",
        "RIF_Telefono_Schermo_prolunghe",
@@ -3345,7 +3345,7 @@
      {
       "title": "Cavo nell'asola",
       "short": "spina sopra la mensola",
-      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
+      "text": "Cala il cavo dall'alto nell'apertura della sponda dell'appoggio P05 e porta la spina nell'asola: il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
        "P05",
        "RIF_Cavo_Spina_prolunghe",
@@ -3382,7 +3382,7 @@
      {
       "title": "Telefono e regolazioni",
       "short": "sulla spina, poi altezza e appoggio",
-      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli il telefono, sfila il cavo dall'alto, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
       "parts": [
        "RIF_Telefono_prolunghe",
        "RIF_Telefono_Schermo_prolunghe",
