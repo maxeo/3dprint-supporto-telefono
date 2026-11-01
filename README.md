@@ -13,15 +13,17 @@ Supporto pieghevole da scrivania per telefono, ispirato a quello delle foto in `
 | P03 | `stl/P03_Slitta.stl` | 107 × 30 × 20 | 1 |
 | P04 | `stl/P04_Piatto.stl` | 150 × 80 × 32 | 1 |
 | P05 | `stl/P05_Appoggio.stl` | 35,5 × 20,3 × 70 | 1 |
-| P06 | `stl/P06_Pomello.stl` (cerniere, madrevite Ø10) | Ø22 × 11 | 2 |
+| P06 | `stl/P06_Pomello.stl` (cerniere, madrevite Ø10) | Ø22 × 13 | 2 |
 | P07 | `stl/P07_Prolunga.stl` | 185 × 35 × 20 | quante ne vuoi (anche 0) |
 | P08 | `stl/P08_Vite_Cerniera.stl` (Ø10 × 57, testa tonda e collo quadro) | Ø18 × 61 | 2 |
 | P09 | `stl/P09_Vite_Appoggio.stl` (Ø8, testa quadra) | 12,6 × 12,6 × 16,9 | 1 |
-| P10 | `stl/P10_Pomello_Appoggio.stl` (madrevite Ø8) | Ø22 × 11 | 1 |
+| P10 | `stl/P10_Pomello_Appoggio.stl` (madrevite Ø8) | Ø22 × 13 | 1 |
 | P11 | `stl/P11_Pomello_Morsa.stl` (pomello con vite Ø8 × 12) | Ø22 × 23 | 1 + 1 per prolunga |
 | P12 | `stl/P12_Dado_Morsa.stl` (dado esagonale 13, madrevite Ø8) | 13 × 15 × 5 | 1 + 1 per prolunga |
+| P14 | `stl/P14_Rondella_Dentata.stl` (cerniera bassa, 36 denti) | 19 × 19,9 × 2,2 | 1 |
+| P13 | `stl/P13_Galletto.stl` (facoltativo: al posto di P06 sulla cerniera bassa) | 33 × 22 × 30,7 | 0–1 |
 
-Filetti trapezoidali passo 2,5 (come le palline), 0,35 mm di gioco radiale; viti e pomelli si stampano in piedi senza supporti. Viti e dadi pieni, strato 0,16 mm. Facoltativi: 4 piedini adesivi Ø10.
+Filetti trapezoidali passo 2,5 (come le palline), 0,35 mm di gioco radiale; nei pomelli P06 e P10 la madrevite cieca lascia circa 3 mm liberi oltre la punta della vite, perché il cielo del foro stampato cala un poco e la vite non deve battere sul fondo; viti e pomelli si stampano in piedi senza supporti. Viti e dadi pieni, strato 0,16 mm. Facoltativi: 4 piedini adesivi Ø10.
 
 Tutti i pezzi si stampano senza supporti (PETG, 0,2 mm; parametri proposti nella guida, da verificare).
 
@@ -32,6 +34,8 @@ Tutti i pezzi si stampano senza supporti (PETG, 0,2 mm; parametri proposti nella
 - Barre con una nervatura davanti che corre nella fessura del canale: arriva a filo, così prolunghe e slitta si stampano coricate senza supporti.
 - Appoggio: corsa di 69 mm lungo il piatto; telefono fino a 14 mm con la cover; asola per il cavo.
 - Chiuso (senza prolunghe): 185 × 90 × 58 mm.
+- Cerniera bassa a scatti di 10°: la nocca della guaina ha 36 denti radiali (alti 0,65 mm) sulla faccia destra e la rondella P14, ferma sulla base col suo piede, gli stessi girati. Il pomello deve solo tenerli in presa; allentato di mezzo giro lascia 0,85 mm di gioco e il braccio cambia scatto. Chi ha già stampato il supporto ristampa solo P02 e P14.
+- Galletto P13 (facoltativo): mozzo lungo fino al bordo della base e alette fuori, rifilate a 16,5 mm dall'asse per non toccare il tavolo; si avvita sulla stessa vite P08 al posto del P06. Lo genera `blender/alternative.py` (dopo `costruisci.py`), con i suoi controlli in `dati/alternative.json`.
 
 ## Rigenerare
 
@@ -46,4 +50,4 @@ Tutti i pezzi si stampano senza supporti (PETG, 0,2 mm; parametri proposti nella
 ## Note
 
 - Non ancora stampato: giochi di cerniere e barre (`GIOCO_NOCCA`, `GIOCO_SLITTA`) e il gioco dei filetti (`F_GIOCO`) sono valori di partenza.
-- Con le prolunghe, o con l'appoggio tutto in alto, tieni il braccio dritto: con il braccio a 95° e l'appoggio in alto il baricentro di un telefono da 200 g cade 3 mm fuori dalla base.
+- Con le prolunghe, o con l'appoggio tutto in alto, tieni il braccio dritto: con il braccio a 100° (uno scatto oltre il dritto) e l'appoggio in alto il baricentro di un telefono da 200 g cade 14,6 mm fuori dalla base.

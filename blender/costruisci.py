@@ -39,7 +39,7 @@ L_CERN = 57.0              # vite di cerniera dalla testa alla punta
 TESTA_APP, L_APP = (12.6, 3.4), 13.5       # testa quadra della vite dell'appoggio (lato, alto), lunghezza
 L_PERNO = 12.0             # vite della morsa, unita al suo pomello
 DADO_AF, DADO_H, SEDE_DADO = 13.0, 5.0, 13.3   # dado della morsa e la sua sede esagonale nel rinforzo
-FONDO_POMELLO = 2.0        # pieno sopra la madrevite cieca dei pomelli
+FONDO_POMELLO = 1.6        # pieno sopra la madrevite cieca dei pomelli
 
 # cerniere: forchetta (due orecchie) + nocca larga 30 in mezzo
 NOCCA = 30.0               # larghezza della nocca (braccio e testa della slitta)
@@ -48,6 +48,14 @@ ORECCHIA = 9.0             # spessore di ogni orecchia
 Y_IN = NOCCA / 2 + GIOCO_NOCCA          # 15,2
 Y_OUT = Y_IN + ORECCHIA                 # 24,2
 R_NOCCA = 10.0             # metà spessore del braccio: raggio di nocche e orecchie
+# cerniera bassa a scatti: denti radiali fra la nocca della guaina (lato del pomello) e la rondella P14,
+# che col piede appoggia sulla base e non gira; la vite deve solo tenere i denti in presa
+DENTI_N, DENTI_H = 36, 0.65                # scatti da 10°, denti a 90° sul raggio medio
+DENTI_R = (5.9, 9.5)                       # corona dei denti
+R_INCASSO = 10.5                           # incasso sulle facce della nocca bassa (rondella e piede)
+YN_V = 12.85                               # fondo dei denti della nocca (lato +y); punte a YN_V + DENTI_H
+GIOCO_DENTI = 0.15                         # fra punte e fondi, a denti in presa
+GIOCO_SGANCIO = 0.65                       # lato della testa della vite: allentando il pomello i denti si staccano
 
 # base
 B_L, B_W, B_T, B_R = 185.0, 90.0, 7.0, 12.0
@@ -88,9 +96,10 @@ XB_MAX = T_X1 - T_FESSURA / 2
 
 # pomello (P06)
 K_R, K_LOBI, K_A, K_H = 10.3, 12, 0.7, 11.0
+K_H_MV = 13.0              # pomelli con la madrevite (P06, P10): più alti, ~2,5 mm liberi sul fondo oltre la punta della vite
 
 # pose della scena
-ALFA_USO, E_USO, TILT_USO = 95.0, 20.0, 20.0     # braccio da +X, sfilo, inclinazione del piatto dalla verticale
+ALFA_USO, E_USO, TILT_USO = 100.0, 20.0, 20.0     # braccio da +X, sfilo, inclinazione del piatto dalla verticale
 ALFA_PRO, N_PRO = 90.0, 3                        # con le prolunghe il braccio sta dritto (la guida ne toglie da 3 a 0)
 TELEFONO = (160.0, 75.0, 9.0, 200.0)              # alto, largo, spesso, grammi (per il baricentro)
 
@@ -325,6 +334,29 @@ def Rx(deg):
     return Matrix.Rotation(math.radians(deg), 4, 'X')
 
 
+def dente(t):
+    """1 sulle punte dei denti (multipli del passo), 0 sui fondi."""
+    f = (t * DENTI_N / (2 * math.pi)) % 1.0
+    return abs(2 * f - 1)
+
+
+def corona(r0, r1, zb, zfun, name):
+    """Anello da r0 a r1 col fondo a zb e la cima zfun(theta): denti radiali, due campioni per dente."""
+    bm = bmesh.new()
+    ang = [math.pi * j / DENTI_N for j in range(2 * DENTI_N)]
+    def ring(r, top):
+        return [bm.verts.new((r * math.cos(t), r * math.sin(t), zfun(t) if top else zb)) for t in ang]
+    it, ot, ib, ob = ring(r0, True), ring(r1, True), ring(r0, False), ring(r1, False)
+    for j in range(len(ang)):
+        i = (j + 1) % len(ang)
+        bm.faces.new((it[j], ot[j], ot[i])); bm.faces.new((it[j], ot[i], it[i]))
+        bm.faces.new((ib[j], ib[i], ob[i], ob[j]))
+        bm.faces.new((ot[j], ob[j], ob[i], ot[i]))
+        bm.faces.new((it[j], it[i], ib[i], ib[j]))
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    return obj_from_bm(bm, name, C_TMP)
+
+
 def forcella(name, poly_xz):
     """Due orecchie (y da Y_IN a Y_OUT e simmetrica)."""
     o = extrude(poly_xz, Y_IN, Y_OUT, "Y", name)
@@ -368,7 +400,8 @@ M = {"P01": mat("M_P01", (0.86, 0.86, 0.88)), "P02": mat("M_P02", (0.55, 0.64, 0
      "P05": mat("M_P05", (0.95, 0.55, 0.20)), "P06": mat("M_P06", (0.20, 0.20, 0.23)),
      "P07": mat("M_P07", (0.45, 0.70, 0.55)), "P08": mat("M_P08", (0.62, 0.64, 0.68)),
      "P09": mat("M_P09", (0.62, 0.64, 0.68)), "P10": mat("M_P10", (0.20, 0.20, 0.23)),
-     "P11": mat("M_P11", (0.20, 0.20, 0.23)), "P12": mat("M_P12", (0.62, 0.64, 0.68))}
+     "P11": mat("M_P11", (0.20, 0.20, 0.23)), "P12": mat("M_P12", (0.62, 0.64, 0.68)),
+     "P14": mat("M_P14", (0.85, 0.35, 0.20))}
 
 # P01 · base
 base = extrude(rrect(0, B_L, -B_W / 2, B_W / 2, B_R), 0, B_T, "Z", "P01_Base")
@@ -395,6 +428,12 @@ pieces["P01_Base"] = (base, Matrix())
 gp = [(0, -R_NOCCA), (TRATTO, -R_NOCCA), (TRATTO, R_NOCCA), (0, R_NOCCA)] + arc(0, 0, R_NOCCA, 90, 270, 36, ends=False)
 guaina = extrude(gp, -NOCCA / 2, NOCCA / 2, "Y", "P02_Guaina")
 canale(guaina, 0.0)
+# nocca: lato +y incassato con la corona di denti, lato -y accorciato per il gioco di sgancio
+boolean(guaina, extrude(circ(0, 0, R_INCASSO, 96), YN_V, NOCCA, "Y", "incasso"), 'DIFFERENCE')
+dn = corona(*DENTI_R, YN_V - 0.5, lambda t: YN_V + DENTI_H * dente(t), "denti")
+dn.data.transform(Rx(-90))                       # Z della corona → +y della guaina
+boolean(guaina, dn, 'UNION')
+boolean(guaina, extrude(circ(0, 0, R_INCASSO, 96), -NOCCA, -(Y_IN - GIOCO_SGANCIO), "Y", "sgancio"), 'DIFFERENCE')
 boolean(guaina, extrude(circ(0, 0, (D_CERN + FORO) / 2, 48), -NOCCA, NOCCA, "Y", "foro"), 'DIFFERENCE')
 pieces["P02_Guaina"] = (guaina, T(0, 0, R_NOCCA))
 
@@ -438,16 +477,16 @@ pieces["P05_Appoggio"] = (appoggio, T(0, 0, A_LARGO) @ Rx(90))
 
 
 # P06 · pomelli zigrinati: madrevite cieca (cerniere Ø10, appoggio Ø8) o vite unita (morse Ø8)
-def k_r(t, z):
+def k_r(t, z, h=K_H):
     r = K_R + K_A * math.cos(K_LOBI * t)
-    r -= max(0.0, z - (K_H - 1.5)) * 1.0          # smusso in cima
+    r -= max(0.0, z - (h - 1.5)) * 1.0            # smusso in cima
     r -= max(0.0, 0.4 - z)                        # niente zampa d'elefante
     return r
 
 
 def pomello(name, d):
-    o = radial_solid(k_r, 0, K_H, name, C_TMP, seg=144, dz=0.25)
-    boolean(o, madrevite(d, -0.5, K_H - FONDO_POMELLO, "mv"), 'DIFFERENCE')
+    o = radial_solid(lambda t, z: k_r(t, z, K_H_MV), 0, K_H_MV, name, C_TMP, seg=144, dz=0.25)
+    boolean(o, madrevite(d, -0.5, K_H_MV - FONDO_POMELLO, "mv"), 'DIFFERENCE')
     return o
 
 
@@ -476,6 +515,16 @@ dado = extrude(hexa(0, 0, DADO_AF), 0, DADO_H, "Z", "P12_Dado_Morsa")
 boolean(dado, madrevite(D_MORSA, -0.5, DADO_H + 0.5, "mv", (True, True)), 'DIFFERENCE')
 pieces["P12_Dado_Morsa"] = (dado, Matrix())
 
+# P14 · rondella dentata fra la nocca bassa e l'orecchia destra: il piede appoggia sulla base e non la lascia girare
+# riferimento: Z = 0 sulla faccia contro l'orecchia, Z verso la nocca; X = x e Y = z del mondo, asse in 0
+Y_RON = Y_IN - 0.05
+ZR_V = Y_RON - (YN_V + DENTI_H + GIOCO_DENTI)    # fondi dei denti della rondella
+ron = extrude(circ(0, 0, DENTI_R[1], 96), 0, ZR_V, "Z", "P14_Rondella_Dentata")
+boolean(ron, extrude(box(-7.5, 3.0, B_T + 0.1 - AX_A[1], 0), 0, ZR_V, "Z", "piede"), 'UNION')
+boolean(ron, corona(*DENTI_R, ZR_V - 0.5, lambda t: ZR_V + DENTI_H * (1 - dente(t)), "denti"), 'UNION')
+boolean(ron, extrude(circ(0, 0, (D_CERN + FORO) / 2, 48), -1, ZR_V + DENTI_H + 1, "Z", "foro"), 'DIFFERENCE')
+pieces["P14_Rondella_Dentata"] = (ron, Matrix())
+
 for n, (o, mp) in pieces.items():
     move_to(o, C_STAMPA)
     paint(o, M[n[:3]])
@@ -499,6 +548,7 @@ def pose(alfa, e, gamma, npro=0, xb=XB_MIN):
          "P06_Pomello": T(AX_A[0], y_k, AX_A[1]) @ to_y @ fase(y_k + Y_OUT),
          "P06_Pomello.2": pia @ T(0, y_k, 0) @ to_y @ fase(y_k + Y_OUT),
          "P08_Vite_Cerniera": T(AX_A[0], -Y_OUT, AX_A[1]) @ to_y,
+         "P14_Rondella_Dentata": T(AX_A[0], Y_RON, AX_A[1]) @ Rx(90),
          "P08_Vite_Cerniera.2": pia @ T(0, -Y_OUT, 0) @ to_y,
          "P09_Vite_Appoggio": pia @ T(xb, T_Y, z_vb),
          "P10_Pomello_Appoggio": pia @ T(xb, T_Y, z_kb) @ fase(z_kb - z_vb)}
@@ -596,7 +646,10 @@ ctrl["telefono_baricentro_x_dritto_appoggio_in_alto_mm"] = baricentro_x(pose(90.
 ctrl["sfilo_massimo_per_tratto_mm"] = E_MAX
 ctrl["pacco_cerniera_mm"] = round(2 * Y_OUT, 2)
 ctrl["vite_cerniera_in_presa_nel_pomello_mm"] = round(L_CERN - 2 * Y_OUT - 0.05, 2)
-ctrl["vite_cerniera_spazio_in_fondo_al_pomello_mm"] = round(K_H - FONDO_POMELLO - (L_CERN - 2 * Y_OUT - 0.05), 2)
+ctrl["vite_cerniera_spazio_in_fondo_al_pomello_mm"] = round(K_H_MV - FONDO_POMELLO - (L_CERN - 2 * Y_OUT - 0.05), 2)
+ctrl["denti_gioco_per_sganciarli_mm"] = round(GIOCO_SGANCIO + GIOCO_DENTI + 0.05, 2)
+ctrl["denti_altezza_mm"] = DENTI_H
+ctrl["rondella_spessore_mm"] = round(ZR_V, 2)
 ctrl["parete_sede_collo_orecchia_mm"] = round(R_NOCCA - Q_SEDE / math.sqrt(2), 2)
 ctrl["parete_nocca_attorno_al_foro_mm"] = round(R_NOCCA - (D_CERN + FORO) / 2, 2)
 ctrl["parete_sopra_canale_mm"] = round(G_T / 2 - CANALE_V / 2, 2)
@@ -605,14 +658,16 @@ ctrl["pomello_morsa_staccato_dal_rinforzo_mm"] = round(S_Y / 2 - SCANALATURA[3] 
 ctrl["piatto_dietro_la_cava_mm"] = round(P_T - T_LABBRO - T_CAVA_H, 2)
 ctrl["pomello_appoggio_sotto_la_mensola_mm"] = round(fx1 - A_MENSOLA - (K_R + K_A), 2)
 ctrl["vite_appoggio_in_presa_nel_pomello_mm"] = round(L_APP - (T_LABBRO + ft + 0.05), 2)
+ctrl["vite_appoggio_spazio_in_fondo_al_pomello_mm"] = round(K_H_MV - FONDO_POMELLO - (L_APP - (T_LABBRO + ft + 0.05)), 2)
 
 geo["misure"] = {
-    "base": [B_L, B_W, B_T], "asse_basso": AX_A, "nocca": NOCCA, "gioco_nocca_per_lato": GIOCO_NOCCA,
+    "base": [B_L, B_W, B_T], "asse_basso": AX_A,
+    "denti": {"numero": DENTI_N, "scatto_gradi": round(360 / DENTI_N, 1), "altezza": DENTI_H, "raggi": DENTI_R}, "nocca": NOCCA, "gioco_nocca_per_lato": GIOCO_NOCCA,
     "orecchia": ORECCHIA, "tratto": TRATTO, "braccio": [NOCCA, G_T], "canale": [CANALE_Y, CANALE_V],
     "barra": [round(S_U1 - S_U0, 1), S_Y, S_V], "nervatura": NERV_Y, "fessura": FESSURA_Y, "gioco_slitta_per_lato": GIOCO_SLITTA,
-    "piatto": [P_X1 - P_X0, P_W, P_T], "asse_piatto_dal_dorso": P_DIST, "telefono_max": TELEFONO_MAX,
+    "piatto": [P_X1 - P_X0, P_W, P_T], "asse_piatto_dal_dorso": P_DIST, "telefono_max": TELEFONO_MAX, "telefono": list(TELEFONO[:3]),
     "guida_appoggio": {"fessura": T_FESSURA, "cava": T_CAVA, "lunga": round(T_X1 - P_X0, 1)},
-    "pomello_diametro": round(2 * (K_R + K_A), 1), "pomello_altezza": K_H,
+    "pomello_diametro": round(2 * (K_R + K_A), 1), "pomello_altezza": K_H_MV, "pomello_morsa_altezza": K_H,
     "posa_uso": {"alfa": ALFA_USO, "sfilo": E_USO, "piatto_dalla_verticale": TILT_USO},
     "posa_prolunghe": {"alfa": ALFA_PRO, "sfilo": E_USO, "prolunghe": N_PRO},
     "filetto": {"passo": F_P, "profondita": F_H, "gioco_radiale": F_GIOCO, "cerniere": D_CERN, "morse_appoggio": D_MORSA},
@@ -625,6 +680,134 @@ geo["montaggio"] = {}
 for k in stampati(pro):
     rot = (P_PRO[k] @ pieces[k.split(".")[0]][1].inverted()).to_3x3()
     geo["montaggio"][k] = {"matrice": [[round(a, 6) for a in r] for r in rot], "bounds": bounds([pro[k]])}
+
+# --- telefono di riferimento (non si stampa) -----------------------------------------
+# sul piatto, col lato corto sulla mensola dell'appoggio (vite in basso): nella scena aperto e con le prolunghe,
+# e per la guida in dati/accessori.json (voce "accessories", agganciato al piatto)
+C_RIF = coll("RIFERIMENTI")
+M_TEL, M_SCHERMO = mat("M_Telefono", (0.09, 0.09, 0.10)), mat("M_Schermo", (0.01, 0.02, 0.04))
+M_TASTI = mat("M_Telefono_Tasti", (0.22, 0.22, 0.24), 0.6)
+HOME = "blender/homescreen.webp"                 # schermata di prova (generata con Codex, WebP 640 × 1384, 13 KB)
+TASTI = ((40, 58, -1), (32, 44, 1), (47, 59, 1))  # da, a (mm dalla cima); -1 = destra (accensione), +1 = sinistra (volume)
+if os.path.exists(os.path.join(ROOT, HOME)):
+    nt = M_SCHERMO.node_tree
+    tex = nt.nodes.new("ShaderNodeTexImage")
+    tex.image = bpy.data.images.load(os.path.join(ROOT, HOME), check_existing=True)
+    nt.links.new(tex.outputs["Color"], next(n for n in nt.nodes if n.type == "BSDF_PRINCIPLED").inputs["Base Color"])
+
+
+def uv_schermo(co, x0, x1, y0, y1):
+    """Alto dell'immagine verso la cima del telefono (+x); la destra di chi guarda lo schermo è -y."""
+    return ((y1 - co.y) / (y1 - y0), (co.x - x0) / (x1 - x0))
+
+
+def stadio(w, h, n=12):
+    """Contorno a stadio (USB-C) largo w e alto h, centrato in (0, 0)."""
+    r, pts = h / 2, []
+    for cx, a0 in ((w / 2 - r, -90), (-w / 2 + r, 90)):
+        pts += [(cx + r * math.cos(math.radians(a0 + 180 * k / n)), r * math.sin(math.radians(a0 + 180 * k / n))) for k in range(n + 1)]
+    return pts
+
+
+def telefono(mp, c, suffix):
+    h, w, s_, _ = TELEFONO
+    x0, z0 = XB_MIN + fx1 + 0.2, PZ1 + 0.1
+    zc = z0 + s_ / 2
+    out = []
+    for nome, poly, za, zb, m in (("RIF_Telefono", rrect(x0, x0 + h, -w / 2, w / 2, 9.0), z0, z0 + s_, M_TEL),
+                                  ("RIF_Telefono_Schermo", rrect(x0 + 2, x0 + h - 2, -w / 2 + 2, w / 2 - 2, 7.5), z0 + s_ - 0.1, z0 + s_ + 0.25, M_SCHERMO)):
+        o = extrude(poly, za, zb, "Z", nome + suffix, c)
+        if nome == "RIF_Telefono":                # presa USB-C nel lato corto in basso, sopra l'asola dell'appoggio
+            boolean(o, extrude([(p, zc + q) for p, q in stadio(8.4, 2.6)], x0 - 1, x0 + 7, "X", "usbc"), 'DIFFERENCE')
+        o.data.materials.clear(); o.data.materials.append(m)   # il booleano lascia uno slot vuoto
+        o.matrix_world = mp
+        out.append(o)
+    me = out[1].data
+    uv = me.uv_layers.new(name="UV").data
+    for li, lp in enumerate(me.loops):
+        uv[li].uv = uv_schermo(me.vertices[lp.vertex_index].co, x0 + 2, x0 + h - 2, -w / 2 + 2, w / 2 - 2)
+    bm = bmesh.new()                              # tasti laterali, a metà spessore
+    for a, b, lato in TASTI:
+        ya, yb = (-w / 2 - 0.8, -w / 2 + 0.3) if lato < 0 else (w / 2 - 0.3, w / 2 + 0.8)
+        r = bmesh.ops.create_cube(bm, size=1)
+        for v in r["verts"]:
+            v.co = Vector((x0 + h - (a + b) / 2 + v.co.x * (b - a), (ya + yb) / 2 + v.co.y * (yb - ya), z0 + s_ / 2 + v.co.z * 2.6))
+    o = obj_from_bm(bm, "RIF_Telefono_Tasti" + suffix, c)
+    o.data.materials.append(M_TASTI)
+    o.matrix_world = mp
+    out.append(o)
+    spina = extrude([(p, zc + q) for p, q in stadio(8.2, 2.4)], x0 - 1.0, x0 + 6.5, "X", "RIF_Cavo_Spina" + suffix, c)
+    boolean(spina, extrude([(p, zc + q) for p, q in stadio(10.0, 5.0)], x0 - 5.0, x0 - 0.1, "X", "corpo"), 'UNION')
+    spina.data.materials.clear(); spina.data.materials.append(M_CAVO)   # guscio nella presa + corpo in gomma nell'asola dell'appoggio
+    spina.matrix_world = mp
+    return out, spina
+
+
+# cavo USB-C: esce dall'asola dell'appoggio davanti al braccio, scende sulla base dal lato della testa della vite
+# (a sinistra), la attraversa e cade dal bordo dietro sul tavolo
+M_CAVO = mat("M_Cavo", (0.85, 0.85, 0.83))
+R_CAVO = 1.6
+Z_CAVO = 7 + R_CAVO + 0.3                         # sopra la piastra della base
+CODA_CAVO = [Vector(p) for p in ((54, -4, 14), (52, -10, Z_CAVO + 0.3), (48, -20, Z_CAVO), (41, -33, Z_CAVO), (30, -39, Z_CAVO),
+             (12, -40, Z_CAVO), (1, -40, Z_CAVO), (-4, -40, 5.5), (-9, -40, R_CAVO + 0.05), (-50, -40, R_CAVO + 0.05))]
+# con le prolunghe il cavo scende dritto davanti al braccio fra queste quote: la guida accorcia solo questo tratto
+# quando toglie le prolunghe (voce "stretch" in dati/accessori.json)
+CAVO_DRITTO = (50.0, 375.0)
+
+
+def cavo(ap, giu, nome, c, dritto=None):
+    """Tubo lungo una Bezier: due punti nell'asola (riferimento dell'appoggio), poi giu e la coda sulla base.
+    dritto = indice del punto da cui parte un tratto verticale: maniglie verticali, così resta una retta."""
+    pts = [ap @ Vector((10.6, 0, 4.9)), ap @ Vector((-15, 0, 4.9))] + [Vector(p) for p in giu] + CODA_CAVO
+    cu = bpy.data.curves.new(nome, 'CURVE'); cu.dimensions = '3D'
+    sp = cu.splines.new('BEZIER'); sp.bezier_points.add(len(pts) - 1)
+    for bp, p in zip(sp.bezier_points, pts):
+        bp.co = p; bp.handle_left_type = bp.handle_right_type = 'AUTO'
+    if dritto is not None:
+        a, b = sp.bezier_points[dritto], sp.bezier_points[dritto + 1]
+        L = (a.co.z - b.co.z) / 3
+        for bp, su, giu_ in ((a, 10, L), (b, L, 10)):
+            bp.handle_left_type = bp.handle_right_type = 'ALIGNED'
+            bp.handle_left, bp.handle_right = bp.co + Vector((0, 0, su)), bp.co - Vector((0, 0, giu_))
+    cu.bevel_depth, cu.bevel_resolution, cu.resolution_u, cu.use_fill_caps = R_CAVO, 3, 10, True
+    tmp = bpy.data.objects.new("tmp_" + nome, cu); c.objects.link(tmp)
+    bpy.context.view_layer.update()
+    me = bpy.data.meshes.new_from_object(tmp.evaluated_get(bpy.context.evaluated_depsgraph_get()))
+    bpy.data.objects.remove(tmp); bpy.data.curves.remove(cu)
+    o = bpy.data.objects.new(nome, me); c.objects.link(o)
+    me.materials.append(M_CAVO)
+    return o
+
+
+tel_uso, spina_uso = telefono(P_USO["P04_Piatto"], C_RIF, "")
+tel_pro, spina_pro = telefono(P_PRO["P04_Piatto"], C_PRO, "_prolunghe")
+cavo_uso = cavo(P_USO["P05_Appoggio"], ((52, 0, 95), (55, 0, 50), (55, -1, 26)), "RIF_Cavo", C_RIF)
+cavo_pro = cavo(P_PRO["P05_Appoggio"], ((55, 0, CAVO_DRITTO[1]), (55, 0, CAVO_DRITTO[0]), (55, -1, 26)), "RIF_Cavo_prolunghe", C_PRO, dritto=2)
+bpy.context.view_layer.update()
+ctrl["telefono_tocca_mm3"] = {f"{o.name}+{k}": v for o in tel_uso[:1] for k in ("P04_Piatto", "P05_Appoggio", "P10_Pomello_Appoggio")
+                             for v in [interference(o, uso[k])] if v > 0.05}
+ctrl["cavo_tocca_mm3"] = {f"{o.name}+{k}": v for o, pz_ in ((spina_uso, uso), (cavo_uso, uso), (spina_pro, pro), (cavo_pro, pro))
+                          for k in stampati(pz_) if tocca(o, pz_[k]) for v in [interference(o, pz_[k])] if v > 0.05}
+ctrl["cavo_tocca_mm3"].update({f"{a.name}+{b.name}": v for a, b in ((spina_uso, tel_uso[0]), (spina_pro, tel_pro[0]))
+                               for v in [interference(a, b)] if v > 0.05})
+acc_out = []
+for o in tel_pro + [spina_pro, cavo_pro]:
+    bm = bmesh.new(); bm.from_mesh(o.data)
+    bmesh.ops.triangulate(bm, faces=bm.faces)
+    nome = "Cavo" if o.name.startswith("RIF_Cavo") else "Telefono"
+    a = {"id": o.name, "label": nome, "piece": nome,
+         "color": [round(255 * c ** (1 / 2.2)) for c in o.data.materials[0].diffuse_color[:3]],
+         "vertices": [[round(c, 2) for c in o.matrix_world @ v.co] for v in bm.verts],
+         "triangles": [[v.index for v in f.verts] for f in bm.faces]}
+    if o is cavo_pro:
+        a["stretch"] = list(CAVO_DRITTO)
+    if o.name.startswith("RIF_Telefono_Schermo") and os.path.exists(os.path.join(ROOT, HOME)):
+        xs, ys = [v.co.x for v in bm.verts], [v.co.y for v in bm.verts]   # bordo dello schermo = estremi della mesh
+        a.update(uv=[[round(q, 4) for q in uv_schermo(v.co, min(xs), max(xs), min(ys), max(ys))] for v in bm.verts], image=HOME)
+    acc_out.append(a)
+    bm.free()
+with open(os.path.join(ROOT, "dati", "accessori.json"), "w", encoding="utf-8") as f:
+    json.dump(acc_out, f, separators=(",", ":"))
 
 # --- STL in posa di stampa ---------------------------------------------------
 for n, (o, mp) in pieces.items():

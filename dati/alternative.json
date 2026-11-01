@@ -1,0 +1,40 @@
+{
+ "controlli": {
+  "galletto_fuori_dalla_base_da_mm": 21.25,
+  "raggio_massimo_fuori_mm": 16.5,
+  "galletto_aperto_mm3": {},
+  "piegato_galletto_angoli_liberi": [
+   0,
+   45,
+   90,
+   135,
+   180,
+   225,
+   270,
+   315
+  ],
+  "galletto_vite_spazio_in_fondo_mm": 2.85
+ },
+ "pezzi": {
+  "P13_Galletto": {
+   "min": [
+    -16.5,
+    -11.0,
+    0.0
+   ],
+   "max": [
+    16.5,
+    11.0,
+    30.65
+   ],
+   "size": [
+    33.0,
+    22.0,
+    30.65
+   ],
+   "volume_mm3": 8330,
+   "peso_PETG_g": 10.6,
+   "non_manifold_edges": 0
+  }
+ }
+}

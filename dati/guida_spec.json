@@ -138,7 +138,49 @@
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Tratto 30 × 20 lungo 100 mm dall'asse, con la nocca in fondo e il canale 24 × 15. Davanti il canale ha una fessura da 14 in cui corre la nervatura della barra. Sul fianco destro la morsa: rinforzo con la sede esagonale del dado P12 per la vite di blocco. 36 g.</p>"
+   "note_html": "<p>Tratto 30 × 20 lungo 100 mm dall'asse, con la nocca in fondo e il canale 24 × 15. Davanti il canale ha una fessura da 14 in cui corre la nervatura della barra. Sul fianco destro la morsa: rinforzo con la sede esagonale del dado P12 per la vite di blocco. Sulla faccia destra della nocca una corona di 36 denti fa presa con la rondella P14: la cerniera bassa va a scatti di 10°. 35 g.</p>"
+  },
+  {
+   "id": "P14",
+   "label": "Rondella dentata · cerniera bassa",
+   "group": "Base",
+   "file": "stl/P14_Rondella_Dentata.stl",
+   "print": "pomelli",
+   "mode": "mesh",
+   "max_triangles": 4000,
+   "matrix": [
+    [
+     1.0,
+     0.0,
+     0.0
+    ],
+    [
+     0.0,
+     0.0,
+     -1.0
+    ],
+    [
+     0.0,
+     1.0,
+     0.0
+    ]
+   ],
+   "assembled_bounds": [
+    [
+     20.5,
+     39.5
+    ],
+    [
+     13.0,
+     15.15
+    ],
+    [
+     7.1,
+     27.0
+    ]
+   ],
+   "quantity": 1,
+   "note_html": "<p>Rondella spessa 1,5 mm con 36 denti alti 0,7 da un lato: sta fra la nocca della guaina e l'orecchia destra della base, coi denti verso la nocca. Il piede appoggia sulla base e non la lascia girare, così i denti tengono il braccio anche col pomello poco stretto. 0 g.</p>"
   },
   {
    "id": "P07",
@@ -357,7 +399,7 @@
     ],
     [
      24.25,
-     35.25
+     37.25
     ],
     [
      6.78,
@@ -398,7 +440,7 @@
      40.92
     ],
     [
-     -35.25,
+     -37.25,
      -24.25
     ],
     [
@@ -563,7 +605,7 @@
    "assembled_bounds": [
     [
      59.52,
-     76.68
+     78.56
     ],
     [
      -32.91,
@@ -571,11 +613,11 @@
     ],
     [
      421.67,
-     445.26
+     445.94
     ]
    ],
    "quantity": 1,
-   "note_html": "<p>Pomello con la madrevite Ø8: sotto la mensola, blocca l'appoggio sul piatto. 4 g.</p>"
+   "note_html": "<p>Pomello con la madrevite Ø8: sotto la mensola, blocca l'appoggio sul piatto. 5 g.</p>"
   },
   {
    "id": "P11",
@@ -795,15 +837,17 @@
   },
   {
    "title": "Braccio sulla base",
-   "short": "nocca nella forchetta",
-   "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
+   "short": "nocca e rondella nella forchetta",
+   "text": "Appoggia la rondella P14 contro l'orecchia destra di P01, denti verso il centro e piede sulla base. Cala la nocca in fondo a P02 fra la rondella e l'orecchia sinistra, con la faccia dentata a destra, e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
    "parts": [
     "P01",
+    "P14",
     "P02",
     "P08A"
    ],
    "built": [
     "P01",
+    "P14",
     "P08A",
     "P02",
     "P07",
@@ -832,14 +876,16 @@
   {
    "title": "Pomello della cerniera bassa",
    "short": "da destra",
-   "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+   "text": "Avvita il pomello P06A sulla vite che sporge a destra finché i denti della nocca entrano in quelli della rondella e il braccio non scatta più: non serve stringere forte. Per cambiare inclinazione allenta di mezzo giro, porta il braccio allo scatto voluto (ogni 10°) e richiudi.",
    "parts": [
     "P01",
+    "P14",
     "P08A",
     "P06A"
    ],
    "built": [
     "P01",
+    "P14",
     "P08A",
     "P06A",
     "P02",
@@ -898,6 +944,7 @@
    ],
    "built": [
     "P01",
+    "P14",
     "P08A",
     "P06A",
     "P02",
@@ -939,6 +986,7 @@
    "built": [
     "P01",
     "P02",
+    "P14",
     "P07",
     "P03",
     "P04",
@@ -965,12 +1013,18 @@
    "travel": 30
   },
   {
-   "title": "Regola e prova",
-   "short": "altezza, appoggio, inclinazione",
-   "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+   "title": "Cavo nell'asola",
+   "short": "spina sopra la mensola",
+   "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
    "parts": [
+    "P05",
+    "RIF_Cavo_Spina_prolunghe",
+    "RIF_Cavo_prolunghe"
+   ],
+   "built": [
     "P01",
     "P02",
+    "P14",
     "P07",
     "P03",
     "P04",
@@ -984,8 +1038,55 @@
     "P11",
     "P12",
     "P11·2",
-    "P12·2"
+    "P12·2",
+    "RIF_Cavo_Spina_prolunghe",
+    "RIF_Cavo_prolunghe"
    ]
+  },
+  {
+   "title": "Telefono e regolazioni",
+   "short": "sulla spina, poi altezza e appoggio",
+   "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+   "parts": [
+    "RIF_Telefono_prolunghe",
+    "RIF_Telefono_Schermo_prolunghe",
+    "RIF_Telefono_Tasti_prolunghe"
+   ],
+   "built": [
+    "P01",
+    "P02",
+    "P14",
+    "P07",
+    "P03",
+    "P04",
+    "P05",
+    "P06A",
+    "P06B",
+    "P08A",
+    "P08B",
+    "P09",
+    "P10",
+    "P11",
+    "P12",
+    "P11·2",
+    "P12·2",
+    "RIF_Cavo_Spina_prolunghe",
+    "RIF_Cavo_prolunghe",
+    "RIF_Telefono_prolunghe",
+    "RIF_Telefono_Schermo_prolunghe",
+    "RIF_Telefono_Tasti_prolunghe"
+   ],
+   "moving": [
+    "RIF_Telefono_prolunghe",
+    "RIF_Telefono_Schermo_prolunghe",
+    "RIF_Telefono_Tasti_prolunghe"
+   ],
+   "dir": [
+    -0.342,
+    0,
+    0.94
+   ],
+   "travel": 70
   }
  ],
  "configurations": {
@@ -998,6 +1099,7 @@
     "parts": [
      "P01",
      "P02",
+     "P14",
      "P03",
      "P04",
      "P05",
@@ -1088,15 +1190,17 @@
      },
      {
       "title": "Braccio sulla base",
-      "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
+      "short": "nocca e rondella nella forchetta",
+      "text": "Appoggia la rondella P14 contro l'orecchia destra di P01, denti verso il centro e piede sulla base. Cala la nocca in fondo a P02 fra la rondella e l'orecchia sinistra, con la faccia dentata a destra, e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
+       "P14",
        "P02",
        "P08A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P02",
        "P03",
@@ -1119,14 +1223,16 @@
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra finché i denti della nocca entrano in quelli della rondella e il braccio non scatta più: non serve stringere forte. Per cambiare inclinazione allenta di mezzo giro, porta il braccio allo scatto voluto (ogni 10°) e richiudi.",
       "parts": [
        "P01",
+       "P14",
        "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -1182,6 +1288,7 @@
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -1220,6 +1327,7 @@
       "built": [
        "P01",
        "P02",
+       "P14",
        "P03",
        "P04",
        "P05",
@@ -1243,12 +1351,18 @@
       "travel": 30
      },
      {
-      "title": "Regola e prova",
-      "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "title": "Cavo nell'asola",
+      "short": "spina sopra la mensola",
+      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
+       "P05",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
+      ],
+      "built": [
        "P01",
        "P02",
+       "P14",
        "P03",
        "P04",
        "P05",
@@ -1259,8 +1373,52 @@
        "P09",
        "P10",
        "P11",
-       "P12"
+       "P12",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
       ]
+     },
+     {
+      "title": "Telefono e regolazioni",
+      "short": "sulla spina, poi altezza e appoggio",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "parts": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "built": [
+       "P01",
+       "P02",
+       "P14",
+       "P03",
+       "P04",
+       "P05",
+       "P06A",
+       "P06B",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe",
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "moving": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "dir": [
+       -0.342,
+       0,
+       0.94
+      ],
+      "travel": 70
      }
     ],
     "override": {
@@ -1376,11 +1534,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · P10 · P11 · pomelli",
+        "title": "P06 · P10 · P11 pomelli · P14 rondella",
         "rows": [
          [
           "Orientamento",
-          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su, P14 piatta coi denti in su"
          ],
          [
           "Pareti",
@@ -1399,7 +1557,7 @@
           "no"
          ]
         ],
-        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi, e sulla rondella fa denti più netti.",
         "summary": "in piedi · 0,16 mm · 50%"
        },
        {
@@ -1456,6 +1614,7 @@
     "parts": [
      "P01",
      "P02",
+     "P14",
      "P07",
      "P03",
      "P04",
@@ -1599,15 +1758,17 @@
      },
      {
       "title": "Braccio sulla base",
-      "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
+      "short": "nocca e rondella nella forchetta",
+      "text": "Appoggia la rondella P14 contro l'orecchia destra di P01, denti verso il centro e piede sulla base. Cala la nocca in fondo a P02 fra la rondella e l'orecchia sinistra, con la faccia dentata a destra, e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
+       "P14",
        "P02",
        "P08A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P02",
        "P07",
@@ -1636,14 +1797,16 @@
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra finché i denti della nocca entrano in quelli della rondella e il braccio non scatta più: non serve stringere forte. Per cambiare inclinazione allenta di mezzo giro, porta il braccio allo scatto voluto (ogni 10°) e richiudi.",
       "parts": [
        "P01",
+       "P14",
        "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -1702,6 +1865,7 @@
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -1743,6 +1907,7 @@
       "built": [
        "P01",
        "P02",
+       "P14",
        "P07",
        "P03",
        "P04",
@@ -1769,12 +1934,18 @@
       "travel": 30
      },
      {
-      "title": "Regola e prova",
-      "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "title": "Cavo nell'asola",
+      "short": "spina sopra la mensola",
+      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
+       "P05",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
+      ],
+      "built": [
        "P01",
        "P02",
+       "P14",
        "P07",
        "P03",
        "P04",
@@ -1788,8 +1959,55 @@
        "P11",
        "P12",
        "P11·2",
-       "P12·2"
+       "P12·2",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
       ]
+     },
+     {
+      "title": "Telefono e regolazioni",
+      "short": "sulla spina, poi altezza e appoggio",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "parts": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "built": [
+       "P01",
+       "P02",
+       "P14",
+       "P07",
+       "P03",
+       "P04",
+       "P05",
+       "P06A",
+       "P06B",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
+       "P11·2",
+       "P12·2",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe",
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "moving": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "dir": [
+       -0.342,
+       0,
+       0.94
+      ],
+      "travel": 70
      }
     ],
     "override": {
@@ -1905,11 +2123,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · P10 · P11 · pomelli",
+        "title": "P06 · P10 · P11 pomelli · P14 rondella",
         "rows": [
          [
           "Orientamento",
-          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su, P14 piatta coi denti in su"
          ],
          [
           "Pareti",
@@ -1928,7 +2146,7 @@
           "no"
          ]
         ],
-        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi, e sulla rondella fa denti più netti.",
         "summary": "in piedi · 0,16 mm · 50%"
        },
        {
@@ -1985,6 +2203,7 @@
     "parts": [
      "P01",
      "P02",
+     "P14",
      "P07",
      "P03",
      "P04",
@@ -2186,15 +2405,17 @@
      },
      {
       "title": "Braccio sulla base",
-      "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
+      "short": "nocca e rondella nella forchetta",
+      "text": "Appoggia la rondella P14 contro l'orecchia destra di P01, denti verso il centro e piede sulla base. Cala la nocca in fondo a P02 fra la rondella e l'orecchia sinistra, con la faccia dentata a destra, e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
+       "P14",
        "P02",
        "P08A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P02",
        "P07",
@@ -2229,14 +2450,16 @@
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra finché i denti della nocca entrano in quelli della rondella e il braccio non scatta più: non serve stringere forte. Per cambiare inclinazione allenta di mezzo giro, porta il braccio allo scatto voluto (ogni 10°) e richiudi.",
       "parts": [
        "P01",
+       "P14",
        "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -2298,6 +2521,7 @@
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -2342,6 +2566,7 @@
       "built": [
        "P01",
        "P02",
+       "P14",
        "P07",
        "P03",
        "P04",
@@ -2371,12 +2596,18 @@
       "travel": 30
      },
      {
-      "title": "Regola e prova",
-      "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "title": "Cavo nell'asola",
+      "short": "spina sopra la mensola",
+      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
+       "P05",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
+      ],
+      "built": [
        "P01",
        "P02",
+       "P14",
        "P07",
        "P03",
        "P04",
@@ -2393,8 +2624,58 @@
        "P11·2",
        "P11·3",
        "P12·2",
-       "P12·3"
+       "P12·3",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
       ]
+     },
+     {
+      "title": "Telefono e regolazioni",
+      "short": "sulla spina, poi altezza e appoggio",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "parts": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "built": [
+       "P01",
+       "P02",
+       "P14",
+       "P07",
+       "P03",
+       "P04",
+       "P05",
+       "P06A",
+       "P06B",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
+       "P07·2",
+       "P11·2",
+       "P11·3",
+       "P12·2",
+       "P12·3",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe",
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "moving": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "dir": [
+       -0.342,
+       0,
+       0.94
+      ],
+      "travel": 70
      }
     ],
     "override": {
@@ -2510,11 +2791,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · P10 · P11 · pomelli",
+        "title": "P06 · P10 · P11 pomelli · P14 rondella",
         "rows": [
          [
           "Orientamento",
-          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su, P14 piatta coi denti in su"
          ],
          [
           "Pareti",
@@ -2533,7 +2814,7 @@
           "no"
          ]
         ],
-        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi, e sulla rondella fa denti più netti.",
         "summary": "in piedi · 0,16 mm · 50%"
        },
        {
@@ -2590,6 +2871,7 @@
     "parts": [
      "P01",
      "P02",
+     "P14",
      "P07",
      "P03",
      "P04",
@@ -2855,15 +3137,17 @@
      },
      {
       "title": "Braccio sulla base",
-      "short": "nocca nella forchetta",
-      "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
+      "short": "nocca e rondella nella forchetta",
+      "text": "Appoggia la rondella P14 contro l'orecchia destra di P01, denti verso il centro e piede sulla base. Cala la nocca in fondo a P02 fra la rondella e l'orecchia sinistra, con la faccia dentata a destra, e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
       "parts": [
        "P01",
+       "P14",
        "P02",
        "P08A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P02",
        "P07",
@@ -2904,14 +3188,16 @@
      {
       "title": "Pomello della cerniera bassa",
       "short": "da destra",
-      "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
+      "text": "Avvita il pomello P06A sulla vite che sporge a destra finché i denti della nocca entrano in quelli della rondella e il braccio non scatta più: non serve stringere forte. Per cambiare inclinazione allenta di mezzo giro, porta il braccio allo scatto voluto (ogni 10°) e richiudi.",
       "parts": [
        "P01",
+       "P14",
        "P08A",
        "P06A"
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -2976,6 +3262,7 @@
       ],
       "built": [
        "P01",
+       "P14",
        "P08A",
        "P06A",
        "P02",
@@ -3023,6 +3310,7 @@
       "built": [
        "P01",
        "P02",
+       "P14",
        "P07",
        "P03",
        "P04",
@@ -3055,12 +3343,18 @@
       "travel": 30
      },
      {
-      "title": "Regola e prova",
-      "short": "altezza, appoggio, inclinazione",
-      "text": "Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "title": "Cavo nell'asola",
+      "short": "spina sopra la mensola",
+      "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
       "parts": [
+       "P05",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
+      ],
+      "built": [
        "P01",
        "P02",
+       "P14",
        "P07",
        "P03",
        "P04",
@@ -3080,8 +3374,61 @@
        "P11·4",
        "P12·2",
        "P12·3",
-       "P12·4"
+       "P12·4",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe"
       ]
+     },
+     {
+      "title": "Telefono e regolazioni",
+      "short": "sulla spina, poi altezza e appoggio",
+      "text": "Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a 40 mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "parts": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "built": [
+       "P01",
+       "P02",
+       "P14",
+       "P07",
+       "P03",
+       "P04",
+       "P05",
+       "P06A",
+       "P06B",
+       "P08A",
+       "P08B",
+       "P09",
+       "P10",
+       "P11",
+       "P12",
+       "P07·2",
+       "P07·3",
+       "P11·2",
+       "P11·3",
+       "P11·4",
+       "P12·2",
+       "P12·3",
+       "P12·4",
+       "RIF_Cavo_Spina_prolunghe",
+       "RIF_Cavo_prolunghe",
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "moving": [
+       "RIF_Telefono_prolunghe",
+       "RIF_Telefono_Schermo_prolunghe",
+       "RIF_Telefono_Tasti_prolunghe"
+      ],
+      "dir": [
+       -0.342,
+       0,
+       0.94
+      ],
+      "travel": 70
      }
     ],
     "override": {
@@ -3197,11 +3544,11 @@
        },
        {
         "key": "pomelli",
-        "title": "P06 · P10 · P11 · pomelli",
+        "title": "P06 · P10 · P11 pomelli · P14 rondella",
         "rows": [
          [
           "Orientamento",
-          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
+          "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su, P14 piatta coi denti in su"
          ],
          [
           "Pareti",
@@ -3220,7 +3567,7 @@
           "no"
          ]
         ],
-        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+        "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi, e sulla rondella fa denti più netti.",
         "summary": "in piedi · 0,16 mm · 50%"
        },
        {
@@ -3383,11 +3730,11 @@
    },
    {
     "key": "pomelli",
-    "title": "P06 · P10 · P11 · pomelli",
+    "title": "P06 · P10 · P11 pomelli · P14 rondella",
     "rows": [
      [
       "Orientamento",
-      "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"
+      "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su, P14 piatta coi denti in su"
      ],
      [
       "Pareti",
@@ -3406,7 +3753,7 @@
       "no"
      ]
     ],
-    "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+    "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi, e sulla rondella fa denti più netti.",
     "summary": "in piedi · 0,16 mm · 50%"
    },
    {
@@ -3461,7 +3808,7 @@
   "cards": [
    {
     "title": "Sezione della cerniera",
-    "html": "<p>La nocca larga 30 sta fra due orecchie con 0,2 mm di gioco per lato. La vite stampata P08 (Ø10) ha sotto la testa un collo quadro che entra nella sede dell'orecchia e non gira; dall'altra parte si avvita il pomello, che ha la madrevite dentro. Girando il pomello le orecchie si flettono un poco e serrano la nocca. Il pacco è 48,4 mm, la vite entra 8,6 mm nel pomello (più di tre giri) e resta nascosta.</p><svg viewBox='0 0 460 200' xmlns='http://www.w3.org/2000/svg' font-size='11' font-family='sans-serif'><rect x='84.80000000000001' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='321.2' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='140.0' y='40' width='180.0' height='120' fill='#8aa1b8'/><rect x='60.80000000000001' y='46.0' width='24.0' height='108.0' fill='#9aa0a8'/><rect x='84.80000000000001' y='70.0' width='342.0' height='60.0' fill='#9aa0a8' opacity='.9'/><rect x='375.2' y='30' width='66.0' height='140' fill='#333' rx='6' opacity='.9'/><text x='84.80000000000001' y='185'>orecchia 9</text><text x='182.0' y='30'>nocca 30</text><text x='60.80000000000001' y='22'>testa e collo quadro</text><text x='365.2' y='185'>pomello filettato</text><text x='194.0' y='185'>gioco 0,2 per lato</text></svg>"
+    "html": "<p>La nocca larga 30 sta fra due orecchie con 0,2 mm di gioco per lato. La vite stampata P08 (Ø10) ha sotto la testa un collo quadro che entra nella sede dell'orecchia e non gira; dall'altra parte si avvita il pomello, che ha la madrevite dentro. Girando il pomello le orecchie si flettono un poco e serrano la nocca. Il pacco è 48,4 mm, la vite entra 8,6 mm nel pomello (più di tre giri), con 2,9 mm liberi sul fondo, e resta nascosta.</p><svg viewBox='0 0 460 200' xmlns='http://www.w3.org/2000/svg' font-size='11' font-family='sans-serif'><rect x='84.80000000000001' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='321.2' y='40' width='54.0' height='120' fill='#bfc3c9'/><rect x='140.0' y='40' width='180.0' height='120' fill='#8aa1b8'/><rect x='60.80000000000001' y='46.0' width='24.0' height='108.0' fill='#9aa0a8'/><rect x='84.80000000000001' y='70.0' width='342.0' height='60.0' fill='#9aa0a8' opacity='.9'/><rect x='375.2' y='30' width='66.0' height='140' fill='#333' rx='6' opacity='.9'/><text x='84.80000000000001' y='185'>orecchia 9</text><text x='182.0' y='30'>nocca 30</text><text x='60.80000000000001' y='22'>testa e collo quadro</text><text x='365.2' y='185'>pomello filettato</text><text x='194.0' y='185'>gioco 0,2 per lato</text></svg>"
    },
    {
     "title": "Sezione del braccio",
@@ -3469,10 +3816,14 @@
    },
    {
     "title": "Stabilità",
-    "html": "<p>Con un telefono da 200 g, braccio a 95° e appoggio in basso il baricentro cade 20 mm dentro la base; con l'appoggio tutto in alto e il braccio a 95° cadrebbe fuori (-3,2 mm), col braccio dritto torna dentro (8,4 mm). Con le prolunghe tieni il braccio dritto: il peso resta sopra la base, ma ogni grado di inclinazione sposta il telefono di più.</p>"
+    "html": "<p>Con un telefono da 200 g, braccio a 100° e appoggio in basso il baricentro cade 9 mm dentro la base; con l'appoggio tutto in alto e il braccio a 100° cadrebbe fuori (-14,6 mm), col braccio dritto torna dentro (8,4 mm). Con le prolunghe tieni il braccio dritto: il peso resta sopra la base, ma ogni grado di inclinazione sposta il telefono di più.</p>"
    },
    {
-    "title": "Se la cerniera scivola",
+    "title": "Cerniera bassa a scatti",
+    "html": "<p>La cerniera bassa porta tutto il peso del braccio e del telefono: lì l'attrito fra PETG e PETG chiederebbe di stringere tanto la vite. Per questo la nocca della guaina ha sulla faccia destra 36 denti radiali alti 0,7 mm, e la rondella P14 gli stessi denti girati: in presa il braccio non può scivolare, e il pomello deve solo tenerli dentro. La rondella non gira perché il suo piede appoggia sulla base. A sinistra la nocca ha 0,8 mm di gioco in tutto: allentando il pomello di mezzo giro i denti si staccano e il braccio gira di uno scatto ogni 10°.</p>"
+   },
+   {
+    "title": "Se la cerniera alta scivola",
     "html": "<p>Stringi il pomello. Se anche stretto non tiene (PETG molto liscio), metti una rondella di gomma o di sughero da 0,5–1 mm fra nocca e orecchia, oppure riduci <code>GIOCO_NOCCA</code> a 0,1 e ristampa. Non forzare il pomello oltre la stretta di una mano: il filetto stampato si rovina prima delle orecchie.</p>"
    }
   ]
@@ -3503,5 +3854,12 @@
    }
   ]
  },
- "footer_html": "Guida offline: aprire questo file dalla cartella del progetto."
+ "footer_html": "Guida offline: aprire questo file dalla cartella del progetto.",
+ "accessories": {
+  "file": "dati/accessori.json",
+  "label": "Telefono e cavo",
+  "attach": "P04",
+  "color": "#1c1d20",
+  "tip": "Telefono 160 × 75 × 9 mm sulla mensola, col cavo USB-C nell'asola dell'appoggio: solo per vedere l'ingombro, non si stampano"
+ }
 }

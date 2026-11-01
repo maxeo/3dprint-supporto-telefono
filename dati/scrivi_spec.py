@@ -33,11 +33,17 @@ def part(id_, key, label, group, prof, note, copie=None, qty=1):
 pz, pp = MS["posa_uso"], MS["posa_prolunghe"]
 ga = MS["guida_appoggio"]
 mens = C["mensola_dal_tavolo_mm"]
+TEL = MS["telefono"]
+ACC = json.load(open(os.path.join(root, "dati", "accessori.json"), encoding="utf-8"))
+TEL_IDS = [a["id"] for a in ACC if a["piece"] == "Telefono"]
+CAVO_IDS = [a["id"] for a in ACC if a["piece"] == "Cavo"]
 parts = [
  part("P01", "P01_Base", "Base", "Base", "base",
       f"<p>Piastra {n(MS['base'][0])} × {n(MS['base'][1])} × {n(MS['base'][2])} con la forchetta della cerniera bassa: due orecchie da {n(MS['orecchia'])} mm, foro per la vite Ø{n(F['cerniere'])} e, sull'orecchia sinistra, la sede quadra del collo della vite: non la lascia girare. Sotto quattro incavi Ø10,5 per piedini adesivi; sopra tre incavi dove girano i pomelli (uno da aperto, due da chiuso). {g('P01_Base')} g a pezzo pieno.</p>"),
  part("P02", "P02_Guaina", "Guaina del braccio", "Braccio", "braccio",
-      f"<p>Tratto {n(MS['braccio'][0])} × {n(MS['braccio'][1])} lungo {n(MS['tratto'])} mm dall'asse, con la nocca in fondo e il canale {n(MS['canale'][0])} × {n(MS['canale'][1])}. Davanti il canale ha una fessura da {n(MS['fessura'])} in cui corre la nervatura della barra. Sul fianco destro la morsa: rinforzo con la sede esagonale del dado P12 per la vite di blocco. {g('P02_Guaina')} g.</p>"),
+      f"<p>Tratto {n(MS['braccio'][0])} × {n(MS['braccio'][1])} lungo {n(MS['tratto'])} mm dall'asse, con la nocca in fondo e il canale {n(MS['canale'][0])} × {n(MS['canale'][1])}. Davanti il canale ha una fessura da {n(MS['fessura'])} in cui corre la nervatura della barra. Sul fianco destro la morsa: rinforzo con la sede esagonale del dado P12 per la vite di blocco. Sulla faccia destra della nocca una corona di {MS['denti']['numero']} denti fa presa con la rondella P14: la cerniera bassa va a scatti di {n(MS['denti']['scatto_gradi'], 0)}°. {g('P02_Guaina')} g.</p>"),
+ part("P14", "P14_Rondella_Dentata", "Rondella dentata · cerniera bassa", "Base", "pomelli",
+      f"<p>Rondella spessa {n(C['rondella_spessore_mm'])} mm con {MS['denti']['numero']} denti alti {n(MS['denti']['altezza'])} da un lato: sta fra la nocca della guaina e l'orecchia destra della base, coi denti verso la nocca. Il piede appoggia sulla base e non la lascia girare, così i denti tengono il braccio anche col pomello poco stretto. {g('P14_Rondella_Dentata')} g.</p>"),
  part("P07", "P07_Prolunga", "Prolunga", "Prolunghe", "braccio",
       f"<p>Sotto una barra come quella della slitta, sopra un tratto come la guaina con la sua morsa: entra nella guaina o in un'altra prolunga, e la slitta o un'altra prolunga entrano in lei. Ogni prolunga alza di {n(MS['tratto'], 0)} mm, più fino a {n(C['sfilo_massimo_per_tratto_mm'], 0)} di sfilo. Se ne mettono quante si vuole: il selettore in cima ne mostra da 0 a {NPRO}. {g('P07_Prolunga')} g.</p>",
       copie=[f"P07_Prolunga.{k}" for k in range(2, NPRO + 1)], qty=NPRO),
@@ -71,6 +77,7 @@ a = math.radians(pp["alfa"]); s_dir = math.radians(90 + pz["piatto_dalla_vertica
 braccio = [round(math.cos(a), 3), 0, round(math.sin(a), 3)]
 davanti_piatto = [round(math.cos(s_dir - math.pi / 2), 3), 0, round(math.sin(s_dir - math.pi / 2), 3)]
 sotto_piatto = [round(-math.cos(s_dir), 3), 0, round(-math.sin(s_dir), 3)]
+su_piatto = [-v for v in sotto_piatto]
 
 # sezione della cerniera (vista dall'alto, asse orizzontale), 6 px/mm
 Yo, Yi = MS["nocca"] / 2 + MS["gioco_nocca_per_lato"] + MS["orecchia"], MS["nocca"] / 2 + MS["gioco_nocca_per_lato"]
@@ -138,18 +145,20 @@ def steps_for(k):
      {"title": "Slitta nell'ultimo tratto" if k else "Slitta nella guaina", "short": "e la sua morsa",
       "text": f"Infila la slitta P03 in {last.split('·')[0]} come le barre prima, poi chiudi la morsa con un dado P12 e un pomello P11.",
       "parts": [last, "P03", nut[k], knob[k]], "built": list(built), "moving": ["P03", nut[k], knob[k]], "dir": braccio, "travel": 80},
-     {"title": "Braccio sulla base", "short": "nocca nella forchetta", "text": "Cala la nocca in fondo a P02 fra le due orecchie di P01 e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
-      "parts": ["P01", "P02", "P08A"], "built": ["P01", "P08A"] + built, "moving": list(built), "dir": [0, 0, 1], "travel": 70},
-     {"title": "Pomello della cerniera bassa", "short": "da destra", "text": "Avvita il pomello P06A sulla vite che sporge a destra. Stringi finché il braccio resta fermo in ogni posizione ma si muove ancora con una mano.",
-      "parts": ["P01", "P08A", "P06A"], "built": ["P01", "P08A", "P06A"] + built, "moving": ["P06A"], "dir": [0, 1, 0], "travel": 30},
+     {"title": "Braccio sulla base", "short": "nocca e rondella nella forchetta", "text": "Appoggia la rondella P14 contro l'orecchia destra di P01, denti verso il centro e piede sulla base. Cala la nocca in fondo a P02 fra la rondella e l'orecchia sinistra, con la faccia dentata a destra, e allinea i fori. Infila la vite P08 da sinistra: il collo quadro sotto la testa entra nella sua sede e la vite non gira più.",
+      "parts": ["P01", "P14", "P02", "P08A"], "built": ["P01", "P14", "P08A"] + built, "moving": list(built), "dir": [0, 0, 1], "travel": 70},
+     {"title": "Pomello della cerniera bassa", "short": "da destra", "text": f"Avvita il pomello P06A sulla vite che sporge a destra finché i denti della nocca entrano in quelli della rondella e il braccio non scatta più: non serve stringere forte. Per cambiare inclinazione allenta di mezzo giro, porta il braccio allo scatto voluto (ogni {n(MS['denti']['scatto_gradi'], 0)}°) e richiudi.",
+      "parts": ["P01", "P14", "P08A", "P06A"], "built": ["P01", "P14", "P08A", "P06A"] + built, "moving": ["P06A"], "dir": [0, 1, 0], "travel": 30},
      {"title": "Appoggio sul piatto", "short": "vite nella guida a T", "text": "Fai scorrere la testa quadra della vite P09 nella cava del piatto P04, entrando dal bordo basso: il gambo esce dalla fessura sulla faccia. Appoggia P05 con la chiavetta nella fessura e avvita il pomello P10 sotto la mensola.",
       "parts": ["P04", "P09", "P05", "P10"], "built": ["P04", "P09", "P05", "P10"], "moving": ["P05", "P10"], "dir": davanti_piatto, "travel": 40},
      {"title": "Piatto sulla testa del braccio", "short": "forchetta sulla nocca", "text": "Porta la forchetta sul dorso di P04 attorno alla nocca in cima a P03 e infila la seconda vite P08 da destra, col collo quadro nella sede.",
-      "parts": ["P03", "P04", "P08B"], "built": ["P01", "P08A", "P06A"] + built + ["P04", "P09", "P05", "P10", "P08B"], "moving": ["P04", "P09", "P05", "P10", "P08B"], "dir": davanti_piatto, "travel": 60},
+      "parts": ["P03", "P04", "P08B"], "built": ["P01", "P14", "P08A", "P06A"] + built + ["P04", "P09", "P05", "P10", "P08B"], "moving": ["P04", "P09", "P05", "P10", "P08B"], "dir": davanti_piatto, "travel": 60},
      {"title": "Pomello della cerniera alta", "short": "da sinistra", "text": "Avvita P06B sulla vite che sporge a sinistra e regola la durezza come per la cerniera bassa.",
       "parts": ["P04", "P08B", "P06B"], "built": ids_for(k), "moving": ["P06B"], "dir": [0, -1, 0], "travel": 30},
-     {"title": "Regola e prova", "short": "altezza, appoggio, inclinazione", "text": f"Altezza: allenta una morsa, sfila (fino a {n(C['sfilo_massimo_per_tratto_mm'], 0)} mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
-      "parts": ids_for(k)},
+     {"title": "Cavo nell'asola", "short": "spina sopra la mensola", "text": "Infila la spina USB-C nell'asola dell'appoggio P05 da sotto, finché il guscio metallico sporge sopra la mensola e il corpo resta nell'asola. Fai scendere il cavo davanti al braccio, appoggialo sulla base dal lato sinistro (quello della testa della vite, lontano dal pomello) e fallo uscire dal bordo dietro.",
+      "parts": ["P05"] + CAVO_IDS, "built": ids_for(k) + CAVO_IDS},
+     {"title": "Telefono e regolazioni", "short": "sulla spina, poi altezza e appoggio", "text": f"Appoggia il telefono sul piatto con lo schermo verso di te e fallo scendere sulla mensola: la presa USB-C entra sulla spina. Ora regola. Altezza: allenta una morsa, sfila (fino a {n(C['sfilo_massimo_per_tratto_mm'], 0)} mm per tratto) e stringi. Appoggio: allenta P10 e fallo scorrere lungo il piatto, il cavo lo segue. Con le prolunghe o con l'appoggio in alto tieni il braccio dritto: il telefono deve restare sopra la base. Per chiuderlo togli telefono e cavo, poi le prolunghe, poi slitta dentro, piatto sul braccio, braccio sulla base.",
+      "parts": TEL_IDS, "built": ids_for(k) + CAVO_IDS + TEL_IDS, "moving": TEL_IDS, "dir": su_piatto, "travel": 70},
     ]
 
 
@@ -191,8 +200,8 @@ PRINT = {"eyebrow": "03 / Stampa", "h2": "Tutto stampato, anche le viti.",
    {"key": "appoggio", "title": "P05 · appoggio", "rows": [["Orientamento", "su un fianco, come negli STL (alto 70 mm)"], ["Pareti", "4"], ["Riempimento", "40%"], ["Supporti", "no"], ["Brim", "5 mm consigliato"]],
     "why": "Su un fianco il profilo di flangia, mensola e sponda è tutto in pianta e sale dritto; il foro della vite viene orizzontale e piccolo. Il brim tiene fermo un pezzo alto e stretto.",
     "summary": "di fianco · 4 pareti · brim"},
-   {"key": "pomelli", "title": "P06 · P10 · P11 · pomelli", "rows": [["Orientamento", "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su"], ["Pareti", "4"], ["Riempimento", "50%"], ["Strato", "0,16 mm"], ["Supporti", "no"]],
-    "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi.",
+   {"key": "pomelli", "title": "P06 · P10 · P11 pomelli · P14 rondella", "rows": [["Orientamento", "come negli STL: P06 e P10 con l'imbocco della madrevite sul piatto, P11 con la cima sul piatto e la vite in su, P14 piatta coi denti in su"], ["Pareti", "4"], ["Riempimento", "50%"], ["Strato", "0,16 mm"], ["Supporti", "no"]],
+    "why": "In piedi il filetto si stampa giro per giro senza supporti; l'invito a 45° all'imbocco assorbe la zampa d'elefante. Lo strato più fine fa fianchi più lisci: il pomello si avvita senza impuntarsi, e sulla rondella fa denti più netti.",
     "summary": "in piedi · 0,16 mm · 50%"},
    {"key": "viti", "title": "P08 · P09 viti · P12 dadi", "rows": [["Orientamento", "viti in piedi sulla testa, dadi piatti"], ["Pareti", "6 (le viti vengono piene)"], ["Riempimento", "100%"], ["Strato", "0,16 mm"], ["Velocità", "lenta: tempo minimo per strato 8 s"], ["Supporti", "no"]],
     "why": f"Il filetto trapezoidale passo {n(F['passo'])} ha fianchi ripidi e si stampa in piedi senza supporti (è quello già provato sulle palline, con {n(F['gioco_radiale'])} mm di gioco radiale). Una vite piena e lenta ha strati ben fusi: la vite di cerniera lavora a trazione quando stringi il pomello. Se si sbriciola, stampa la vite più calda di 10 °C.",
@@ -224,15 +233,18 @@ spec = {
  "configurations": {"default": f"n{N_DEF}", "options": [opzione(k) for k in range(NPRO + 1)]},
  "print": print_for(N_DEF),
  "notes": {"eyebrow": "04 / Cerniera e braccio", "h2": "Una vite, un pomello, la frizione la scegli tu.", "nav": "Giunti",
-  "cards": [{"title": "Sezione della cerniera", "html": f"<p>La nocca larga {n(MS['nocca'])} sta fra due orecchie con {n(MS['gioco_nocca_per_lato'])} mm di gioco per lato. La vite stampata P08 (Ø{n(F['cerniere'])}) ha sotto la testa un collo quadro che entra nella sede dell'orecchia e non gira; dall'altra parte si avvita il pomello, che ha la madrevite dentro. Girando il pomello le orecchie si flettono un poco e serrano la nocca. Il pacco è {n(C['pacco_cerniera_mm'])} mm, la vite entra {n(C['vite_cerniera_in_presa_nel_pomello_mm'])} mm nel pomello (più di tre giri) e resta nascosta.</p>" + svg},
+  "cards": [{"title": "Sezione della cerniera", "html": f"<p>La nocca larga {n(MS['nocca'])} sta fra due orecchie con {n(MS['gioco_nocca_per_lato'])} mm di gioco per lato. La vite stampata P08 (Ø{n(F['cerniere'])}) ha sotto la testa un collo quadro che entra nella sede dell'orecchia e non gira; dall'altra parte si avvita il pomello, che ha la madrevite dentro. Girando il pomello le orecchie si flettono un poco e serrano la nocca. Il pacco è {n(C['pacco_cerniera_mm'])} mm, la vite entra {n(C['vite_cerniera_in_presa_nel_pomello_mm'])} mm nel pomello (più di tre giri), con {n(C['vite_cerniera_spazio_in_fondo_al_pomello_mm'])} mm liberi sul fondo, e resta nascosta.</p>" + svg},
             {"title": "Sezione del braccio", "html": "<p>Ogni tratto (guaina e prolunghe) ha il canale con una fessura davanti; ogni barra (prolunghe e slitta) ha sotto una nervatura che corre nella fessura e arriva a filo. La morsa è il pomello P11, con la sua vite, avvitato nel dado P12 chiuso nel rinforzo sul fianco: la punta preme nella scanalatura della barra, che finisce prima del fondo e fa da fermo.</p>" + svg2},
             {"title": "Stabilità", "html": f"<p>Con un telefono da 200 g, braccio a {n(pz['alfa'], 0)}° e appoggio in basso il baricentro cade {n(C['telefono_baricentro_x_uso_mm'], 0)} mm dentro la base; con l'appoggio tutto in alto e il braccio a {n(pz['alfa'], 0)}° cadrebbe fuori ({n(C['telefono_baricentro_x_uso_appoggio_in_alto_mm'])} mm), col braccio dritto torna dentro ({n(C['telefono_baricentro_x_dritto_appoggio_in_alto_mm'])} mm). Con le prolunghe tieni il braccio dritto: il peso resta sopra la base, ma ogni grado di inclinazione sposta il telefono di più.</p>"},
-            {"title": "Se la cerniera scivola", "html": "<p>Stringi il pomello. Se anche stretto non tiene (PETG molto liscio), metti una rondella di gomma o di sughero da 0,5–1 mm fra nocca e orecchia, oppure riduci <code>GIOCO_NOCCA</code> a 0,1 e ristampa. Non forzare il pomello oltre la stretta di una mano: il filetto stampato si rovina prima delle orecchie.</p>"}]},
+            {"title": "Cerniera bassa a scatti", "html": f"<p>La cerniera bassa porta tutto il peso del braccio e del telefono: lì l'attrito fra PETG e PETG chiederebbe di stringere tanto la vite. Per questo la nocca della guaina ha sulla faccia destra {MS['denti']['numero']} denti radiali alti {n(MS['denti']['altezza'])} mm, e la rondella P14 gli stessi denti girati: in presa il braccio non può scivolare, e il pomello deve solo tenerli dentro. La rondella non gira perché il suo piede appoggia sulla base. A sinistra la nocca ha {n(C['denti_gioco_per_sganciarli_mm'])} mm di gioco in tutto: allentando il pomello di mezzo giro i denti si staccano e il braccio gira di uno scatto ogni {n(MS['denti']['scatto_gradi'], 0)}°.</p>"},
+            {"title": "Se la cerniera alta scivola", "html": "<p>Stringi il pomello. Se anche stretto non tiene (PETG molto liscio), metti una rondella di gomma o di sughero da 0,5–1 mm fra nocca e orecchia, oppure riduci <code>GIOCO_NOCCA</code> a 0,1 e ristampa. Non forzare il pomello oltre la stretta di una mano: il filetto stampato si rovina prima delle orecchie.</p>"}]},
  "files": {"h2": "I file.", "intro_html": "Gli STL sono in <code>stl/</code>; la scena e lo script che li genera in <code>blender/</code>. Nella scena le collezioni nascoste <b>CON_PROLUNGHE</b> e <b>PIEGATO</b> mostrano il supporto con due prolunghe e chiuso.",
   "links": [{"label": "README", "href": "README.md"}, {"label": "Scena Blender", "href": "blender/Supporto_Telefono.blend"},
             {"label": "Script di costruzione", "href": "blender/costruisci.py"}, {"label": "Misure e controlli", "href": "dati/geometria.json"},
             {"label": "Foto di riferimento", "href": "originale/foto_3.jpg"}]},
- "footer_html": "Guida offline: aprire questo file dalla cartella del progetto."
+ "footer_html": "Guida offline: aprire questo file dalla cartella del progetto.",
+ "accessories": {"file": "dati/accessori.json", "label": "Telefono e cavo", "attach": "P04", "color": "#1c1d20",
+                 "tip": f"Telefono {n(TEL[0], 0)} × {n(TEL[1], 0)} × {n(TEL[2], 0)} mm sulla mensola, col cavo USB-C nell'asola dell'appoggio: solo per vedere l'ingombro, non si stampano"}
 }
 json.dump(spec, open(os.path.join(root, "dati", "guida_spec.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 print("ok", len(parts))
